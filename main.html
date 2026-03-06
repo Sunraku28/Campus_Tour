@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>College Campus Tour</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+</head>
+<body>
+
+<div class="hero">
+
+    <div id="campus-map"></div>
+    <button id="toggle-time" class="time-btn">🌙</button>
+
+    <div id="hero-layer" class="blur-overlay">
+        <img class="logo" src="./photos/logo.jpg">
+
+        <div class="info-container">
+            <h1 class="top-left-text">Know more <br>about campus..</h1>
+            <div class="campus-details">
+                <p><span>Established:</span> 2005</p>
+                <p><span>Location:</span> Jabalpur, Madhya Pradesh</p>
+                <p><span>Campus:</span> PDPM IIITDM Jabalpur</p>
+                <p>Experience our campus in a 360° virtual environment.</p>
+            </div>
+        </div>
+
+        <button class="start-btn" onclick="startTour()">VIRTUAL TOUR</button>
+    </div>
+    
+</div>
+
+<script type="module" src="./js/app.js"></script>
+
+</body>
+</html>

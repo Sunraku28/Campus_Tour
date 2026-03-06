@@ -1,0 +1,6 @@
+*.jpeg
+*.jpg
+!./photos/logo.jpg
+generate.py
+
+
