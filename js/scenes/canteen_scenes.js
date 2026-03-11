@@ -16,17 +16,19 @@ export const cafeScenes = {
                 "pitch": -12.0,
                 "yaw": 179.5 ,
                 "type": "scene",
-                "text": "GO to center ",
                 "sceneId": "center_day",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Go to center",
                 "cssClass": "custom-arrow point-up"
             },
             {   
                 "pitch": -10.0,
                 "yaw": 156.0,
                 "type":"scene",
-                "text":"back to tree",
                 "sceneId": "tree_day",
-                "cssClass": "custom-arrow point-left"
+                "cssClass": "custom-arrow point-left",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Back to tree"
             }        
         ]
     },
@@ -47,18 +49,33 @@ export const cafeScenes = {
                 "pitch": -12.0,
                 "yaw": 179.5 ,
                 "type": "scene",
-                "text": "GO to center ",
                 "sceneId": "center_night",
-                "cssClass": "custom-arrow point-up"
+                "cssClass": "custom-arrow point-up",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Go to center"
             },
             {   
                 "pitch": -10.0,
                 "yaw": 156.0,
                 "type":"scene",
-                "text":"back to tree",
                 "sceneId": "tree_night",
-                "cssClass": "custom-arrow point-left"
+                "cssClass": "custom-arrow point-left",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Back to tree"
             }        
         ]
     }
 };
+
+// This function creates a permanent text label for our hotspots
+function permanentText(hotSpotDiv, args) {
+    // Create a new span element to hold your text
+    var textLabel = document.createElement('span');
+    textLabel.innerHTML = args;
+    
+    // Give it a custom CSS class so we can style it easily
+    textLabel.classList.add('custom-permanent-label');
+    
+    // Attach it permanently to the hotspot button
+    hotSpotDiv.appendChild(textLabel);
+}

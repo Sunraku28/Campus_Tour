@@ -16,17 +16,19 @@ export const treeScenes = {
                 "pitch": 5.0,
                 "yaw": 20.0,
                 "type":"scene",
-                "text":"GO to cafeteria",
                 "sceneId": "cafeteria_day",
                 "cssClass": "custom-door",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "GO to cafeteria"
             },
             {
                 "pitch": -7,      
-                "yaw": -92,
+                "yaw": -85                                                                                                                                                                      ,
                 "type":"scene",
-                "text":"back to main gate",
                 "sceneId": "main_gate_day",
-                "cssClass": "custom-arrow point-up"
+                "cssClass": "custom-arrow point-up",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "GO to main gate"
             }
         ]
     },
@@ -47,18 +49,33 @@ export const treeScenes = {
                 "pitch": 5.0,
                 "yaw": 20.0,
                 "type":"scene",
-                "text":"GO to cafeteria",
                 "sceneId": "cafeteria_night",
-                "cssClass": "custom-door"
+                "cssClass": "custom-door",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "GO to cafeteria"
             },
             {
                 "pitch": -7,      
                 "yaw": -92,
                 "type":"scene",
-                "text":"back to main gate",
                 "sceneId": "main_gate_night",
-                "cssClass": "custom-arrow point-up"
+                "cssClass": "custom-arrow point-up",
+                 "createTooltipFunc": permanentText,
+                "createTooltipArgs": "GO to main gate"
             }
         ]
     }
 };
+
+// This function creates a permanent text label for our hotspots
+function permanentText(hotSpotDiv, args) {
+    // Create a new span element to hold your text
+    var textLabel = document.createElement('span');
+    textLabel.innerHTML = args;
+    
+    // Give it a custom CSS class so we can style it easily
+    textLabel.classList.add('custom-permanent-label');
+    
+    // Attach it permanently to the hotspot button
+    hotSpotDiv.appendChild(textLabel);
+}

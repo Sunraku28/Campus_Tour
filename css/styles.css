@@ -258,15 +258,113 @@ body {
 /* Laptop/Desktop adjustments (scales them back down for mouse clicks) */
 @media (min-width: 1024px) {
     .custom-door {
-        width: 25px !important;
-        height: 25px !important;
+        width: 30px !important;
+        height: 30px !important;
         margin-left: -15px !important;
         margin-top: -15px !important;
     }
     .custom-arrow {
-        width: 25px !important;
-        height: 25px !important;
-        margin-left: -12.5px !important;
-        margin-top: -12.5px !important;
+        width: 30px !important;
+        height: 30px !important;
+        margin-left: -15px !important;
+        margin-top: -15px !important;
     }
+}
+
+/*panellum ui changes*/
+
+/* Turning to flex column*/
+.pnlm-controls-container {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    position: absolute !important;
+    top: 20px !important;  
+    left: 20px !important; 
+   /* Stacking the Zoom group button*/
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important; /* Space between Zoom group and Fullscreen */
+    height: auto !important; 
+}
+
+/* Zoom controls group (+ and -), Also a Flex column */
+.pnlm-zoom-controls {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important; 
+    
+    /* Forces + and - so that the buttons donot overlap */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important; /* Specify the space between the + and -*/
+    height: auto !important;
+    width: auto !important;
+}
+
+/*  Style the individual circular buttons */
+.pnlm-zoom-in,
+.pnlm-zoom-out,
+.pnlm-fullscreen-toggle-button {
+    position: relative !important; /* Overrides Pannellum's overlapping absolute behavior */
+    top: 0 !important; /* Resets Pannellum's top positioning */
+    margin: 0 !important; /* We are using 'gap' now instead of margin */
+    
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 50% !important; 
+    
+    width: 45px !important;
+    height: 45px !important;
+    
+    background-image: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+/* Making the glassy finish*/
+.pnlm-zoom-in::after { content: "+"; color: white; font-size: 28px; font-weight: 400; line-height: 1; margin-top: -2px; }
+.pnlm-zoom-out::after { content: "−"; color: white; font-size: 28px; font-weight: 400; line-height: 1; margin-top: -2px; }
+.pnlm-fullscreen-toggle-button::after { content: "⛶"; color: white; font-size: 22px; font-weight: 400; line-height: 1; }
+
+/* Hover effects */
+.pnlm-zoom-in:hover,
+.pnlm-zoom-out:hover,
+.pnlm-fullscreen-toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border-color: #ffea74 !important; /* Golden border on hover */
+    box-shadow: 0 4px 15px rgba(255, 234, 116, 0.4) !important; /* Golden glow */
+    transform: scale(1.1); /* Slight pop effect */
+}
+
+/* Style for our new permanent text labels */
+.custom-permanent-label {
+    padding: 10px 20px;
+    font-size: 12px; /* Default is usually 14px or 16px. Increase or decrease as needed! */
+    width: auto; /* Forces the box to be exactly 120 pixels wide */
+    height: 20px; /* Optional: Forces an exact height */
+    position: absolute;
+    bottom: 42px; /* Increase this to push the text higher above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.4); /* Nice transparent black background */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 50px;
+    white-space: nowrap; /* Forces text to stay on one line */
+    text-align: center;
+    pointer-events: none; /* Prevents the text from blocking your mouse clicks */
+}
+
+/* Completely kill Pannellum's default hover tooltips so they don't double up */
+.pnlm-hotspot .pnlm-tooltip {
+    display: none !important;
 }

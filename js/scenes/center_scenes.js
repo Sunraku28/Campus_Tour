@@ -13,12 +13,13 @@ export const centerScenes = {
         },
         "hotSpots": [
             {
-                "pitch": -4.0,
+                "pitch": 3.02,
                 "yaw": 175.0,
                 "type":"scene",
-                "text":"back to cafeteria",
                 "sceneId": "cafeteria_day",
-                "cssClass": "custom-door"
+                "cssClass": "custom-door",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "GO to cafeteria"
             }    
         ]
     },
@@ -39,10 +40,24 @@ export const centerScenes = {
                 "pitch": -3.1, 
                 "yaw": 95.9, 
                 "type":"scene",
-                "text":"back to cafeteria",
                 "sceneId": "cafeteria_night",
-                "cssClass": "custom-door"
+                "cssClass": "custom-door",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "GO to center",
             }    
         ]
     }
 };
+
+// This function creates a permanent text label for our hotspots
+function permanentText(hotSpotDiv, args) {
+    // Create a new span element to hold your text
+    var textLabel = document.createElement('span');
+    textLabel.innerHTML = args;
+    
+    // Give it a custom CSS class so we can style it easily
+    textLabel.classList.add('custom-permanent-label');
+    
+    // Attach it permanently to the hotspot button
+    hotSpotDiv.appendChild(textLabel);
+}

@@ -19,9 +19,10 @@ const viewer = pannellum.viewer('campus-map', {
         "sceneFadeDuration": 1500, 
         "autoLoad": true , 
         "autoRotate" : -2,
-        "autoRotateInactivityDelay": 3000,
+        "autoRotateInactivityDelay": 7000,
         "touchPanSpeedCoeffFactor": 0.7, 
-        "friction": 0.4
+        "friction": 0.4,
+        // "hotSpotDebug": true
     },
     "scenes": allCampusScenes // <-- We feed the merged object here!
 });
