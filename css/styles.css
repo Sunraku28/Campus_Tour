@@ -182,6 +182,16 @@ body {
     border-color: #d4ac0d;
 }
 
+/* mobile specific time button*/          
+@media (max-width: 600px) {
+    .time-btn {
+    top: 15px;
+    right: 15px;
+    padding: 5px; 
+    font-size: 24px;
+    }
+}
+
 /*door button*/
 .custom-door {
     width: 30px;
@@ -244,3 +254,19 @@ body {
 .point-right::after { transform: rotate(0deg); }
 .point-left::after { transform: rotate(180deg); }
 .point-down::after { transform: rotate(90deg); }
+
+/* Laptop/Desktop adjustments (scales them back down for mouse clicks) */
+@media (min-width: 1024px) {
+    .custom-door {
+        width: 25px !important;
+        height: 25px !important;
+        margin-left: -15px !important;
+        margin-top: -15px !important;
+    }
+    .custom-arrow {
+        width: 25px !important;
+        height: 25px !important;
+        margin-left: -12.5px !important;
+        margin-top: -12.5px !important;
+    }
+}
