@@ -43,7 +43,7 @@ export const centerScenes = {
                 "sceneId": "cafeteria_night",
                 // "cssClass": "custom-door",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "GO to center",
+                "createTooltipArgs": "GO to cafeteria",
             }    
         ]
     }
