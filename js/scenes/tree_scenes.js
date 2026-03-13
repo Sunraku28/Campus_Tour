@@ -17,7 +17,7 @@ export const treeScenes = {
                 "yaw": 20.0,
                 "type":"scene",
                 "sceneId": "cafeteria_day",
-                "cssClass": "custom-door",
+                // "cssClass": "custom-door",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "GO to cafeteria"
             },
@@ -26,7 +26,7 @@ export const treeScenes = {
                 "yaw": -85                                                                                                                                                                      ,
                 "type":"scene",
                 "sceneId": "main_gate_day",
-                "cssClass": "custom-arrow point-up",
+                // "cssClass": "custom-arrow point-up",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "GO to main gate"
             }
@@ -50,7 +50,7 @@ export const treeScenes = {
                 "yaw": 20.0,
                 "type":"scene",
                 "sceneId": "cafeteria_night",
-                "cssClass": "custom-door",
+                // "cssClass": "custom-door",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "GO to cafeteria"
             },
@@ -59,7 +59,7 @@ export const treeScenes = {
                 "yaw": -92,
                 "type":"scene",
                 "sceneId": "main_gate_night",
-                "cssClass": "custom-arrow point-up",
+                // "cssClass": "custom-arrow point-up",
                  "createTooltipFunc": permanentText,
                 "createTooltipArgs": "GO to main gate"
             }

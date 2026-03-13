@@ -19,7 +19,7 @@ export const gateScenes = {
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Go to tree",
                 "sceneId": "tree_day",
-                "cssClass": "custom-arrow point-up"
+                // "cssClass": "custom-arrow point-up"
             }
         ]
     },
@@ -41,7 +41,7 @@ export const gateScenes = {
                 "yaw": 8.0, 
                 "type": "scene",
                 "sceneId": "tree_night",
-                "cssClass": "custom-arrow point-up",
+                // "cssClass": "custom-arrow point-up",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "GO to Tree"
             }
