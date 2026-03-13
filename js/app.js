@@ -61,3 +61,37 @@ toggleBtn.addEventListener('click', () => {
 
     viewer.loadScene(nextScene, currentPitch, currentYaw);
 });
+// the dissapearance of Night - Day Button
+var outdoorScenes = [
+    "main_gate_day", 
+    "main_gate_night", 
+    "center_day",
+    "center_night",
+    "tree_day",
+    "tree_night"
+];
+viewer.on('scenechange', function(newSceneId) {
+    
+    var timeButton = document.querySelector('.time-btn');
+    
+    if (timeButton) {
+        if (outdoorScenes.includes(newSceneId)) {
+            timeButton.style.display = 'block'; 
+        } 
+        else {
+            timeButton.style.display = 'none';  
+        }
+    }
+}); 
+window.onload = function() {
+    var initialScene = viewer.getScene();
+    var timeButton = document.querySelector('.time-btn');
+    
+    if (timeButton) {
+        if (outdoorScenes.includes(initialScene)) {
+            timeButton.style.display = 'block';
+        } else {
+            timeButton.style.display = 'none';
+        }
+    }
+};
