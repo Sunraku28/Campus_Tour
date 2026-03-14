@@ -21,7 +21,7 @@ const viewer = pannellum.viewer('campus-map', {
         "autoRotate" : -2,
         "autoRotateInactivityDelay": 7000,
         "touchPanSpeedCoeffFactor": 0.7, 
-        "friction": 0.4,
+        "friction": 0.1,
         // "hotSpotDebug": true
     },
     "scenes": allCampusScenes // <-- We feed the merged object here!
