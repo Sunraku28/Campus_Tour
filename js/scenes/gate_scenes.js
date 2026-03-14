@@ -19,7 +19,7 @@ export const gateScenes = {
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Go to tree",
                 "sceneId": "tree_day",
-                // "cssClass": "custom-arrow point-up"
+                 "cssClass": "custom-logo-pin"
             }
         ]
     },

@@ -19,14 +19,14 @@ export const cafeScenes = {
                 "sceneId": "center_day",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Go to center",
-                // "cssClass": "custom-arrow point-up"
+                "cssClass": "custom-nav-arrow point-up"
             },
             {   
                 "pitch": -10.0,
                 "yaw": 156.0,
                 "type":"scene",
                 "sceneId": "tree_day",
-                // "cssClass": "custom-arrow point-left",
+                "cssClass": "custom-nav-arrow point-up-left",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Back to tree"
             }        

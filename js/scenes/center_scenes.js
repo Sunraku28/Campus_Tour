@@ -17,7 +17,7 @@ export const centerScenes = {
                 "yaw": 175.0,
                 "type":"scene",
                 "sceneId": "cafeteria_day",
-                // "cssClass": "custom-door",
+                 "cssClass": "custom-nav-door",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "GO to cafeteria"
             }    
@@ -41,7 +41,7 @@ export const centerScenes = {
                 "yaw": 95.9, 
                 "type":"scene",
                 "sceneId": "cafeteria_night",
-                // "cssClass": "custom-door",
+                 "cssClass": "custom-nav-door",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "GO to cafeteria",
             }    

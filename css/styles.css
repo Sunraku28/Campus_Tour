@@ -164,9 +164,9 @@ body {
     right: 20px;
     z-index: 999999; 
     padding: 15px 30px;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a7c;
     color: #ffffff;
-    border: 2px solid #555;
+    border: 2px solid #555;         
     border-radius: 30px;
     cursor: pointer;
     font-size: 18px;
@@ -177,7 +177,7 @@ body {
 }
 
 .time-btn.day-mode {
-    background-color: #ecf0b3;
+    background-color: #ecf0b37e;
     color: #000;
     border-color: #d4ac0d;
 }
@@ -209,7 +209,6 @@ body {
 } 
 /*panellum ui changes*/
 
-/* Turning to flex column*/
 .pnlm-controls-container {
     background-color: transparent !important;
     border: none !important;
@@ -324,38 +323,34 @@ body {
 .custom-permanent-label {
     padding: 10px 20px;
     font-size: 12px; /* Default is usually 14px or 16px. Increase or decrease as needed! */
-    width: auto; /* Forces the box to be exactly 120 pixels wide */
-    height: 20px; /* Optional: Forces an exact height */
+    width: auto; 
+    height: 20px; 
     position: absolute;
-    bottom: 42px; /* Increase this to push the text higher above the icon */
+    bottom: 42px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.4); /* Nice transparent black background */
+    background-color: rgba(0, 0, 0, 0.4); 
     color: white;
     padding: 4px 10px;
     border-radius: 50px;
-    white-space: nowrap; /* Forces text to stay on one line */
+    white-space: nowrap; 
     text-align: center;
-    pointer-events: none; /* Prevents the text from blocking your mouse clicks */
+    pointer-events: none; 
 }
 
-/* Completely kill Pannellum's default hover tooltips so they don't double up */
 .pnlm-hotspot .pnlm-tooltip {
     display: none !important;
 }
-/* 1. TURN THE DEFAULT ARROW INTO A SOLID WHITE DOT */
 .pnlm-scene {
-    background-image: none !important; /* Kills the default Pannellum arrow */
+    background-image: none !important; 
     background-color: white !important;
     width: 15px !important;  /* Size of the center white dot */
     height: 15px !important;
-    border-radius: 50% !important; /* Makes it a perfect circle */
+    border-radius: 50% !important;
     border: none !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important; /* Drop shadow so it pops */
 }
 
-/* 2. CREATE THE EXPANDING RIPPLE RING */
-/* We use ::after to attach an invisible expanding circle behind the main dot */
 .pnlm-scene::after {
     content: '';
     position: absolute;
@@ -365,11 +360,10 @@ body {
     border: 3px solid  white; /* Thickness and color of the ripple ring */
     border-radius: 50%;
     animation: pulse-ripple 2.0s infinite ease-out; /* The animation loop */
-    pointer-events: none; /* Crucial: stops the expanding ring from blocking clicks! */
+    pointer-events: none; /
     box-sizing: border-box;
 }
 
-/* 3. DEFINE THE ANIMATION TIMELINE */
 @keyframes pulse-ripple {
     0% {
         /* Starts exactly the same size as the dot */
@@ -384,3 +378,136 @@ body {
         opacity: 0; /* Fades completely into invisibility */
     }
 }
+div.pnlm-scene.custom-logo-pin,
+div.pnlm-info.custom-logo-pin,
+div.custom-logo-pin {
+    width: 50px !important;
+    height: 60px !important;
+    
+    background-image: url('../photos/tracking.png') !important; 
+    
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    animation: none !important; 
+    
+    margin-left: -25px !important; 
+    margin-top: -60px !important; 
+}
+
+div.pnlm-scene.custom-logo-pin::after,
+div.pnlm-scene.custom-logo-pin::before,
+div.custom-logo-pin::after,
+div.custom-logo-pin::before {
+    display: none !important;
+    content: none !important;
+    animation: none !important;
+    border: none !important;
+}
+
+div.custom-logo-pin {
+    transition: filter 0.2s ease !important;
+}
+
+div.custom-logo-pin:hover {
+    filter: brightness(1.2) drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8)) !important;
+}
+/*  ARROW BUTTON  */
+.custom-nav-arrow {
+    --arrow-spin: 0deg; 
+    
+    width: 40px !important;
+    height: 40px !important;
+    background-color: white !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    cursor: pointer !important;
+    
+    margin-left: -20px !important; 
+    margin-top: -20px !important;
+    
+    border: none !important;
+    animation: none !important;
+    background-image: none !important;
+}
+.custom-nav-arrow::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    background-image: url('../photos/up.png') !important;
+    
+    background-size: 60% !important; 
+    
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    
+    transform: rotate(var(--arrow-spin)) !important;
+    transition: transform 0.2s ease !important;
+}
+
+.custom-nav-arrow:hover {
+    box-shadow: 0 4px 15px rgba(255, 94, 0, 0.5) !important; /* Orange glow */
+}
+
+.custom-nav-arrow:hover::before {
+    transform: rotate(var(--arrow-spin)) scale(1.2) !important; 
+}
+
+/* Add one of these to your JS to point the arrow! */
+.point-up         { --arrow-spin: 0deg; }
+.point-up-right   { --arrow-spin: 45deg; }
+.point-right      { --arrow-spin: 90deg; }
+.point-down-right { --arrow-spin: 135deg; }
+.point-down       { --arrow-spin: 180deg; }
+.point-down-left  { --arrow-spin: 225deg; }
+.point-left       { --arrow-spin: 270deg; }
+.point-up-left    { --arrow-spin: 315deg; }
+
+.custom-nav-arrow::after { display: none !important; }
+
+/* THE  DOOR BUTTON  */
+.custom-nav-door {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: white !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    cursor: pointer !important;
+    
+    margin-left: -20px !important; 
+    margin-top: -20px !important;
+    
+    border: none !important;
+    animation: none !important;
+    background-image: none !important;
+}
+
+.custom-nav-door::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    background-image: url('../photos/door.png') !important;
+
+    /* Change this percentage (e.g., to 70% or 50%) if the door looks too big or too small inside the white circle */
+    background-size: 80% !important; 
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    
+    transition: transform 0.2s ease !important;
+}
+
+.custom-nav-door:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; 
+}
+
+.custom-nav-door:hover::before {
+    transform: scale(1.15) !important; 
+}
+
+.custom-nav-door::after { display: none !important; }
