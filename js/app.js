@@ -17,13 +17,16 @@ const viewer = pannellum.viewer('campus-map', {
     "default": {
         "firstScene": "main_gate_day", 
         "sceneFadeDuration": 1500, 
+        "showZoomCtrl": false,
+        "showFullscreenCtrl": false,
         "autoLoad": true , 
         "autoRotate" : -2,
         "autoRotateInactivityDelay": 7000,
         "touchPanSpeedCoeffFactor": 0.7, 
         "friction": 0.1,
-        // "hotSpotDebug": true
-    },
+        // "hotSpotDebug": trus
+
+        },
     "scenes": allCampusScenes // <-- We feed the merged object here!
 });
 

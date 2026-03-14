@@ -52,7 +52,7 @@ export const cafeScenes = {
                 "sceneId": "center_night",
                 // "cssClass": "custom-arrow point-up",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Go to center"
+                "createTooltipArgs": "𝗚𝗼 𝘁𝗼 𝗰𝗲𝗻𝘁𝗲𝗿"
             },
             {   
                 "pitch": -10.0,
