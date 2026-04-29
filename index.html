@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Virtual Campus Tour</title>
+    <link rel="icon" type="image/png" href="./photos/logo.png">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="css/map.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<div class="hero">
+
+
+    <div id="campus-map"></div>
+    <button id="toggle-time" class="time-btn">🌙</button>
+    <button id="mobile-map-btn" class="map-icon-btn">🗺️</button>
+
+    <nav class="floating-nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">☰</label>
+
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">Classrooms ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-scene="LHTC_104_day">Lecture Hall 104</a></li>
+                    <li><a href="#" data-scene="LHTC_102_day">Lecture Hall 102</a></li>
+                    <li><a href="#" data-scene="LHTC_103_day">Auditorium</a></li>
+                    <li><a href="#" data-scene="LHTC_cr_day">Classroom</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Labs ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-scene="LHTC_design1_day">Design Lab</a></li>
+                    <li><a href="#" data-scene="electronics_lab_day">Electronics Lab</a></li>
+                    <li><a href="#" data-scene="manufacturing_lab_day">Manufacturing Lab</a></li>
+                    <li><a href="#" data-scene="mechatronics_lab_day">Mechatronic Lab</a></li>
+                    <li><a href="#" data-scene="mechanical_lab_day">Mechanical Lab</a></li>
+                    <li><a href="#" data-scene="seminarhall_day">Seminar Hall</a></li>
+                    <li><a href="#" data-scene="tinkering_lab_day">Tinkering Lab</a></li>
+                    <li><a href="#" data-scene="computer_lab_day">Computer Lab</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Facilities ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-scene="mess_gate_day">Central Mess</a></li>
+                    <li><a href="#" data-scene="nescafe_day">Nescafe</a></li>
+                    <li><a href="#" data-scene="PHC_day">Amul</a></li>
+                    <li><a href="#" data-scene="hexagon_gate_day">Hexagon Canteen</a></li>
+                    <li><a href="#" data-scene="PHC_day">Primary Health Care Center</a></li>
+                    <li><a href="#" data-scene="rewa_day">Rewa Residency</a></li> 
+                    <li><a href="#" data-scene="narmada_day">Narmada Residency</a></li>
+                    <li><a href="#" data-scene="visitor_hostel_day">Visitor's Hostel</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Hostels ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-scene="H1_gate_day">Vasistha Hostel</a></li>
+                    <li><a href="#" data-scene="H3_gate_day">Aryabhatta Hostel</a></li>
+                    <li><a href="#" data-scene="H4_gate_day">Vivekananda Hostel</a></li>
+                    <li><a href="#" data-scene="panini_gate_day">Panini Hostel</a></li>
+                    <li><a href="#" data-scene="ms_gate_day">Maa Saraswati Hostel</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Resources ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-scene="library_day">Central Library</a></li>
+                    <li><a href="#" data-scene="Oat_day">Open Air Theater</a></li>
+                    <li><a href="#" data-scene="LHTC_103_day">Auditorium</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Sports ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-scene="sac_gate_day">Student Activity Centre (SAC)</a></li>
+                    <li><a href="#" data-scene="badminton_day">Badminton Court</a></li>
+                    <li><a href="#" data-scene="tt_day">Table Tennis</a></li>
+                    <li><a href="#" data-scene="kabaddi_day">Kabaddi</a></li>
+                    <li><a href="#">Gym</a></li>
+                    <li><a href="#" data-scene="court_day">Lawn Tennis Court</a></li>
+                    <li><a href="#" data-scene="court_day">Basketball Court</a></li>
+                    <li><a href="#" data-scene="vcourt_day">Volleyball Court</a></li>
+                    <li><a href="#" data-scene="ground_day">Cricket Ground</a></li>
+                    <li><a href="#" data-scene="ground_day">Football Ground</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Clubs ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-scene="afc_day">Aero Fabrication Workshop</a></li>
+                    <li><a href="#" >Astronomy and Physics Society</a></li>
+                    <li><a href="#" data-scene="racing_day">Racing Club Workshop</a></li>
+                    <li><a href="#" data-scene="ers_day">Electronics and Robotics Workshop</a></li>
+                    <li><a href="#" >CAD Workshop</a></li>
+                    <li><a href="#" data-scene="saaz_day">Saaz (music club)</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Offices ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-scene="DSA_gate_day">Dean Student Affairs (DSA) Office</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Attractions ▾</a>
+                <ul class="dropdown-menu-last">
+                    <li><a href="#" >Dumna Nature Park</a></li>
+                </ul>
+            </li>
+        </ul>
+        <script src="./js/nav/nav.js"></script>
+
+    </nav>
+
+    <img class="logo" src="./photos/logo.png">
+    <h1 class="college-name">PDPM ‎ IIITDM <br> J a b a l p u r </h1>
+    
+    <div id="hero-layer" class="blur-overlay">
+        <div class="info-container">
+
+            <h1 class="top-left-text">Know more <br>about campus..</h1>
+            <div class="campus-details">
+                <p><span>Established:</span> 2005</p>
+                <p><span>Location:</span> Jabalpur, Madhya Pradesh</p>
+                <p><span>Campus:</span> PDPM IIITDM Jabalpur</p>
+                <p>Experience our campus in a 360° virtual environment.</p>
+            </div>
+
+        </div>
+
+        <button class="start-btn" onclick="startTour()">VIRTUAL TOUR</button>
+
+    </div>
+    
+</div>
+
+<div id="minimap-wrapper">
+    <div id="minimap"></div>
+    <button id="toggle-map-btn">⛶</button>
+</div>
+
+<script src="js/map/coordinates.js" defer></script>
+<script src="js/remove_nd_button.js" defer></script>
+<script src="js/map/map_desktop.js" defer></script>
+<script src="js/map/map_mobile.js" defer></script>
+<script type="module" src="js/app.js"></script>
+
+
+<div id="custom-right-click-menu" class="glass-menu">
+    <ul>
+        <li id="btn-teleport"> Random Teleport</li>
+        <li id="btn-restart-tour"> Restart Tour</li>
+    </ul>
+</div>
+
+<div id="toast-notification" class="glass-toast"></div>
+
+</body>
+</html>

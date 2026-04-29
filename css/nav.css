@@ -1,0 +1,255 @@
+
+/* Navigation bar */
+.floating-nav {
+    position: fixed;
+    top: 30px; 
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.205); 
+    border-radius: 50px 0px 0px 50px; 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); 
+    z-index: 1000; 
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.floating-nav.tour-started {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; 
+}
+
+.nav-toggle, 
+.nav-toggle-label {
+    display: none; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links > li {
+    position: relative;
+}
+
+.nav-links > li > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 18px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.nav-links > li:first-child > a { border-top-left-radius: 50px; border-bottom-left-radius: 50px; }
+.nav-links > li:last-child > a { border-top-right-radius: 0px; border-bottom-right-radius: 0px; }
+
+.nav-links > li:hover > a {
+    background-color: #ebcf93; 
+    color: #1a2538;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: rgba(157, 157, 158, 0.466);
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 10px 0;
+    min-width: 260px;
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: all 0.3s ease;
+    max-height: 60vh; 
+    overflow-y: auto;
+}
+
+
+.dropdown-menu-last {
+    position: absolute;
+    top: 100%;
+    right: 5px;
+    background-color: rgba(157, 157, 158, 0.466);
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 10px 0;
+    min-width: 260px;
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: all 0.3s ease;  
+    max-height: 60vh; 
+    overflow-y: auto;
+}
+
+
+.dropdown:hover .dropdown-menu , .dropdown:hover .dropdown-menu-last{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a, .dropdown-menu-last li a {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 12px 25px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu-last li a:hover {
+    background-color: rgba(255, 255, 255, 0.15); 
+}       
+
+
+.dropdown-menu::-webkit-scrollbar,
+.dropdown-menu-last::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track,
+.dropdown-menu-last::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb,
+.dropdown-menu-last::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover,
+.dropdown-menu-last::-webkit-scrollbar-thumb:hover {
+    background: #ebcf93;
+}
+
+
+@media (max-width: 1250px) {
+
+    .nav-toggle-label {
+        display: block;
+        color: #ffffff;
+        font-size: 24px;
+        padding: 12px 20px;
+        cursor: pointer;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: all 0.3s ease;  
+        
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.274)    ; 
+        backdrop-filter: blur(10px);
+        min-width: 200px;
+        border-radius: 15px 0 15px 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); 
+        -webkit-tap-highlight-color: transparent;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        box-shadow: none; 
+        transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s, box-shadow 0.4s ease;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        max-height: 800px; 
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-links > li > a,
+    .nav-links > li:first-child > a,
+    .nav-links > li:last-child > a {
+        border-radius: 15px;
+        padding: 15px 20px;
+        min-width: 200px;
+    }
+
+    .nav-links > li:last-child > a {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .dropdown-menu, 
+    .dropdown-menu-last {
+        font-weight: bold;
+        position: relative; 
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        border-radius: 0; 
+        box-shadow: none; 
+        background-color: rgba(0, 0, 0, 0.1); 
+
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden; 
+        visibility: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        
+        transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease, visibility 0.4s;
+        transform: none;
+    }
+
+    .dropdown-menu li a, 
+    .dropdown-menu-last li a {
+        padding-left: 35px;
+    }
+
+
+    /* .dropdown:hover .dropdown-menu, 
+    .dropdown:hover .dropdown-menu-last {
+        display: block; 
+        transform: none; 
+    } */
+
+    .dropdown-menu.show, 
+    .dropdown-menu-last.show {
+        max-height: 250px; 
+        overflow-y: auto;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transform: none;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        max-height: 1000vh; 
+        overflow-y: hidden;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); 
+    }
+    
+}
