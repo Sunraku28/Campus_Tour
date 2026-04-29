@@ -643,8 +643,11 @@ div.custom-logo-pin:hover {
        bottom: 90px, left: 50%, transform: translateX(-50%)
        We place info-btn to its right */
     .info-btn {
+        justify-content: center;
+        align-items: center;
         z-index: 9999999 !important;
         position: absolute;
+        pointer-events: auto !important; 
         bottom: 90px;
         top: auto;
         right: auto;
