@@ -54,7 +54,7 @@ export const librarycenterScenes = {
                 "type": "scene",
                 "sceneId": "tinkering_lab_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " Tinkering Lab",
+                "createTooltipArgs": "Tinkering Lab",
                
             },
             {

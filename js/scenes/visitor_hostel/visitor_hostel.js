@@ -17,7 +17,7 @@ export const visitorhostelScenes = {
                 "type": "scene",
                 "sceneId": "PHC_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to PHC",
+                "createTooltipArgs": "Primary Healthcare Center",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -26,7 +26,7 @@ export const visitorhostelScenes = {
                 "type": "scene",
                 "sceneId": "rewa_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Rewa Residency",
+                "createTooltipArgs": "Rewa Residency",
                 "cssClass": "custom-nav-arrow point-up"
             }
         ]
@@ -49,7 +49,7 @@ export const visitorhostelScenes = {
                 "type": "scene",
                 "sceneId": "PHC_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to PHC",
+                "createTooltipArgs": "Primary Healthcare Center",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -58,7 +58,7 @@ export const visitorhostelScenes = {
                 "type": "scene",
                 "sceneId": "rewa_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Rewa Residency",
+                "createTooltipArgs": "Rewa Residency",
                 "cssClass": "custom-nav-arrow point-up"
             }
           

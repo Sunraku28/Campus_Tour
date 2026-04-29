@@ -18,7 +18,7 @@ export const nescafeScenes = {
                 "type": "scene",
                 "sceneId": "H1_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Vasishtha",
+                "createTooltipArgs": "Vasishtha Hostel",
                 "cssClass": "custom-nav-arrow point-left"
             }
         ]
@@ -41,7 +41,7 @@ export const nescafeScenes = {
                 "type":"scene",
                 "sceneId": "H1_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Vasishtha",
+                "createTooltipArgs": "Vasishtha Hostel",
                 "cssClass": "custom-nav-arrow point-left"
             }        
         ]

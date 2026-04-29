@@ -18,7 +18,7 @@ export const OatScenes= {
                 "type": "scene",
                 "sceneId": "LHTC_frontgate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way To Front Gate",
+                "createTooltipArgs": "Front Gate",
                 "cssClass": "custom-nav-arrow point-right",
             }
     
@@ -42,7 +42,7 @@ export const OatScenes= {
                 "type":"scene",
                 "sceneId": "LHTC_frontgate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way To Front Gate",
+                "createTooltipArgs": "Front Gate",
                 "cssClass": "custom-nav-arrow point-right",
             }        
         ]

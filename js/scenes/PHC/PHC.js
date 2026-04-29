@@ -17,7 +17,7 @@ export const PHCScenes = {
                 "type": "scene",
                 "sceneId": "library_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Library",
+                "createTooltipArgs": "Library",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -26,7 +26,7 @@ export const PHCScenes = {
                 "type": "scene",
                 "sceneId": "visitor_hostel_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Visitor's Hostel",
+                "createTooltipArgs": "Visitor's Hostel",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -35,7 +35,7 @@ export const PHCScenes = {
                 "type": "scene",
                 "sceneId": "DSA_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to DSA Office",
+                "createTooltipArgs": "DSA Office",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -44,7 +44,7 @@ export const PHCScenes = {
                 "type": "scene",
                 //"sceneId": "DSA_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "PHC",
+                "createTooltipArgs": "Primary Healthcare Center",
                 //"cssClass": "custom-nav-arrow point-up-left"
             }
         ]
@@ -67,7 +67,7 @@ export const PHCScenes = {
                 "type": "scene",
                 "sceneId": "library_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Library",
+                "createTooltipArgs": "Library",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -76,7 +76,7 @@ export const PHCScenes = {
                 "type": "scene",
                 "sceneId": "visitor_hostel_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Visitor's Hostel",
+                "createTooltipArgs": "Visitor's Hostel",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -85,7 +85,7 @@ export const PHCScenes = {
                 "type": "scene",
                 "sceneId": "DSA_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to DSA Office",
+                "createTooltipArgs": "DSA Office",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -94,7 +94,7 @@ export const PHCScenes = {
                 "type": "scene",
                 //"sceneId": "DSA_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "PHC",
+                "createTooltipArgs": "Primary Healthcare Center",
                 //"cssClass": "custom-nav-arrow point-up-left"
             }
         ]

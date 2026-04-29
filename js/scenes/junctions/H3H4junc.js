@@ -17,7 +17,7 @@ export const H3H4junctionScenes = {
                 "type": "scene",
                 "sceneId": "panini_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Panini",
+                "createTooltipArgs": "Panini Hostel",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {   
@@ -27,7 +27,7 @@ export const H3H4junctionScenes = {
                 "sceneId": "H3_gate_day",
                 "cssClass": "custom-nav-arrow point-up",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Aryabhatta"
+                "createTooltipArgs": "Aryabhatta Hostel"
             } ,     
             {   
                 "pitch": -4.1032399515064606,
@@ -36,7 +36,7 @@ export const H3H4junctionScenes = {
                 "sceneId": "H4_gate_day",
                 "cssClass": "custom-nav-arrow point-up-right",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Vivekananda"
+                "createTooltipArgs": "Vivekananda Hostel"
             }          
         ]
     },
@@ -58,7 +58,7 @@ export const H3H4junctionScenes = {
                 "type": "scene",
                 "sceneId": "panini_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Panini",
+                "createTooltipArgs": "Panini Hostel",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {   
@@ -68,7 +68,7 @@ export const H3H4junctionScenes = {
                 "sceneId": "H3_gate_night",
                 "cssClass": "custom-nav-arrow point-up",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Aryabhatta"
+                "createTooltipArgs": "Aryabhatta Hostel"
             } ,     
             {   
                 "pitch":  -5.164515802049632,
@@ -77,7 +77,7 @@ export const H3H4junctionScenes = {
                 "sceneId": "H4_gate_night",
                 "cssClass": "custom-nav-arrow point-up-right",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Vivekananda"
+                "createTooltipArgs": "Vivekananda Hostel"
             }          
         ]
     }

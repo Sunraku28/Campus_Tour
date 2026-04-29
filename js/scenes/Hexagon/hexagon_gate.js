@@ -26,7 +26,7 @@ export const HexagongateScenes = {
                 "type": "scene",
                 "sceneId": "lab_complex_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Lab Complex",
+                "createTooltipArgs": "Lab Complex",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -35,7 +35,7 @@ export const HexagongateScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_frontgate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to LHTC",
+                "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -44,7 +44,7 @@ export const HexagongateScenes = {
                 "type": "scene",
                 "sceneId": "trisection_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Trisection",
+                "createTooltipArgs": "Trisection",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
         ]
@@ -76,7 +76,7 @@ export const HexagongateScenes = {
                 "type": "scene",
                 "sceneId": "lab_complex_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Lab Complex",
+                "createTooltipArgs": "Lab Complex",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -85,7 +85,7 @@ export const HexagongateScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_frontgate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to LHTC",
+                "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -94,7 +94,7 @@ export const HexagongateScenes = {
                 "type": "scene",
                 "sceneId": "trisection_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Trisection",
+                "createTooltipArgs": "Trisection",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             

@@ -80,7 +80,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "lab_complex_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " Core Lab",
+                "createTooltipArgs": "Core Lab",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -89,7 +89,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "library_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " Library",
+                "createTooltipArgs": "Library",
                 "cssClass": "custom-nav-arrow point-up-right"
             },  
         ]

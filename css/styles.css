@@ -305,24 +305,43 @@ body {
 }
 
 .custom-permanent-label {
-    padding: 10px 20px;
-    font-size: 12px;
+    /* Scale the font size dynamically */
+    font-size: calc(12px * var(--zoom-scale, 1));
     font-weight: 800 !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Change height to auto so it wraps the scaled text properly */
+    height: auto; 
     width: auto; 
-    height: 20px; 
+    
     position: absolute;
-    bottom: 42px; 
+    /* Scale the distance from the bottom so it moves up as the icon grows */
+    bottom: calc(42px * var(--zoom-scale, 1)); 
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0); 
     color: white;
-    padding: 4px 10px;
+    
+    /* Scale the padding so the bubble stays proportional to the text */
+    padding: calc(4px * var(--zoom-scale, 1)) calc(10px * var(--zoom-scale, 1));
     border-radius: 50px;
     white-space: nowrap; 
     text-align: center;
     pointer-events: none; 
 
+    white-space: normal !important; 
+    
+    /* CHANGE 2: Add a dynamic max-width so long text breaks into two lines */
+    max-width: calc(190px * var(--zoom-scale, 1)); 
+    
+    /* CHANGE 3: Add line-height so the two lines don't crash into each other */
+    line-height: 1.2;
+    
+    /* Optional: Ensure long unbroken words don't overflow */
+    word-wrap: break-word; 
+    
+    text-align: center;
+    pointer-events: none; 
     text-shadow: 
     -1px -1px 0 #000,  
     1px -1px 0 #000,
@@ -330,6 +349,7 @@ body {
     1px  1px 0 #000,
     0px  3px 5px rgba(0,0,0,0.8) !important;
 }
+
 
 .pnlm-hotspot .pnlm-tooltip {
     display: none !important;
@@ -342,6 +362,17 @@ body {
     border-radius: 50% !important;
     border: none !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.pnlm-scene::before {
+    content: '' !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px !important;
+    height: 48px !important;
+    background-color: transparent !important;
 }
 
 .pnlm-scene::after {
@@ -816,8 +847,74 @@ div.custom-logo-pin:hover {
 
 
 
+/* changing icon size for mobile */
+@media (max-width: 768px) {
+    
+    .custom-nav-arrow,
+    .custom-nav-door {
+        width: calc(15px * var(--zoom-scale, 1)) !important;
+        height: calc(15px * var(--zoom-scale, 1)) !important;
+        margin-left: calc(-14px * var(--zoom-scale, 1)) !important;
+        margin-top: calc(-14px * var(--zoom-scale, 1)) !important;
+    }
 
+    div.pnlm-scene.custom-logo-pin,
+    div.pnlm-info.custom-logo-pin,
+    div.custom-logo-pin {
+        width: calc(35px * var(--zoom-scale, 1)) !important;
+        height: calc(42px * var(--zoom-scale, 1)) !important;
+        margin-left: calc(-17.5px * var(--zoom-scale, 1)) !important; 
+        margin-top: calc(-42px * var(--zoom-scale, 1)) !important;
+    }
 
+    
+    .custom-permanent-label {
+        font-size: calc(6px * var(--zoom-scale, 1)) !important;
+        bottom: calc(15px * var(--zoom-scale, 1)) !important;
+        padding: calc(3px * var(--zoom-scale, 1)) calc(8px * var(--zoom-scale, 1)) !important;
+        max-width: calc(100px * var(--zoom-scale, 1)) !important;
+    }
 
+    .custom-nav-arrow::after,
+    .custom-nav-door::after {
+        content: '' !important;
+        display: block !important; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px !important;
+        height: 48px !important;
+        background-color: transparent !important; 
+    }
 
+    .pnlm-scene {
+        width: 10px !important;
+        height: 10px !important;
+    }
 
+    .pnlm-scene::before {
+        content: '' !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px !important;
+        height: 48px !important;
+        background-color: transparent !important;
+    }
+
+    
+    @keyframes pulse-ripple {
+        0% {
+            width: 18px;
+            height: 18px;
+            opacity: 1;
+        }
+        100% {
+            width: 35px; 
+            height: 35px;
+            opacity: 0;
+        }
+    }
+}

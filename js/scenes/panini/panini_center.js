@@ -18,7 +18,7 @@ export const paninicenterScenes = {
                 "sceneId": "panini_canteen_day",
                  "cssClass": "custom-nav-door",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to canteen"
+                "createTooltipArgs": "Canteen"
             },
             {
                 "pitch": -7,      
@@ -27,7 +27,7 @@ export const paninicenterScenes = {
                 "sceneId": "panini_gate_day",
                 "cssClass": "custom-nav-arrow point-up",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs":  "Back to Main Gate"
+                "createTooltipArgs":  "Exit"
             }
         ]
     },
@@ -50,7 +50,7 @@ export const paninicenterScenes = {
                 "sceneId": "panini_canteen_night",
                  "cssClass": "custom-nav-door",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Canteen"
+                "createTooltipArgs": "Canteen"
             },
             {
                 "pitch": -7,      
@@ -59,7 +59,7 @@ export const paninicenterScenes = {
                 "sceneId": "panini_gate_night",
                 "cssClass": "custom-nav-arrow point-up",
                  "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Back to Main Gate"
+                "createTooltipArgs": "Exit"
             }
         ]
     }

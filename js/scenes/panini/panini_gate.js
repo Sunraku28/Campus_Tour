@@ -27,7 +27,7 @@ export const paninigateScenes = {
                 "yaw": -94.63788297914037,
                 "type": "scene",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to H3H4Junction",
+                "createTooltipArgs": "H3-H4Junction",
                 "sceneId": "H3H4junc_day",
                 "cssClass": "custom-nav-arrow point-up"
             },
@@ -36,7 +36,7 @@ export const paninigateScenes = {
                 "yaw": 87.25861370743176, 
                 "type": "scene",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Maa Saraswati ",
+                "createTooltipArgs": "Maa Saraswati Hostel",
                 "sceneId": "ms_gate_day",
                 "cssClass": "custom-nav-arrow point-up"
             }
@@ -70,7 +70,7 @@ export const paninigateScenes = {
                 "yaw": -89.70332733500649, 
                 "type": "scene",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to H3H4Junction",
+                "createTooltipArgs": "H3-H4Junction",
                 "sceneId": "H3H4junc_night",
                 "cssClass": "custom-nav-arrow point-up"
             }  ,
@@ -79,7 +79,7 @@ export const paninigateScenes = {
                 "yaw": 90.25861370743176, 
                 "type": "scene",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Maa Saraswati ",
+                "createTooltipArgs": "Maa Saraswati Hostel",
                 "sceneId": "ms_gate_night",
                 "cssClass": "custom-nav-arrow point-up"
             }

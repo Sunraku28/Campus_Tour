@@ -28,7 +28,7 @@ export const H4gateScenes = {
                 "sceneId": "H3H4junc_day",
                 "cssClass": "custom-nav-arrow point-up-left",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to H3H4Junction"
+                "createTooltipArgs": "H3-H4 Junction"
             }          
         ]
     },
@@ -60,7 +60,7 @@ export const H4gateScenes = {
                 "sceneId": "H3H4junc_night",
                 "cssClass": "custom-nav-arrow point-up-left",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to H3H4Junction"
+                "createTooltipArgs": "H3-H4 Junction"
             }          
         ]
     }

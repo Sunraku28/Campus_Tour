@@ -282,7 +282,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Random Teleport 
     const teleportBtn = document.getElementById("btn-teleport");
     if (teleportBtn) {
         teleportBtn.addEventListener("click", function() {
@@ -304,18 +303,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Restart Tour 
     const restartBtn = document.getElementById("btn-restart-tour");
     if (restartBtn) {
         restartBtn.addEventListener("click", function() {
-            window.tourViewer.loadScene('ground_day', 0, 0, 100);
+            window.tourViewer.loadScene('DSA_gate_day', 0, 0, 100);
             
             const contextMenu = document.getElementById("custom-right-click-menu");
             if (contextMenu) contextMenu.classList.remove("show");
         });
     }
 
-    // Custom right-click context menu
     window.addEventListener("contextmenu", function(event) {
         if (!contextMenu) return;
         event.preventDefault(); 
@@ -358,7 +355,6 @@ window.addEventListener("mouseup", function(event) {
     }
 }, { capture: true });
 
-// Toast notification 
 window.showToast = function(message) {
     const toast = document.getElementById("toast-notification");
     if (!toast) return;
@@ -371,7 +367,6 @@ window.showToast = function(message) {
     }, 2500);
 };  
 
-// Contributors modal open / close 
 window.openTeamModal = function() {
     const modal = document.getElementById("contributors-modal");
     if (modal) modal.classList.add("show");
@@ -388,3 +383,46 @@ window.addEventListener("click", function(event) {
         modal.classList.remove("show");
     }
 }, { capture: true });
+
+
+// for dynamically scaling hotspot icons
+
+window.updateHotspotScale = function(currentFov) {
+    const baseFov = 100; 
+    
+    let scale = baseFov / currentFov;
+    
+    scale = Math.max(0.6, Math.min(scale, 2.5));
+    
+    document.documentElement.style.setProperty('--zoom-scale', scale);
+};
+
+
+window.onload = function() {
+    var initialScene = window.tourViewer.getScene();
+    var timeButton = document.querySelector('.time-btn');
+    
+    if (timeButton) {
+        if (typeof indoorScenes !== 'undefined' && indoorScenes.includes(initialScene)) {
+            timeButton.style.display = 'none';
+        } else {
+            timeButton.style.display = 'block';
+        }
+    }
+
+    let initialFov = window.tourViewer.getHfov();
+    window.updateHotspotScale(initialFov);
+};
+
+window.tourViewer.on('zoomchange', function(newFov) {
+    window.updateHotspotScale(newFov);
+});
+
+window.tourViewer.on('scenechange', function() {
+    setTimeout(() => {
+        let currentFov = window.tourViewer.getHfov();
+        window.updateHotspotScale(currentFov);
+    }, 100); 
+});
+
+

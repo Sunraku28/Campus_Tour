@@ -49,7 +49,7 @@ export const labgateScenes = {
                 "type": "scene",
                 "sceneId": "hexagon_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Hexagon",
+                "createTooltipArgs": "Hexagon Canteen",
                  "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -83,7 +83,7 @@ export const labgateScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_back_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to LHTC",
+                "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
         ]
@@ -138,7 +138,7 @@ export const labgateScenes = {
                 "type": "scene",
                 "sceneId": "hexagon_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Hexagon",
+                "createTooltipArgs": "Hexagon Canteen",
                  "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -172,7 +172,7 @@ export const labgateScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_back_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to LHTC",
+                "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
 

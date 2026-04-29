@@ -26,7 +26,7 @@ export const LHTCFRONTGATEScenes = {
                 "type": "scene",
                 "sceneId": "Oat_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way To Oat",
+                "createTooltipArgs": "OAT",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -35,7 +35,7 @@ export const LHTCFRONTGATEScenes = {
                 "type": "scene",
                 "sceneId": "trisection_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way To Trisection",
+                "createTooltipArgs": "Trisection",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
         ]
@@ -67,7 +67,7 @@ export const LHTCFRONTGATEScenes = {
                 "type": "scene",
                 "sceneId": "Oat_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way To Oat",
+                "createTooltipArgs": "OAT",
                 "cssClass": "custom-nav-arrow point-up"
             },
              {
@@ -76,7 +76,7 @@ export const LHTCFRONTGATEScenes = {
                 "type": "scene",
                 "sceneId": "trisection_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way To Trisection",
+                "createTooltipArgs": "Trisection",
                 "cssClass": "custom-nav-arrow point-up"
             },
                       

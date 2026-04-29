@@ -18,7 +18,7 @@ export const H4entryScenes = {
                 "type": "scene",
                 "sceneId": "H4_center_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Center",
+                "createTooltipArgs": "Center",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {   
@@ -37,7 +37,7 @@ export const H4entryScenes = {
                 "sceneId": "H4_canteen_day",
                 "cssClass": "custom-nav-arrow point-up-right",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Canteen"
+                "createTooltipArgs": "Canteen"
             }          
         ]
     },
@@ -60,7 +60,7 @@ export const H4entryScenes = {
                 "type": "scene",
                 "sceneId": "H4_center_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Center",
+                "createTooltipArgs": "Center",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {   
@@ -79,7 +79,7 @@ export const H4entryScenes = {
                 "sceneId": "H4_canteen_night",
                 "cssClass": "custom-nav-arrow point-up-right",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Canteen"
+                "createTooltipArgs": "Canteen"
             }            
         ]
     }

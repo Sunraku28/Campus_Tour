@@ -17,7 +17,7 @@ export const CrossroadsScenes = {
                 "type": "scene",
                 "sceneId": "mess_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Mess",
+                "createTooltipArgs": "Mess",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {   
@@ -27,7 +27,7 @@ export const CrossroadsScenes = {
                 "sceneId": "H1_gate_day",
                 "cssClass": "custom-nav-arrow point-up-left",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "way to Vasishtha"
+                "createTooltipArgs": "Vasishtha Hostel"
             } ,     
             {   
                 "pitch": -3.312551281775746,
@@ -36,7 +36,7 @@ export const CrossroadsScenes = {
                 "sceneId": "sac_gate_day",
                 "cssClass": "custom-nav-arrow point-up-left",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "way to SAC"
+                "createTooltipArgs": "SAC"
             },        
             {   
                 "pitch": -1.7325691394414662,
@@ -45,7 +45,7 @@ export const CrossroadsScenes = {
                 "sceneId": "trisection_day",
                 "cssClass": "custom-nav-arrow point-up-right",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "way to Trisection"
+                "createTooltipArgs": "Trisection"
             }           
         ]
     },
@@ -77,7 +77,7 @@ export const CrossroadsScenes = {
                 "sceneId": "H1_gate_night",
                 "cssClass": "custom-nav-arrow point-up-left",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "way to Vasishtha"
+                "createTooltipArgs": "Vasishtha Hostel"
             } ,     
             {   
                 "pitch": 0.12512684875552488,
@@ -86,7 +86,7 @@ export const CrossroadsScenes = {
                 "sceneId": "sac_gate_night",
                 "cssClass": "custom-nav-arrow point-up-left",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "way to SAC"
+                "createTooltipArgs": "SAC"
             },        
             {   
                 "pitch": -3.3471043960036693,
@@ -95,7 +95,7 @@ export const CrossroadsScenes = {
                 "sceneId": "trisection_night",
                 "cssClass": "custom-nav-arrow point-up-right",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "way to Trisection"
+                "createTooltipArgs": "Trisection"
             }           
         ]
     }
