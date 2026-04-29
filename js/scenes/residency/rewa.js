@@ -1,0 +1,94 @@
+export const rewaScenes = {
+    "rewa_day" : {
+        "type": "multires",
+        "multiRes" :{
+            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/residencies/rewa_tiles", 
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,  
+            "cubeResolution": 2768 
+        },
+        "hotSpots": [
+            {
+                "pitch": -4.3533432751661088,
+                "yaw": -90.67186031951765,
+                "type": "scene",
+                "sceneId": "visitor_hostel_day",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Way to Visitor's Hostel",
+                "cssClass": "custom-nav-arrow point-up-left"
+            },
+            {
+                "pitch": -1.5213168520730211,
+                "yaw": 89.53990340081707,
+                "type": "scene",
+                "sceneId": "narmada_day",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Way to Narmada Residency",
+                "cssClass": "custom-nav-arrow point-up"
+            },
+            {
+                "pitch":  3.4525634775448735,
+                "yaw": 160.33823943769255,
+                "type": "scene",
+                //"sceneId": "narmada_day",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Mandir",
+                //"cssClass": "custom-nav-arrow point-up"
+            }
+        ]
+    },
+    "rewa_night" : {
+        "type": "multires",
+        "multiRes" :{
+            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/residencies/rewa_tiles", 
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,  
+            "cubeResolution": 2768 
+        },
+        "hotSpots": [
+            {
+                "pitch": -4.3533432751661088,
+                "yaw": -90.67186031951765,
+                "type": "scene",
+                "sceneId": "visitor_hostel_day",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Way to Visitor's Hostel",
+                "cssClass": "custom-nav-arrow point-up-left"
+            },
+            {
+                "pitch": -1.5213168520730211,
+                "yaw": 89.53990340081707,
+                "type": "scene",
+                "sceneId": "narmada_day",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Way to Narmada Residency",
+                "cssClass": "custom-nav-arrow point-up"
+            },
+            {
+                "pitch":  3.4525634775448735,
+                "yaw": 160.33823943769255,
+                "type": "scene",
+                //"sceneId": "narmada_day",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "Mandir",
+                //"cssClass": "custom-nav-arrow point-up"
+            }
+        ]
+    }
+}
+function permanentText(hotSpotDiv, args) {
+
+    var textLabel = document.createElement('span');
+    textLabel.innerHTML = args;
+    
+    // custom text 
+    textLabel.classList.add('custom-permanent-label');
+    
+    hotSpotDiv.appendChild(textLabel);
+}
