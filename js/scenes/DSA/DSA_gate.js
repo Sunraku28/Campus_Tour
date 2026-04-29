@@ -27,7 +27,7 @@ export const DSAgateScenes = {
                 "type": "scene",
                 "sceneId": "lab_complex_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Lab Complex",
+                "createTooltipArgs": "Lab Complex",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -36,7 +36,7 @@ export const DSAgateScenes = {
                 "type": "scene",
                 "sceneId": "PHC_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to PHC",
+                "createTooltipArgs": "Primary Healthcare Center",
                 "cssClass": "custom-nav-arrow point-up-left"
             }
             
@@ -71,7 +71,7 @@ export const DSAgateScenes = {
                 "type": "scene",
                 "sceneId": "lab_complex-gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Lab Complex",
+                "createTooltipArgs": "Lab Complex",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -80,7 +80,7 @@ export const DSAgateScenes = {
                 "type": "scene",
                 "sceneId": "PHC_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to PHC",
+                "createTooltipArgs": "Primary Healthcare Center",
                 "cssClass": "custom-nav-arrow point-up-left"
             }
           

@@ -17,7 +17,7 @@ export const trisectionScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_frontgate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to LHTC",
+                "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -26,7 +26,7 @@ export const trisectionScenes = {
                 "type": "scene",
                 "sceneId": "crossroads_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Crossroads",
+                "createTooltipArgs": "Crossroads",
                 "cssClass": "custom-nav-arrow point-up"
             },
              {
@@ -35,7 +35,7 @@ export const trisectionScenes = {
                 "type": "scene",
                 "sceneId": "hexagon_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Hexagon",
+                "createTooltipArgs": "Hexagon",
                 "cssClass": "custom-nav-arrow point-up"
             },
         ]
@@ -58,7 +58,7 @@ export const trisectionScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_frontgate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to LHTC",
+                "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
               {
@@ -67,7 +67,7 @@ export const trisectionScenes = {
                 "type": "scene",
                 "sceneId": "crossroads_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Crossroads",
+                "createTooltipArgs": "Crossroads",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -76,7 +76,7 @@ export const trisectionScenes = {
                 "type": "scene",
                 "sceneId": "hexagon_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Hexagon",
+                "createTooltipArgs": "Hexagon",
                 "cssClass": "custom-nav-arrow point-up"
             },
                       

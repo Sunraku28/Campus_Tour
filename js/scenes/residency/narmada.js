@@ -17,7 +17,7 @@ export const narmadaScenes = {
                 "type": "scene",
                 "sceneId": "rewa_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Rewa Residency",
+                "createTooltipArgs": "Rewa Residency",
                 "cssClass": "custom-nav-arrow point-up-left"
             }
         ]
@@ -40,7 +40,7 @@ export const narmadaScenes = {
                 "type": "scene",
                 "sceneId": "rewa_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Rewa Residency",
+                "createTooltipArgs": "Rewa Residency",
                 "cssClass": "custom-nav-arrow point-up-left"
             }
           

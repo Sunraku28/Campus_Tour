@@ -17,7 +17,7 @@ export const rewaScenes = {
                 "type": "scene",
                 "sceneId": "visitor_hostel_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Visitor's Hostel",
+                "createTooltipArgs": "Visitor's Hostel",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -26,7 +26,7 @@ export const rewaScenes = {
                 "type": "scene",
                 "sceneId": "narmada_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Narmada Residency",
+                "createTooltipArgs": "Narmada Residency",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -58,7 +58,7 @@ export const rewaScenes = {
                 "type": "scene",
                 "sceneId": "visitor_hostel_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Visitor's Hostel",
+                "createTooltipArgs": "Visitor's Hostel",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -67,7 +67,7 @@ export const rewaScenes = {
                 "type": "scene",
                 "sceneId": "narmada_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Narmada Residency",
+                "createTooltipArgs": "Narmada Residency",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {

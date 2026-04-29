@@ -28,7 +28,7 @@ export const H3gateScenes = {
                 "type": "scene",
                 "sceneId": "H3H4junc_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to H3H4 junction",
+                "createTooltipArgs": "H3-H4 junction",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -37,7 +37,7 @@ export const H3gateScenes = {
                 "type": "scene",
                 "sceneId": "mess_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Mess",
+                "createTooltipArgs": "Mess",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -90,7 +90,7 @@ export const H3gateScenes = {
                 "type": "scene",
                 "sceneId": "H3H4junc_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to H3H4 junction",
+                "createTooltipArgs": "H3-H4 junction",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -99,7 +99,7 @@ export const H3gateScenes = {
                 "type": "scene",
                 "sceneId": "mess_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Mess",
+                "createTooltipArgs": "Mess",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {

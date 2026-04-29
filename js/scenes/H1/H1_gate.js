@@ -26,7 +26,7 @@ export const H1gateScenes = {
                 "type": "scene",
                 "sceneId": "crossroads_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Crossroads",
+                "createTooltipArgs": "Crossroads",
                 "cssClass": "custom-nav-arrow point-up"
             },
              {
@@ -35,7 +35,7 @@ export const H1gateScenes = {
                 "type": "scene",
                 "sceneId": "nescafe_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Nescafe",
+                "createTooltipArgs": "Nescafe",
                 "cssClass": "custom-nav-arrow point-up"
             },
         ]
@@ -67,7 +67,7 @@ export const H1gateScenes = {
                 "type": "scene",
                 "sceneId": "nescafe_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Nescafe",
+                "createTooltipArgs": "Nescafe",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -76,7 +76,7 @@ export const H1gateScenes = {
                 "type": "scene",
                 "sceneId": "crossroads_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Crossroads",
+                "createTooltipArgs": "Crossroads",
                 "cssClass": "custom-nav-arrow point-up"
             }
 

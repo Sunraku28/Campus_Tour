@@ -26,7 +26,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "panini_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Panini ",
+                "createTooltipArgs": "Panini Hostel",
                 "cssClass": "custom-logo-pin"
             },
              {
@@ -35,7 +35,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "H4_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Vivekananda",
+                "createTooltipArgs": "Vivekananda Hostel",
                 "cssClass": "custom-logo-pin"
             },
              {
@@ -44,7 +44,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "H3_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Aryabhatta",
+                "createTooltipArgs": "Aryabhatta Hostel",
                 "cssClass": "custom-logo-pin"
             },
              {
@@ -53,7 +53,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "H1_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Vasishtha",
+                "createTooltipArgs": "Vasishtha Hostel",
                 "cssClass": "custom-logo-pin"
             },
              {
@@ -71,7 +71,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "ms_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Maa Saraswati",
+                "createTooltipArgs": "Maa Saraswati Hostel",
                 "cssClass": "custom-logo-pin"
             }
         ]
@@ -103,7 +103,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "panini_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Panini ",
+                "createTooltipArgs": "Panini Hostel",
                 "cssClass": "custom-logo-pin"
             },
              {
@@ -112,7 +112,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "H4_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Vivekananda",
+                "createTooltipArgs": "Vivekananda Hostel",
                 "cssClass": "custom-logo-pin"
             },
              {
@@ -121,7 +121,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "H3_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Aryabhatta",
+                "createTooltipArgs": "Aryabhatta Hostel",
                 "cssClass": "custom-logo-pin"
             },
              {
@@ -130,7 +130,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "H1_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Vasishtha",
+                "createTooltipArgs": "Vasishtha Hostel",
                 "cssClass": "custom-logo-pin"
             },
              {
@@ -148,7 +148,7 @@ export const groundScenes = {
                 "type": "scene",
                 "sceneId": "ms_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Maa Saraswati",
+                "createTooltipArgs": "Maa Saraswati Hostel",
                 "cssClass": "custom-logo-pin"
             }
         ]

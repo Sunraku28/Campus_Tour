@@ -17,7 +17,7 @@ export const H3centerScenes = {
                 "type": "scene",
                 "sceneId": "H3_entry_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Corridor",
+                "createTooltipArgs": "Corridor",
                 "cssClass": "custom-nav-arrow point-up-left"
             }
           
@@ -41,7 +41,7 @@ export const H3centerScenes = {
                 "type": "scene",
                 "sceneId": "H3_entry_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Corridor",
+                "createTooltipArgs": "Corridor",
                 "cssClass": "custom-nav-arrow point-up-left"
             }
           

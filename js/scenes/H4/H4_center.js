@@ -18,7 +18,7 @@ export const H4centerScenes = {
                 "type": "scene",
                 "sceneId": "H4_entry_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Corridor",
+                "createTooltipArgs": "Corridor",
                 "cssClass": "custom-nav-arrow point-right"
             }
           
@@ -43,7 +43,7 @@ export const H4centerScenes = {
                 "type": "scene",
                 "sceneId": "H4_entry_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Corridor",
+                "createTooltipArgs": "Corridor",
                 "cssClass": "custom-nav-arrow point-right"
             }
           

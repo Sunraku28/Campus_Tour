@@ -26,7 +26,7 @@ export const messgateScenes = {
                 "type": "scene",
                 "sceneId": "H3_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Aryabhatta",
+                "createTooltipArgs": "Aryabhatta Hostel",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
              {
@@ -35,7 +35,7 @@ export const messgateScenes = {
                 "type": "scene",
                 "sceneId": "crossroads_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Crossroads",
+                "createTooltipArgs": "Crossroads",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
         ]
@@ -67,7 +67,7 @@ export const messgateScenes = {
                 "type": "scene",
                 "sceneId": "H3_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Aryabhatta",
+                "createTooltipArgs": "Aryabhatta Hostel",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
              {
@@ -76,7 +76,7 @@ export const messgateScenes = {
                 "type": "scene",
                 "sceneId": "crossroads_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Crossroads",
+                "createTooltipArgs": "Crossroads",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
         ]

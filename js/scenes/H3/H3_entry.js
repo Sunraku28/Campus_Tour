@@ -26,7 +26,7 @@ export const H3entryScenes = {
                 "type": "scene",
                 "sceneId": "H3_canteen_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Canteen",
+                "createTooltipArgs": "Canteen",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
              {
@@ -35,7 +35,7 @@ export const H3entryScenes = {
                 "type": "scene",
                 "sceneId": "H3_center_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Center",
+                "createTooltipArgs": "Center",
                 "cssClass": "custom-nav-arrow point-up-right"
             }
           
@@ -68,7 +68,7 @@ export const H3entryScenes = {
                 "type": "scene",
                 "sceneId": "H3_canteen_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Canteen",
+                "createTooltipArgs": "Canteen",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
              {
@@ -77,7 +77,7 @@ export const H3entryScenes = {
                 "type": "scene",
                 "sceneId": "H3_center_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Center",
+                "createTooltipArgs": "Center",
                 "cssClass": "custom-nav-arrow point-up-right"
             }
           

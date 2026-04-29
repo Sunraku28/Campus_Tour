@@ -26,7 +26,7 @@ export const librarygateScenes = {
                 "type": "scene",
                 "sceneId": "PHC_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to PHC",
+                "createTooltipArgs": "Primary Healthcare Center",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
             {
@@ -35,7 +35,7 @@ export const librarygateScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_back_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to LHTC",
+                "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up"
             }
         ]
@@ -67,7 +67,7 @@ export const librarygateScenes = {
                 "type": "scene",
                 "sceneId": "PHC_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to PHC",
+                "createTooltipArgs": "Primary Healthcare Center",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -76,7 +76,7 @@ export const librarygateScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_back_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to LHTC",
+                "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up"
             }
           

@@ -17,7 +17,7 @@ export const msgateScenes = {
                 "type": "scene",
                 "sceneId": "sac_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to SAC",
+                "createTooltipArgs": "SAC",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {
@@ -26,7 +26,7 @@ export const msgateScenes = {
                 "type": "scene",
                 "sceneId": "panini_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Panini",
+                "createTooltipArgs": "Panini Hostel",
                 "cssClass": "custom-nav-arrow point-up"
             },
             
@@ -51,7 +51,7 @@ export const msgateScenes = {
                 "type": "scene",
                 "sceneId": "sac_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to  SAC",
+                "createTooltipArgs": "SAC",
                 "cssClass": "custom-nav-arrow point-up"
             },
              {
@@ -60,7 +60,7 @@ export const msgateScenes = {
                 "type": "scene",
                 "sceneId": "panini_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Panini",
+                "createTooltipArgs": "Panini Hostel",
                 "cssClass": "custom-nav-arrow point-up"
 
             },
