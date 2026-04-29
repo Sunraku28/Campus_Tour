@@ -19,6 +19,54 @@
     <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
+
+<!-- info modal -->
+<div id="contributors-modal" class="contributors-modal-overlay">
+    <div class="contributors-modal-panel">
+
+        <!-- Close Button -->
+        <button class="contributors-close-btn" onclick="closeTeamModal()" title="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+
+        <!-- Mentor Section -->
+        <h2 class="contributors-section-heading">Mentor</h2>
+        <div class="contributors-mentor-row">
+            <div class="contributors-person">
+                <div class="contributors-avatar" style="background-image: url('./photos/akshay_pandey.jpg');"></div>
+                <span class="contributors-name">Dr Akshay Pandey</span>
+            </div>
+        </div>
+
+        <!-- Developers Section -->
+        <h2 class="contributors-section-heading">Developers</h2>
+        <div class="contributors-dev-grid">
+            <div class="contributors-person">
+                <div class="contributors-avatar" style="background-image: url('./photos/dev1.jpg');"></div>
+                <span class="contributors-name">Anubhav Sharma</span>
+            </div>
+            <div class="contributors-person">
+                <div class="contributors-avatar" style="background-image: url('./photos/dev2.jpg');"></div>
+                <span class="contributors-name">Pujan Mirani</span>
+            </div>
+            <div class="contributors-person">
+                <div class="contributors-avatar" style="background-image: url('./photos/dev3.jpg');"></div>
+                <span class="contributors-name">Ashutosh Verma</span>
+            </div>
+            <div class="contributors-person">
+                <div class="contributors-avatar" style="background-image: url('./photos/dev4.jpg');"></div>
+                <span class="contributors-name">Abhinav Parmar</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
 <body>
 
 <div class="hero">
@@ -26,6 +74,23 @@
 
     <div id="campus-map"></div>
     <button id="toggle-time" class="time-btn">🌙</button>
+    <!-- Info Button -->
+    <!-- <button id="info-btn" class="info-btn" title="Contributors">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="8" stroke-width="3"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+        </svg>
+    <-- </button> will update this soon  -->
+    <button id="info-btn" class="info-btn" data-tooltip="who we are?">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="8" stroke-width="3"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+        </svg> 
+    </button>
     <button id="mobile-map-btn" class="map-icon-btn">🗺️</button>
 
     <nav class="floating-nav">
