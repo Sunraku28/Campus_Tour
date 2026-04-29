@@ -203,7 +203,7 @@ window.startTour = function() {
     document.querySelector('.time-btn').classList.add('tour-started');
     document.querySelector('.map-icon-btn').classList.add('tour-started');
     document.querySelector('.college-name').classList.add('tour-started');
-   document.getElementById('info-btn').classList.add('tour-started');
+    document.getElementById('info-btn').classList.add('tour-started');
 
     if (window.syncMapWithScene) {
         let currentScene = window.tourViewer.getScene() || 'DSA_gate_day';
@@ -253,6 +253,7 @@ window.tourViewer.on('scenechange', function(newSceneId) {
         window.syncMapWithScene(newSceneId);
     }
 }); 
+
 window.onload = function() {
     var initialScene = window.tourViewer.getScene();
     var timeButton = document.querySelector('.time-btn');
@@ -268,11 +269,20 @@ window.onload = function() {
     // if (window.syncMapWithScene && initialScene) {
     //     window.syncMapWithScene(initialScene);
     // }
-} 
+}; 
+
 document.addEventListener("DOMContentLoaded", function() {
     const contextMenu = document.getElementById("custom-right-click-menu");
 
-    
+    // Info button - open contributors modal 
+    const infoBtn = document.getElementById("info-btn");
+    if (infoBtn) {
+        infoBtn.addEventListener("click", function() {
+            window.openTeamModal();
+        });
+    }
+
+    // Random Teleport 
     const teleportBtn = document.getElementById("btn-teleport");
     if (teleportBtn) {
         teleportBtn.addEventListener("click", function() {
@@ -289,15 +299,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.error("Could not find Pannellum scenes.");
             }
             if (contextMenu){
-                contextMenu.classList.remove("show")
-            };
+                contextMenu.classList.remove("show");
+            }
         });
     }
 
+    // Restart Tour 
     const restartBtn = document.getElementById("btn-restart-tour");
     if (restartBtn) {
         restartBtn.addEventListener("click", function() {
-            
             window.tourViewer.loadScene('ground_day', 0, 0, 100);
             
             const contextMenu = document.getElementById("custom-right-click-menu");
@@ -305,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Custom right-click context menu
     window.addEventListener("contextmenu", function(event) {
         if (!contextMenu) return;
         event.preventDefault(); 
@@ -345,9 +356,9 @@ window.addEventListener("mouseup", function(event) {
     if (event.button === 2) {
         event.stopPropagation();
     }
-
-
 }, { capture: true });
+
+// Toast notification 
 window.showToast = function(message) {
     const toast = document.getElementById("toast-notification");
     if (!toast) return;
@@ -360,7 +371,7 @@ window.showToast = function(message) {
     }, 2500);
 };  
 
-
+// Contributors modal open / close 
 window.openTeamModal = function() {
     const modal = document.getElementById("contributors-modal");
     if (modal) modal.classList.add("show");
@@ -371,17 +382,9 @@ window.closeTeamModal = function() {
     if (modal) modal.classList.remove("show");
 };
 
-// Close it if the user clicks the dark blurry background
 window.addEventListener("click", function(event) {
     const modal = document.getElementById("contributors-modal");
     if (event.target === modal) {
         modal.classList.remove("show");
     }
 }, { capture: true });
-
-
-
-
-
-
-
