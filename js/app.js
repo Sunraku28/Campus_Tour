@@ -438,7 +438,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentX = 0, currentY = 0;
     let animationFrameId = null;
 
-    // 1. Create an invisible glass layer to catch our custom drags
     const joystickOverlay = document.createElement('div');
     joystickOverlay.style.position = 'absolute';
     joystickOverlay.style.top = '0';
@@ -466,14 +465,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 cancelAnimationFrame(animationFrameId);
             }
 
-            // Close the right-click menu immediately after clicking
             if (contextMenu) {
                 contextMenu.classList.remove("show");
             }
         });
     }
 
-    // 3. The Math: Calculate speed based on mouse drag distance
     function joystickLoop() {
         if (!isDragging) return;
 

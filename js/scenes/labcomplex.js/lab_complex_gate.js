@@ -41,7 +41,7 @@ export const labgateScenes = {
                 "type": "scene",
                 "sceneId": "mechanical_lab_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Mechanical Lab",
+                "createTooltipArgs": "Central Workshop",
             },
             {
                 "pitch": -1.5225690985783027,
@@ -66,7 +66,7 @@ export const labgateScenes = {
                 "type": "scene",
                 "sceneId": "mechatronics_lab_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Mechatronics Lab",
+                "createTooltipArgs": "Microwave and FabricationLab Lab",
             },
            
              {
@@ -81,7 +81,7 @@ export const labgateScenes = {
                 "pitch":  -4.235079322168174,
                 "yaw": -98.38122778964942,
                 "type": "scene",
-                "sceneId": "LHTC_back_night",
+                "sceneId": "LHTC_back_day",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up-left"
@@ -130,7 +130,7 @@ export const labgateScenes = {
                 "type": "scene",
                 "sceneId": "mechanical_lab_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Mechanical Lab",
+                "createTooltipArgs": "Central Workshop",
             },
             {
                 "pitch": -3.159049937113721,
@@ -155,7 +155,7 @@ export const labgateScenes = {
                 "type": "scene",
                 "sceneId": "mechatronics_lab_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Mechatronics Lab",
+                "createTooltipArgs": "Microwave and Fabrication Lab",
             },
            
              {
