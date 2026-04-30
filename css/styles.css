@@ -833,7 +833,7 @@ div.custom-logo-pin:hover {
     gap: 16px 8px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     .contributors-dev-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px 16px;
