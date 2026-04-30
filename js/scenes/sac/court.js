@@ -2,7 +2,7 @@ export const courtScenes = {
     "court_day" : {
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/SAC/court_day_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/SAC/court_day_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -26,7 +26,7 @@ export const courtScenes = {
     "court_night" : {
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/SAC/court_day_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/SAC/court_day_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
