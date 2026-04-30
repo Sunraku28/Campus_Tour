@@ -86,6 +86,7 @@ export const labgateScenes = {
                 "createTooltipArgs": "LHTC",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
+            
         ]
     },
     "lab_complex_gate_night" : {

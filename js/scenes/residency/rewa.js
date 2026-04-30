@@ -56,7 +56,7 @@ export const rewaScenes = {
                 "pitch": -4.3533432751661088,
                 "yaw": -90.67186031951765,
                 "type": "scene",
-                "sceneId": "visitor_hostel_day",
+                "sceneId": "visitor_hostel_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Visitor's Hostel",
                 "cssClass": "custom-nav-arrow point-up-left"
@@ -65,7 +65,7 @@ export const rewaScenes = {
                 "pitch": -1.5213168520730211,
                 "yaw": 89.53990340081707,
                 "type": "scene",
-                "sceneId": "narmada_day",
+                "sceneId": "narmada_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Narmada Residency",
                 "cssClass": "custom-nav-arrow point-up"
