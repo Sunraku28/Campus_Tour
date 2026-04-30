@@ -3,7 +3,7 @@ export const LHTCDESIGN2Scenes = {
 
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/LHTC/design_up_right_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/design_up_right_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -27,7 +27,7 @@ export const LHTCDESIGN2Scenes = {
 
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/LHTC/design_up_right_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/design_up_right_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -40,7 +40,7 @@ export const LHTCDESIGN2Scenes = {
                 "pitch":  -10.539225370293435,
                 "yaw": 145.68429232699037,
                 "type": "scene",
-                "sceneId": "LHTC_design1_day",
+                "sceneId": "LHTC_design1_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Go downstairs",
                 //"cssClass": "custom-nav-arrow point-left" 
