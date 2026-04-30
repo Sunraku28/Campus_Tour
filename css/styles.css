@@ -919,33 +919,12 @@ div.custom-logo-pin:hover {
     }
 }
 
-/* =========================================
-   Bottom Loading Bar
-========================================= */
-#loading-bar-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 4px;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 9999999;
-    
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s;
-}
-
-#loading-bar-container.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-#loading-bar {
-    height: 100%;
-    width: 0%;
-    background: #e6f05a; 
-    box-shadow: 0 0 8px #e6f05a; 
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+/* Hide Map UI when Contributor Modal is Open*/
+body:has(.contributors-modal-overlay.show) #minimap-wrapper,
+body:has(.contributors-modal-overlay.show) .map-icon-btn,
+body:has(.contributors-modal-overlay.show) .info-btn {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
 }
