@@ -39,7 +39,7 @@ export const lab3Scenes = {
                "pitch": -7.1838208348803985,
                 "yaw": -76.9031933075311,
                 "type": "scene",
-                "sceneId": "library_center_day",
+                "sceneId": "library_center_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Exit",
                 "cssClass": "custom-nav-door"

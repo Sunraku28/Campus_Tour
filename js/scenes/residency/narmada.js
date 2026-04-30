@@ -38,7 +38,7 @@ export const narmadaScenes = {
                 "pitch":  -1.21777252635313765,
                 "yaw": -87.37799838703786,
                 "type": "scene",
-                "sceneId": "rewa_day",
+                "sceneId": "rewa_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Rewa Residency",
                 "cssClass": "custom-nav-arrow point-up-left"

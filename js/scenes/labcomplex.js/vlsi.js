@@ -38,7 +38,7 @@ export const vlsilabScenes = {
                 "pitch": -5.686891893638293,
                 "yaw": -129.99306074861164,
                 "type": "scene",
-                "sceneId": "lab_complex_gate_day",
+                "sceneId": "lab_complex_gate_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Exit",
                 "cssClass": "custom-nav-door"

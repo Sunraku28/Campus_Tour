@@ -38,7 +38,7 @@ export const electronicslabScenes = {
                 "pitch": -5.611435218557139,
                 "yaw": -87.90708773389798,
                 "type": "scene",
-                "sceneId": "lab_complex_gate_day",
+                "sceneId": "lab_complex_gate_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Exit",
                 "cssClass": "custom-nav-door"
