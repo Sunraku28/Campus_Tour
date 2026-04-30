@@ -425,4 +425,132 @@ window.tourViewer.on('scenechange', function() {
     }, 100); 
 });
 
+// Joystick Control
+
+document.addEventListener("DOMContentLoaded", function() {
+    const joystickBtn = document.getElementById('btn-joystick-mode');
+    const viewerContainer = document.getElementById('campus-map');
+    const contextMenu = document.getElementById("custom-right-click-menu");
+
+    let isJoystickMode = false;
+    let isDragging = false;
+    let startX = 0, startY = 0;
+    let currentX = 0, currentY = 0;
+    let animationFrameId = null;
+
+    // 1. Create an invisible glass layer to catch our custom drags
+    const joystickOverlay = document.createElement('div');
+    joystickOverlay.style.position = 'absolute';
+    joystickOverlay.style.top = '0';
+    joystickOverlay.style.left = '0';
+    joystickOverlay.style.width = '100%';
+    joystickOverlay.style.height = '100%';
+    joystickOverlay.style.zIndex = '99999'; // Sits above Pannellum, below UI
+    joystickOverlay.style.display = 'none'; // Hidden by default
+    joystickOverlay.style.cursor = 'all-scroll';
+    viewerContainer.appendChild(joystickOverlay);
+
+    // 2. Toggle Mode On/Off from the Right-Click Menu
+    if (joystickBtn) {
+        joystickBtn.addEventListener('click', function() {
+            isJoystickMode = !isJoystickMode;
+            
+            if (isJoystickMode) {
+                joystickBtn.innerHTML = 'Disable Joystick Pan'; // Update menu text
+                joystickOverlay.style.display = 'block'; 
+                window.tourViewer.stopAutoRotate(); 
+            } else {
+                joystickBtn.innerHTML = 'Enable Joystick Pan'; // Revert menu text
+                joystickOverlay.style.display = 'none'; 
+                isDragging = false;
+                cancelAnimationFrame(animationFrameId);
+            }
+
+            // Close the right-click menu immediately after clicking
+            if (contextMenu) {
+                contextMenu.classList.remove("show");
+            }
+        });
+    }
+
+    // 3. The Math: Calculate speed based on mouse drag distance
+    function joystickLoop() {
+        if (!isDragging) return;
+
+        let deltaX = currentX - startX;
+        let deltaY = currentY - startY;
+
+        // SPEED MULTIPLIER: Lower = smoother/slower. 
+        let sensitivity = 0.005;
+
+        let currentYaw = window.tourViewer.getYaw();
+        let currentPitch = window.tourViewer.getPitch();
+
+        // Apply continuous rotation. 
+        window.tourViewer.setYaw(currentYaw + (deltaX * sensitivity), false);
+        window.tourViewer.setPitch(currentPitch - (deltaY * sensitivity), false);
+
+        animationFrameId = requestAnimationFrame(joystickLoop);
+    }
+
+    // 4. Mouse Controls
+    joystickOverlay.addEventListener('mousedown', function(e) {
+        // Only trigger joystick on Left Click (button 0)
+        if (e.button !== 0) return; 
+        
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        currentX = e.clientX;
+        currentY = e.clientY;
+        joystickLoop(); // Start the engine
+    });
+
+    joystickOverlay.addEventListener('mousemove', function(e) {
+        if (isDragging) {
+            currentX = e.clientX;
+            currentY = e.clientY;
+        }
+    });
+
+    window.addEventListener('mouseup', function(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        cancelAnimationFrame(animationFrameId); // Stop the engine
+
+        // SMART CLICK: Let users click hotspots even if Joystick mode is ON
+        let dist = Math.hypot(currentX - startX, currentY - startY);
+        if (dist < 5) { // If they just clicked without dragging
+            joystickOverlay.style.display = 'none'; 
+            let elementBelow = document.elementFromPoint(e.clientX, e.clientY);
+            if (elementBelow) elementBelow.click(); // Pass the click through
+            joystickOverlay.style.display = 'block'; 
+        }
+    });
+
+    // 5. Touch Controls (for mobile)
+    joystickOverlay.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        currentX = e.touches[0].clientX;
+        currentY = e.touches[0].clientY;
+        joystickLoop();
+    });
+
+    joystickOverlay.addEventListener('touchmove', function(e) {
+        if (isDragging) {
+            currentX = e.touches[0].clientX;
+            currentY = e.touches[0].clientY;
+        }
+    });
+
+    window.addEventListener('touchend', function() {
+        isDragging = false;
+        cancelAnimationFrame(animationFrameId);
+    });
+});
+
+
+
 

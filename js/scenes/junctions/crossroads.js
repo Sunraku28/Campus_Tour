@@ -67,7 +67,7 @@ export const CrossroadsScenes = {
                 "type": "scene",
                 "sceneId": "mess_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Way to Mess",
+                "createTooltipArgs": "Mess",
                 "cssClass": "custom-nav-arrow point-up"
             },
             {   
