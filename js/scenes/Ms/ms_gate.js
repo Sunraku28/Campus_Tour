@@ -29,8 +29,16 @@ export const msgateScenes = {
                 "createTooltipArgs": "Panini Hostel",
                 "cssClass": "custom-nav-arrow point-up"
             },
+        {
+        "pitch": 0, 
+        "yaw": 0,   
+        "type": "custom",
+        "cssClass": "bus-tracker-hotspot", // <-- I ADDED THIS FIX HERE!
+        "createTooltipFunc": busHotspotCreator
+    }
+]
             
-        ]
+        
     },
     "ms_gate_night" : {
         "type": "multires",
@@ -64,6 +72,13 @@ export const msgateScenes = {
                 "cssClass": "custom-nav-arrow point-up"
 
             },
+            {
+                "pitch": -5, 
+                "yaw": 120,   
+                "type": "custom",
+                "cssClass": "bus-tracker-hotspot", // <-- I ADDED THIS FIX HERE!
+                "createTooltipFunc": busHotspotCreator
+            }
            
         ]
     }
@@ -77,4 +92,13 @@ function permanentText(hotSpotDiv, args) {
     textLabel.classList.add('custom-permanent-label');
     
     hotSpotDiv.appendChild(textLabel);
+}function busHotspotCreator(hotSpotDiv, args) {
+    // Inject the HTML structure directly into the pill
+    hotSpotDiv.innerHTML = `
+        <div style="font-size: 24px;">🚌</div>
+        <div>
+            <div style="font-size: 11px; text-transform: uppercase; color: #aaa; letter-spacing: 1px;">Next Bus to City</div>
+            <div class="bus-countdown-display" style="font-size: 16px; font-weight: bold; color: #4CAF50;">Calculating...</div>
+        </div>
+    `;
 }
