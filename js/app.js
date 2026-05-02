@@ -551,6 +551,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// scene according to the current time 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const now = new Date();
+    const istTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+    const currentHour = istTime.getHours();
+    if (currentHour >= 19) {
+        const timeToggleBtn = document.getElementById('toggle-time');
+        if (timeToggleBtn) {
+            timeToggleBtn.click(); 
+        }
+    }
+});
+
 
 
 
