@@ -39,6 +39,12 @@ export const paninigateScenes = {
                 "createTooltipArgs": "Maa Saraswati Hostel",
                 "sceneId": "ms_gate_day",
                 "cssClass": "custom-nav-arrow point-up"
+            },
+           {
+                "pitch": -5, 
+                "yaw": 120,   
+                "type": "custom",
+                "createTooltipFunc": window.busHotspotCreator
             }
         ]
          
@@ -82,6 +88,12 @@ export const paninigateScenes = {
                 "createTooltipArgs": "Maa Saraswati Hostel",
                 "sceneId": "ms_gate_night",
                 "cssClass": "custom-nav-arrow point-up"
+            },
+           {
+                "pitch": -5, 
+                "yaw": 120,   
+                "type": "custom",
+                "createTooltipFunc": window.busHotspotCreator
             }
         ]
     }
