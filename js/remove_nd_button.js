@@ -8,7 +8,9 @@ var indoorScenes = [
     "APS_room_night",
     "conference_room_day",
     "conference_room_night",
-    // lab area
+    "DSA_center_day",
+    "DSA_center_night",
+    // lab area,
     "electronics_lab_day",
     "electronics_lab_night",
     "mechatronics_lab_day",
@@ -34,6 +36,8 @@ var indoorScenes = [
     "gym_night",
     "kabaddi_day",
     "kabaddi_night",
+    "court_day",
+    "court_night",
     // hostel area
     "panini_canteen_day",
     "panini_canteen_night",

@@ -2,7 +2,7 @@ export const LHTC102Scenes = {
     "LHTC_102_day" : {
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/LHTC/L102_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/L102_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -25,7 +25,7 @@ export const LHTC102Scenes = {
     "LHTC_102_night" : {
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/LHTC/L102_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/L102_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",

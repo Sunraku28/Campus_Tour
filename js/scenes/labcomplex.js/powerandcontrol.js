@@ -2,7 +2,7 @@ export const powerandcontrollabScenes = {
     "pandc_lab_day" : {
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/corelab/power_control_lab_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/corelab/power_control_lab_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -25,7 +25,7 @@ export const powerandcontrollabScenes = {
     "pandc_lab_night" : {
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/corelab/power_control_lab_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/corelab/power_control_lab_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -38,7 +38,7 @@ export const powerandcontrollabScenes = {
                 "pitch": -6.644873244906731,
                 "yaw": -111.12113098134145,
                 "type": "scene",
-                "sceneId": "lab_complex_gate_day",
+                "sceneId": "lab_complex_gate_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Exit",
                 "cssClass": "custom-nav-door"

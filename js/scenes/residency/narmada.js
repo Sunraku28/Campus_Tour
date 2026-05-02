@@ -2,7 +2,7 @@ export const narmadaScenes = {
     "narmada_day" : {
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/residencies/narmada_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/residencies/narmada_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -25,7 +25,7 @@ export const narmadaScenes = {
     "narmada_night" : {
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/residencies/narmada_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/residencies/narmada_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -38,7 +38,7 @@ export const narmadaScenes = {
                 "pitch":  -1.21777252635313765,
                 "yaw": -87.37799838703786,
                 "type": "scene",
-                "sceneId": "rewa_day",
+                "sceneId": "rewa_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Rewa Residency",
                 "cssClass": "custom-nav-arrow point-up-left"
