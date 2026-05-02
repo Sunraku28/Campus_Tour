@@ -235,7 +235,7 @@
 
     .dropdown-menu.show, 
     .dropdown-menu-last.show {
-        max-height: 250px; 
+        max-height: 160px; 
         overflow-y: auto;
         opacity: 1;
         visibility: visible;

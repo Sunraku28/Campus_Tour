@@ -159,10 +159,11 @@
     }
 
     .map-icon-btn.tour-started{
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto; 
-}
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto; 
+        transition: opacity 0.5s ease-in-out; 
+    }
 
     .map-icon-btn:active {
         transform: scale(0.95);

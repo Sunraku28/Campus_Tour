@@ -3,7 +3,7 @@ export const paninigateScenes = {
         // "title": "Main Gate Day",
         "type": "multires",
         "multiRes" :{
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/panini/panini_gate_day_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/panini/panini_gate_day_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -47,7 +47,7 @@ export const paninigateScenes = {
         // "title": "Main Gate Night",
         "type": "multires",
         "multiRes": {
-            "basePath": "https://pub-1908b9e1f7974e65bc14d41162f52c63.r2.dev/photos/panini/panini_gate_night_tiles", 
+            "basePath": "https://iiitdmj-assets.xyz/photos/panini/panini_gate_night_tiles", 
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
