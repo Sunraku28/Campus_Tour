@@ -187,7 +187,7 @@ window.tourViewer = pannellum.viewer('campus-map', {
         "autoRotateInactivityDelay": 7000,
         "touchPanSpeedCoeffFactor": 0.7, 
         "friction": 0.1,
-         "hotSpotDebug": true
+         "hotSpotDebug": false
     },
     "scenes": allCampusScenes 
 });
