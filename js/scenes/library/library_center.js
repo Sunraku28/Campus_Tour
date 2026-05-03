@@ -91,8 +91,8 @@ export const librarycenterScenes = {
             
             },
             {
-                "pitch": 2.2983009993886263,
-                "yaw": 16.83904673818371,
+                "pitch": 2.8983009993886263,
+                "yaw": 10.03904673818371,
                 "type": "scene",
                 "sceneId": "library_night",
                 "createTooltipFunc": permanentText,

@@ -42,7 +42,7 @@ export const lab1Scenes = {
                 "sceneId": "library_center_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Exit",
-                "cssClass": "custom-nav-arrow point-left"
+                "cssClass": "custom-nav-door"
             }
           
         ]

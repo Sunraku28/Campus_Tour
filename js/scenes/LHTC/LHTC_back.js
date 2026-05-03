@@ -17,7 +17,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_102_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "L-102",
+                "createTooltipArgs": "L102",
                 
             },
             {
@@ -35,7 +35,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_103_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " L-103",
+                "createTooltipArgs": " L103",
                 
             },
             {
@@ -44,7 +44,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_104_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "L-104",
+                "createTooltipArgs": "L104",
             
             },
             {
@@ -112,7 +112,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_102_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "L-102",
+                "createTooltipArgs": "L102",
                 
             },
             {
@@ -130,7 +130,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_103_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " L-103",
+                "createTooltipArgs": " L103",
                 
             },
             {
@@ -139,7 +139,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_104_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " L-104",
+                "createTooltipArgs": " L104",
                 
             },
             {

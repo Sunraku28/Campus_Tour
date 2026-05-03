@@ -41,7 +41,7 @@ export const LHTCCRScenes = {
                 "sceneId": "LHTC_back_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Exit",
-                "cssClass": "custom-nav_door"
+                "cssClass": "custom-nav-door"
             },
                       
           
