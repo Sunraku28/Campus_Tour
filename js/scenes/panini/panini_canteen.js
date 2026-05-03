@@ -1,5 +1,6 @@
 export const paninicanteenScenes = {
     "panini_canteen_day" : {
+        "title" : "Panini Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/panini/panini_canteen_tiles", 
@@ -24,6 +25,7 @@ export const paninicanteenScenes = {
         ]
     },
     "panini_canteen_night" : { 
+        "title" : "Panini Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/panini/panini_canteen_tiles", 

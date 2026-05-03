@@ -1,5 +1,6 @@
 export const vlsilabScenes = {
     "vlsi_lab_day" : {
+        "title" : "VLSI Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/VLSI_lab_tiles", 
@@ -23,6 +24,7 @@ export const vlsilabScenes = {
         ]
     },
     "vlsi_lab_night" : {
+        "title" : "VLSI Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/VLSI_lab_tiles", 

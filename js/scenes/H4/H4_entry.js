@@ -1,6 +1,6 @@
 export const H4entryScenes = {
     "H4_entry_day" : {
-        // "title" : "cafeteria_day",
+        "title" : "Vivekananda Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H4/H4_entry_tiles", 
@@ -42,7 +42,7 @@ export const H4entryScenes = {
         ]
     },
      "H4_entry_night" : {
-        // "title" : "cafeteria_day",
+        "title" : "Vivekananda Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H4/H4_entry_tiles", 

@@ -1,5 +1,6 @@
 export const courtScenes = {
     "court_day" : {
+        "title" : "Basketball and Tennis Court",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/court_day_tiles", 
@@ -24,6 +25,7 @@ export const courtScenes = {
         ]
     },
     "court_night" : {
+        "title" : "Basketball and Tennis Court",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/court_day_tiles", 

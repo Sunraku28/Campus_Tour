@@ -1,5 +1,6 @@
 export const messgateScenes = {
     "mess_gate_day" : {
+        "title" : "Central Mess",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/mess/mess_gate_day_tiles", 
@@ -41,6 +42,7 @@ export const messgateScenes = {
         ]
     },
     "mess_gate_night" : {
+        "title" : "Central Mess",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/mess/mess_gate_night_tiles", 

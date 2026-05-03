@@ -1,5 +1,6 @@
 export const LHTCCRScenes = {
     "LHTC_cr_day" : {
+        "title" : "Classroom",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/cr_tiles", 
@@ -23,6 +24,7 @@ export const LHTCCRScenes = {
         ]
     },
     "LHTC_cr_night" : {
+        "title" : "Classroom",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/cr_tiles", 

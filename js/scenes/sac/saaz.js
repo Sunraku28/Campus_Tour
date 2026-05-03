@@ -1,6 +1,6 @@
 export const saazScenes = {
     "saaz_day" : {
-        // "title" : "cafeteria_day",
+        "title" : "Saaz Room",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/saaz_tiles", 
@@ -25,7 +25,7 @@ export const saazScenes = {
         ]
     },
     "saaz_night" : {
-        // "title" : "cafeteria_day",
+        "title" : "Saaz Room",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/saaz_tiles", 

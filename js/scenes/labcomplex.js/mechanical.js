@@ -1,5 +1,6 @@
 export const mechanicallabScenes = {
     "mechanical_lab_day" : {
+        "title" : "Central Workshop",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/mechanical_lab_tiles", // <- needs to be changed 
@@ -23,6 +24,7 @@ export const mechanicallabScenes = {
         ]
     },
     "mechanical_lab_night" : {
+        "title" : "Central Workshop",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/mechanical_lab_tiles", // <- needs to be changed 

@@ -1,6 +1,6 @@
 export const H3gateScenes = {
     "H3_gate_day" : {
-        // "title" : "cafeteria_day",
+        "title" : "Aryabhatta Hostel (Hall-3)",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H3/H3_gate_day_tiles", 
@@ -62,7 +62,7 @@ export const H3gateScenes = {
         ]
     },
     "H3_gate_night" : {
-        // "title" : "cafeteria_day",
+        "title" : "Aryabhatta Hostel (Hall-3)",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H3/H3_gate_night_tiles", 

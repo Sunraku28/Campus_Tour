@@ -1,5 +1,6 @@
 export const H3centerScenes = {
     "H3_center_day" : {
+        "title" : "Aryabhatta Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H3/H3_center_day_tiles", 
@@ -24,6 +25,7 @@ export const H3centerScenes = {
         ]
     },
     "H3_center_night" : {
+        "title" : "Aryabhatta Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H3/H3_center_night_tiles", 

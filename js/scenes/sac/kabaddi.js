@@ -1,5 +1,6 @@
 export const kabaddiScenes = {
     "kabaddi_day" : {
+        "title" : "Kabaddi",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/kabaddi_tiles", 
@@ -24,6 +25,7 @@ export const kabaddiScenes = {
         ]
     },
     "kabaddi_night" : {
+        "title" : "Kabaddi",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/kabaddi_tiles", 

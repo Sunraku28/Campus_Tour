@@ -1,5 +1,6 @@
 export const vcourtScenes = {
     "vcourt_day": {
+        "title" : "Volleyball Court",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/vcourt_day_tiles", 
@@ -24,6 +25,7 @@ export const vcourtScenes = {
         ]
     },
     "vcourt_night": {
+        "title" : "Volleyball Court",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/vcourt_night_tiles", 

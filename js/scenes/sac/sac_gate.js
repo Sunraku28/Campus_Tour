@@ -1,5 +1,6 @@
 export const sacgateScenes = {
     "sac_gate_day" : {
+        "title" : "SAC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/sac_gate_day_tiles", 
@@ -98,6 +99,7 @@ export const sacgateScenes = {
         ]
     },
     "sac_gate_night" : {
+        "title" : "SAC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/sac_gate_night_tiles", 

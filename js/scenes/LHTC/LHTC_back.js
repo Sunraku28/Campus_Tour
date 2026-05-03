@@ -1,5 +1,6 @@
 export const LHTCBACKGATEScenes = {
     "LHTC_back_day" : {
+        "title" : "LHTC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/lhtc_back_day_tiles", 
@@ -95,6 +96,7 @@ export const LHTCBACKGATEScenes = {
         ]
     },
     "LHTC_back_night" : {
+        "title" : "LHTC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/LHTC_back_night_tiles", 

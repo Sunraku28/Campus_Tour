@@ -1,5 +1,6 @@
 export const LHTC102Scenes = {
     "LHTC_102_day" : {
+        "title" : "L - 102",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/L102_tiles", 
@@ -23,6 +24,7 @@ export const LHTC102Scenes = {
         ]
     },
     "LHTC_102_night" : {
+        "title" : "L - 102",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/L102_tiles", 

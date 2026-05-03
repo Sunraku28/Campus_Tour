@@ -1,5 +1,6 @@
 export const messScenes = {
     "mess_day" : {
+        "title" : "Central Mess",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/mess/mess_tiles", 
@@ -24,6 +25,7 @@ export const messScenes = {
         ]
     },
     "mess_night" : {
+        "title" : "Central Mess",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/mess/mess_tiles", 

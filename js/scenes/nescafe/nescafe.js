@@ -1,6 +1,6 @@
 export const nescafeScenes = {
     "nescafe_day" : {
-        // "title" : "cafeteria_day",
+        "title" : "Nescafe",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/nescafe/nescafe_day_tiles", 
@@ -24,6 +24,7 @@ export const nescafeScenes = {
         ]
     },
     "nescafe_night" : { 
+        "title" : "Nescafe",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/nescafe/nescafe_night_tiles", 

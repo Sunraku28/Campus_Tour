@@ -1,5 +1,6 @@
 export const librarycenterScenes = {
     "library_center_day" : {
+        "title" : "Central Library",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/library_center_tiles", 
@@ -69,6 +70,7 @@ export const librarycenterScenes = {
         ]
     },
     "library_center_night" : {
+        "title" : "Central Library",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/library_center_tiles", 

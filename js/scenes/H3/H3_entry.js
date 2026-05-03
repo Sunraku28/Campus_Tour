@@ -1,5 +1,6 @@
 export const H3entryScenes = {
    "H3_entry_day" : {
+        "title" : "Aryabhatta Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H3/H3_entry_tiles", 
@@ -42,6 +43,7 @@ export const H3entryScenes = {
         ]
     },
     "H3_entry_night" : {
+        "title" : "Aryabhatta Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H3/H3_entry_tiles", 

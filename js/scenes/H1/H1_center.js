@@ -1,6 +1,6 @@
 export const H1centerScenes = {
     "H1_center_day" : {
-        // "title" : "cafeteria_day",
+        "title" : "Vasishtha Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/H1_center_day_tiles", 
@@ -53,7 +53,7 @@ export const H1centerScenes = {
         ]
     },
     "H1_center_night" : {
-        // "title" : "cafeteria_day",
+        "title" : "Vasishtha Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/H1_center_night_tiles", 

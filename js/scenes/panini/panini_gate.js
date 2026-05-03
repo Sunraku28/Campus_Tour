@@ -1,7 +1,7 @@
 import { getNextBusInfo } from '../../bus_tracker/bus_tracker.js';
 export const paninigateScenes = {
     "panini_gate_day": {
-        // "title": "Main Gate Day",
+        "title": "Panini Hostel Gate",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/panini/panini_gate_day_tiles", 
@@ -58,7 +58,7 @@ export const paninigateScenes = {
          
     },
     "panini_gate_night": {
-        // "title": "Main Gate Night",
+        "title": "Panini Hostel Gate",
         "type": "multires",
         "multiRes": {
             "basePath": "https://iiitdmj-assets.xyz/photos/panini/panini_gate_night_tiles", 

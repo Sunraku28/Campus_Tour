@@ -1,5 +1,6 @@
 export const electronicslabScenes = {
     "electronics_lab_day" : {
+        "title" : "Electronics Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/electronics_lab_tiles", 
@@ -23,6 +24,7 @@ export const electronicslabScenes = {
         ]
     },
     "electronics_lab_night" : {
+        "title" : "Electronics Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/electronics_lab_tiles", 

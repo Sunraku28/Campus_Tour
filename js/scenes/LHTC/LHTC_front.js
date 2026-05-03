@@ -1,5 +1,6 @@
 export const LHTCFRONTGATEScenes = {
     "LHTC_frontgate_day" : {
+        "title" : "LHTC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/LHTC_frontgate_day_tiles", 
@@ -50,6 +51,7 @@ export const LHTCFRONTGATEScenes = {
         ]
     },
     "LHTC_frontgate_night" : {
+        "title" : "LHTC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/LHTC_frontgate_night_tiles", 

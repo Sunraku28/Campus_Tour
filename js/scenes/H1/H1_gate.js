@@ -1,5 +1,6 @@
 export const H1gateScenes = {
     "H1_gate_day" : {
+        "title": "Vasishtha Hostel (Hall-1)",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/H1_gate_day_tiles", 
@@ -41,6 +42,7 @@ export const H1gateScenes = {
         ]
     },      
     "H1_gate_night" : {
+        "title": "Vasishtha Hostel (Hall-1)",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/H1_gate_night_tiles", 

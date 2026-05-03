@@ -1,5 +1,6 @@
 export const labgateScenes = {
     "lab_complex_gate_day" : {
+        "title" : "Lab Complex",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/core_lab_gate_day_tiles", 
@@ -90,6 +91,7 @@ export const labgateScenes = {
         ]
     },
     "lab_complex_gate_night" : {
+        "title" : "Lab Complex",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/corelab_gate_night_tiles", 

@@ -1,6 +1,7 @@
 import { getNextBusInfo } from '../../bus_tracker/bus_tracker.js';
 export const msgateScenes = {
     "ms_gate_day" : {
+        "title" : "Maa Saraswati Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/ms/ms_gate_day_tiles", 
@@ -42,6 +43,7 @@ export const msgateScenes = {
         
     },
     "ms_gate_night" : {
+        "title" : "Maa Saraswati Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/ms/ms_gate_night_tiles", 

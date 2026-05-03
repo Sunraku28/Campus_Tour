@@ -1,6 +1,6 @@
 export const OatScenes= {
     "Oat_day" : {
-        // "title" : "cafeteria_day",
+        "title" : "Open Air Theater",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/oat/oat_day_tiles", 
@@ -25,6 +25,7 @@ export const OatScenes= {
         ]
     },
     "Oat_night" : { 
+        "title" : "Open Air Theater",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/oat/oat_day_tiles", 

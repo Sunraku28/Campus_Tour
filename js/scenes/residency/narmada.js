@@ -1,5 +1,6 @@
 export const narmadaScenes = {
     "narmada_day" : {
+        "title" : "Narmada Residency",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/narmada_tiles", 
@@ -23,6 +24,7 @@ export const narmadaScenes = {
         ]
     },
     "narmada_night" : {
+        "title" : "Narmada Residency",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/narmada_tiles", 
