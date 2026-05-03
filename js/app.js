@@ -392,7 +392,7 @@ window.updateHotspotScale = function(currentFov) {
     
     let scale = baseFov / currentFov;
     
-    scale = Math.max(0.6, Math.min(scale, 2.5));
+    scale = Math.max(0.3, Math.min(scale, 2.5));
     
     document.documentElement.style.setProperty('--zoom-scale', scale);
 };

@@ -1,3 +1,4 @@
+import { getNextBusInfo } from '../../bus_tracker/bus_tracker.js';
 export const rewaScenes = {
     "rewa_day" : {
         "type": "multires",
@@ -37,6 +38,13 @@ export const rewaScenes = {
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Mandir",
                 //"cssClass": "custom-nav-arrow point-up"
+            },
+            {
+                "pitch": 6.484895161431426,
+                "yaw": -122.40284454344287,
+                "type": "custom",
+                "cssClass": "bus-tracker-hotspot", 
+                "createTooltipFunc": busHotspotCreator
             }
         ]
     },
@@ -78,7 +86,15 @@ export const rewaScenes = {
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Mandir",
                 //"cssClass": "custom-nav-arrow point-up"
+            },
+               {
+                "pitch": 6.484895161431426,
+                "yaw": -122.40284454344287,
+                "type": "custom",
+                "cssClass": "bus-tracker-hotspot", 
+                "createTooltipFunc": busHotspotCreator
             }
+           
         ]
     }
 }
@@ -91,4 +107,13 @@ function permanentText(hotSpotDiv, args) {
     textLabel.classList.add('custom-permanent-label');
     
     hotSpotDiv.appendChild(textLabel);
+}
+function busHotspotCreator(hotSpotDiv, args) {
+    let busData = getNextBusInfo();
+  hotSpotDiv.innerHTML = `
+    <div class="bus-label">Next Bus</div>
+    <div class="bus-countdown-display" style="color: ${busData.color};">
+        ${busData.text}
+    </div>
+`;
 }
