@@ -282,21 +282,29 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    const teleportBtn = document.getElementById("btn-teleport");
+   const teleportBtn = document.getElementById("btn-teleport");
     if (teleportBtn) {
+        // 1. Grab all scenes
+        const allScenes = Object.keys(allCampusScenes); 
+        
+        // 2. Add scenes you want to exclude
+        const excludedScenes = [
+            "gym_day",
+            "gym_night"     
+        ];
+
         teleportBtn.addEventListener("click", function() {
-            let config = window.tourViewer.getConfig();
-            
-            if (config && config.scenes) {
-                let allScenes = Object.keys(config.scenes);
-                let randomIndex = Math.floor(Math.random() * allScenes.length);
-                let randomScene = allScenes[randomIndex];
-                
-                window.tourViewer.loadScene(randomScene);
-            }
-            else {
-                console.error("Could not find Pannellum scenes.");
-            }
+            // 3. Filter out the excluded scenes
+            const safeScenes = allScenes.filter(scene => !excludedScenes.includes(scene));
+
+            // 4. Pick a random scene
+            const randomIndex = Math.floor(Math.random() * safeScenes.length);
+            const nextScene = safeScenes[randomIndex];
+
+            // 5. Load it using your specific viewer variable!
+            window.tourViewer.loadScene(nextScene);
+
+            // Hide the right-click menu if it's open
             if (contextMenu){
                 contextMenu.classList.remove("show");
             }
