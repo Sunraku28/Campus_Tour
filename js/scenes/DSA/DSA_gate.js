@@ -69,7 +69,7 @@ export const DSAgateScenes = {
                 "pitch": 1.3740666768442416,
                 "yaw": -172.95047126345517,
                 "type": "scene",
-                "sceneId": "lab_complex-gate_night",
+                "sceneId": "lab_complex_gate_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Lab Complex",
                 "cssClass": "custom-nav-arrow point-up-right"
