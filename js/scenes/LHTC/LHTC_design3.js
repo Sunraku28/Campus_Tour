@@ -1,6 +1,6 @@
 export const LHTCDESIGN3Scenes = {
     "LHTC_design3_day" : {
-        "title" : "Design Lab",
+        "title" : "Design Studio",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/design_up_left_tiles", 
@@ -24,7 +24,7 @@ export const LHTCDESIGN3Scenes = {
         ]
     },
     "LHTC_design3_night" : {
-        "title" : "Design Lab",
+        "title" : "Design Studio",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/design_up_left_tiles", 
