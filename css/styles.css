@@ -977,4 +977,48 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     .bus-countdown-display {
         font-size: 6px !important;
     }
+    .logo {
+    position: absolute;
+    top: 27px;
+    left: 30px;
+    width: 50px; 
+    z-index: 999999;
+    }
+    .info-container {
+    position: absolute;
+    top: 35px;
+    left: 90px;
+    z-index: 30;
+    cursor: default;
+    
+    
+    }
+    .top-left-text{
+    font-size: 16px;
+    }
+    .campus-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-left: 3px solid #e6f05a;
+    margin-top: 12px;
+    padding: 0 15px;
+    color: white;
+    transition: all 0.5s ease;
+    width: 220px;
+    }
+    .college-name.tour-started{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    position: absolute;
+    font-size: 16px;
+    top: 35px;
+    left: 90px;
+    z-index: 30;
+    cursor: default;
+    font-family: "Stack Sans Headline", sans-serif;
+}
 }
