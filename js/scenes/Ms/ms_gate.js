@@ -1,3 +1,4 @@
+import { getNextBusInfo } from '../../bus_tracker/bus_tracker.js';
 export const msgateScenes = {
     "ms_gate_day" : {
         "type": "multires",
@@ -30,11 +31,11 @@ export const msgateScenes = {
                 "cssClass": "custom-nav-arrow point-up"
             },
         {
-        "pitch": 0, 
-        "yaw": 0,   
-        "type": "custom",
-        "cssClass": "bus-tracker-hotspot", // <-- I ADDED THIS FIX HERE!
-        "createTooltipFunc": busHotspotCreator
+               "pitch": 7.88881338221912, 
+               "yaw": -42.96124096262982,
+                "type": "custom",
+                "cssClass": "bus-tracker-hotspot", // <-- I ADDED THIS FIX HERE!
+                "createTooltipFunc": busHotspotCreator
     }
 ]
             
@@ -73,8 +74,8 @@ export const msgateScenes = {
 
             },
             {
-                "pitch": -5, 
-                "yaw": 120,   
+                "pitch": 7.958455883911304, 
+                "yaw": -41.75387622377619 ,
                 "type": "custom",
                 "cssClass": "bus-tracker-hotspot", // <-- I ADDED THIS FIX HERE!
                 "createTooltipFunc": busHotspotCreator
@@ -92,13 +93,13 @@ function permanentText(hotSpotDiv, args) {
     textLabel.classList.add('custom-permanent-label');
     
     hotSpotDiv.appendChild(textLabel);
-}function busHotspotCreator(hotSpotDiv, args) {
-    // Inject the HTML structure directly into the pill
-    hotSpotDiv.innerHTML = `
-        <div style="font-size: 24px;">🚌</div>
-        <div>
-            <div style="font-size: 11px; text-transform: uppercase; color: #aaa; letter-spacing: 1px;">Next Bus to City</div>
-            <div class="bus-countdown-display" style="font-size: 16px; font-weight: bold; color: #4CAF50;">Calculating...</div>
-        </div>
-    `;
+}
+function busHotspotCreator(hotSpotDiv, args) {
+    let busData = getNextBusInfo();
+  hotSpotDiv.innerHTML = `
+    <div class="bus-label">Next Bus</div>
+    <div class="bus-countdown-display" style="color: ${busData.color};">
+        ${busData.text}
+    </div>
+`;
 }

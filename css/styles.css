@@ -917,6 +917,9 @@ div.custom-logo-pin:hover {
             opacity: 0;
         }
     }
+
+  
+
 }
 
 /* Hide Map UI when Contributor Modal is Open*/
@@ -929,31 +932,49 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     transition: opacity 0.3s ease, visibility 0.3s ease !important;
 }
 
-/* --- Live Bus Tracker 3D Hotspot --- */
-
-/* The main outer container */
 .bus-tracker-hotspot {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 16px;
-    background: rgba(20, 20, 20, 0.7);
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px); 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
+    flex-direction: column;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    width: 240px; 
-    transform: translate(-50%, -50%); 
-    pointer-events: none; 
+    font-family: 'Courier New', monospace;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    white-space: nowrap;
 }
 
-/* The dynamic countdown text */
+.bus-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.5);
+}
+
 .bus-countdown-display {
-    font-size: 16px;
-    font-weight: bold;
-    color: #4CAF50; 
+    font-size: 13px;
+    font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .bus-tracker-hotspot {
+        padding: 2px 4px;
+        border-radius: 3px;
+        max-width: 45px;
+        white-space: normal;
+    }
+
+    .bus-label {
+        font-size: 5px;
+        letter-spacing: 0.5px;
+    }
+
+    .bus-countdown-display {
+        font-size: 6px !important;
+    }
 }

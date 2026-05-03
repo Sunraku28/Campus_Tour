@@ -4,8 +4,8 @@ const busSchedules = {
     weekend: ["15:00" , "15:30", "17:30", "18:00" , "19:00" , "20:50"]                    
 };
 
-// 2. The Math Function (Now it just RETURNS the text and color, it doesn't touch the screen)
-function getNextBusInfo() {
+// 2. The Math Function (Calculates the next bus)
+export function getNextBusInfo() {
     const now = new Date();
     const currentMins = (now.getHours() * 60) + now.getMinutes();
     const currentDay = now.getDay(); 
@@ -55,7 +55,7 @@ function busHotspotCreator(hotSpotDiv, args) {
     `;
 }
 
-// 4. Update the tracker every 60 seconds (in case they leave the tab open for a long time)
+// 4. Update the tracker every 60 seconds 
 setInterval(function() {
     let busData = getNextBusInfo();
     document.querySelectorAll('.bus-countdown-display').forEach(display => {

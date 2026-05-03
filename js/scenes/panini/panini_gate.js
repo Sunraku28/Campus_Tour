@@ -1,3 +1,4 @@
+import { getNextBusInfo } from '../../bus_tracker/bus_tracker.js';
 export const paninigateScenes = {
     "panini_gate_day": {
         // "title": "Main Gate Day",
@@ -45,7 +46,14 @@ export const paninigateScenes = {
                 "yaw": 120,   
                 "type": "custom",
                 "createTooltipFunc": window.busHotspotCreator
-            }
+            },
+             {
+               "pitch": 6.117433679488566, 
+               "yaw": 117.39272611874544,
+                "type": "custom",
+                "cssClass": "bus-tracker-hotspot", // <-- I ADDED THIS FIX HERE!
+                "createTooltipFunc": busHotspotCreator
+    }
         ]
          
     },
@@ -94,7 +102,14 @@ export const paninigateScenes = {
                 "yaw": 120,   
                 "type": "custom",
                 "createTooltipFunc": window.busHotspotCreator
-            }
+            },
+             {
+                "pitch": 8.899238903785626, 
+                "yaw": 121.59981222220608,
+                "type": "custom",
+                "cssClass": "bus-tracker-hotspot", // <-- I ADDED THIS FIX HERE!
+                "createTooltipFunc": busHotspotCreator
+    }
         ]
     }
 };
@@ -109,4 +124,13 @@ function permanentText(hotSpotDiv, args) {
     
     // Attach it permanently to the hotspot button
     hotSpotDiv.appendChild(textLabel);
+}
+function busHotspotCreator(hotSpotDiv, args) {
+    let busData = getNextBusInfo();
+    hotSpotDiv.innerHTML = `
+    <div class="bus-label">Next Bus</div>
+    <div class="bus-countdown-display" style="color: ${busData.color};">
+        ${busData.text}
+    </div>
+`;
 }
