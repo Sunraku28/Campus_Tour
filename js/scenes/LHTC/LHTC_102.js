@@ -1,4 +1,5 @@
 export const LHTC102Scenes = {
+    
     "LHTC_102_day" : {
         "type": "multires",
         "multiRes" :{
