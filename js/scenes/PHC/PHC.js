@@ -1,6 +1,6 @@
 export const PHCScenes = {
     "PHC_day" : {
-        "title" : "Amul",
+        "title" : " Amul",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/amul_day_tiles", 
