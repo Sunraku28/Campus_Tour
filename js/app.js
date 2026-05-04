@@ -281,27 +281,35 @@ document.addEventListener("DOMContentLoaded", function() {
             window.openTeamModal();
         });
     }
-
+    // teleport button 
    const teleportBtn = document.getElementById("btn-teleport");
     if (teleportBtn) {
         // 1. Grab all scenes
         const allScenes = Object.keys(allCampusScenes); 
         
-        // 2. Add scenes you want to exclude
+        // 2. Add scenes you want to completely exclude (always hidden)
         const excludedScenes = [
             "gym_day",
             "gym_night"     
         ];
 
         teleportBtn.addEventListener("click", function() {
-            // 3. Filter out the excluded scenes
-            const safeScenes = allScenes.filter(scene => !excludedScenes.includes(scene));
+            const safeScenes = allScenes.filter(scene => {
+                if (excludedScenes.includes(scene)) return false;
 
-            // 4. Pick a random scene
+                // Next, check the current time mode
+                if (window.isNight) {
+                    return !scene.endsWith('_day');
+                } else {
+                    return !scene.endsWith('_night');
+                }
+            });
+
+            // 4. Pick a random scene from the newly filtered list
             const randomIndex = Math.floor(Math.random() * safeScenes.length);
             const nextScene = safeScenes[randomIndex];
 
-            // 5. Load it using your specific viewer variable!
+            // 5. Load it!
             window.tourViewer.loadScene(nextScene);
 
             // Hide the right-click menu if it's open
