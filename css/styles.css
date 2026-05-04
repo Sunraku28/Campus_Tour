@@ -918,6 +918,20 @@ div.custom-logo-pin:hover {
         }
     }
 
+    /*for labels*/
+    .custom-permanent-label {
+        display: none !important; 
+    }
+
+    /* 2. Hide the main Scene Title box (that was overlapping your buttons) */
+    .pnlm-panorama-info {
+        display: none !important;
+    }
+
+    /* 3. Hide any lingering default Pannellum tooltips just to be safe */
+    .pnlm-tooltip {
+        display: none !important;
+    } 
   
 
 }
