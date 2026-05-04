@@ -185,10 +185,8 @@ window.tourViewer = pannellum.viewer('campus-map', {
         "autoLoad": true , 
         "autoRotate" : -2,
         "autoRotateInactivityDelay": 7000,
-        "touchPanSpeedCoeffFactor": 0.7, 
-        "friction": 0.50,
-
-      
+        "touchPanSpeedCoeffFactor": 1.1, 
+        "friction": 0.10,
          "hotSpotDebug": false
     },
     "scenes": allCampusScenes 
