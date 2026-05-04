@@ -1,7 +1,7 @@
 
 export const H4canteenScenes = {
     "H4_canteen_day" : {
-        // "title" : "cafeteria_day",
+        "title" : "Hall-4 Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H4/H4_canteen_tiles", 
@@ -26,7 +26,7 @@ export const H4canteenScenes = {
         ]
     },
     "H4_canteen_night" : {
-        // "title" : "cafeteria_day",
+        "title" : "Hall-4 Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H4/H4_canteen_tiles", 

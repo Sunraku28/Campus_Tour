@@ -1,5 +1,6 @@
 export const visitorhostelScenes = {
     "visitor_hostel_day" : {
+        "title" : "Visitor Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/visitor_hostel_day_tiles", 
@@ -32,6 +33,7 @@ export const visitorhostelScenes = {
         ]
     },
     "visitor_hostel_night" : {
+        "title" : "Visitor Hostel",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/visitor_hostel_night_tiles", 

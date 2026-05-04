@@ -1,5 +1,6 @@
 export const ersScenes = {
     "ers_day" : {
+        "title": "ERS Workshop",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/ers_tiles", 
@@ -23,6 +24,7 @@ export const ersScenes = {
         ]
     },
     "ers_night" : {
+        "title": "ERS Workshop",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/ers_tiles", 

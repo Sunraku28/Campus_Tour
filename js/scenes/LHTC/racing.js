@@ -1,5 +1,6 @@
 export const RacingScenes = {
     "racing_day" : {
+        "title" : "Racing Workshop",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/racing_tiles", 
@@ -32,6 +33,7 @@ export const RacingScenes = {
         ]
     },
     "racing_night" : {
+        "title" : "Racing Workshop",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/racing_tiles", 

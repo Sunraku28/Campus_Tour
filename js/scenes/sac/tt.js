@@ -1,5 +1,6 @@
 export const ttScenes = {
     "tt_day" : {
+        "title" : "Table Tennis",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/tt_tiles", 
@@ -24,6 +25,7 @@ export const ttScenes = {
         ]
     },
     "tt_night" : {
+        "title" : "Table Tennis",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/tt_tiles", 

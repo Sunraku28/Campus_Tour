@@ -1,5 +1,6 @@
 export const badmintonScenes = {
     "badminton_day" : {
+        "title" : "Badminton Court",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/badminton_tiles", 
@@ -24,6 +25,7 @@ export const badmintonScenes = {
         ]
     },
     "badminton_night" : {
+        "title" : "Badminton Court",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/badminton_tiles", 

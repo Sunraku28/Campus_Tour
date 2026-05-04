@@ -1,6 +1,7 @@
 // This is tinkering Lab
 export const lab2Scenes = {
     "tinkering_lab_day" : {
+        "title" : "Tinkering Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/tinkering_lab_tiles", 
@@ -24,6 +25,7 @@ export const lab2Scenes = {
         ]
     },
     "tinkering_lab_night" : {
+        "title" : "Tinkering Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/tinkering_lab_tiles", 

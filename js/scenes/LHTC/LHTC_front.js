@@ -1,5 +1,6 @@
 export const LHTCFRONTGATEScenes = {
     "LHTC_frontgate_day" : {
+        "title" : "LHTC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/LHTC_frontgate_day_tiles", 
@@ -38,9 +39,19 @@ export const LHTCFRONTGATEScenes = {
                 "createTooltipArgs": "Trisection",
                 "cssClass": "custom-nav-arrow point-up-right"
             },
+            {
+                "pitch":  -0.8678224029054504,
+                "yaw": 81.49393613980152,
+                "type": "scene",
+                "sceneId": "sac_gate_day",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "SAC",
+                "cssClass": "custom-nav-arrow point-up-right"
+            }
         ]
     },
     "LHTC_frontgate_night" : {
+        "title" : "LHTC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/LHTC_frontgate_night_tiles", 
@@ -79,6 +90,15 @@ export const LHTCFRONTGATEScenes = {
                 "createTooltipArgs": "Trisection",
                 "cssClass": "custom-nav-arrow point-up"
             },
+            {
+                "pitch":  -2.3275703119997906,
+                "yaw": 76.78162002116034,
+                "type": "scene",
+                "sceneId": "sac_gate_night",
+                "createTooltipFunc": permanentText,
+                "createTooltipArgs": "SAC",
+                "cssClass": "custom-nav-arrow point-up-right"
+            }
                       
           
         ]

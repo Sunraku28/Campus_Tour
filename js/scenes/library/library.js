@@ -1,5 +1,6 @@
 export const libraryScenes = {
     "library_day" : {
+        "title" : "Library",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/library_tiles", 
@@ -23,6 +24,7 @@ export const libraryScenes = {
         ]
     },
     "library_night" : {
+        "title" : "Library",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/library_tiles", 

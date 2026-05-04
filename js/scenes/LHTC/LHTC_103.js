@@ -1,5 +1,6 @@
 export const LHTC103Scenes = {
     "LHTC_103_day" : {
+        "title" : "Auditorium",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/auditorium_tiles", 
@@ -23,6 +24,7 @@ export const LHTC103Scenes = {
         ]
     },
     "LHTC_103_night" : {
+        "title" : "Auditorium",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/auditorium_tiles", 

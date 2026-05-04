@@ -1,5 +1,6 @@
 export const H1canteenScenes = {
     "H1_canteen_day" : {
+        "title": "Hall-1 Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/H1_canteen_tiles", 
@@ -23,6 +24,7 @@ export const H1canteenScenes = {
         ]
     },
     "H1_canteen_night" : {
+        "title": "Hall-1 Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/H1_canteen_tiles", 

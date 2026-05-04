@@ -1,5 +1,6 @@
 export const HexagongateScenes = {
     "hexagon_gate_day" : {
+        "title" : "Hexagon Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/hexagon/hexagon_gate_day_tiles", 
@@ -50,6 +51,7 @@ export const HexagongateScenes = {
         ]
     },
     "hexagon_gate_night" : {
+        "title" : "Hexagon Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/hexagon/hexagon_gate_night_tiles", 

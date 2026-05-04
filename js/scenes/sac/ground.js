@@ -1,5 +1,6 @@
 export const groundScenes = {
     "ground_day" : {
+        "title" : "Cricket and Football Ground",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/ground_day_tiles", 
@@ -77,6 +78,7 @@ export const groundScenes = {
         ]
     },
     "ground_night" : {
+        "title" : "Cricket and Football Ground",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/SAC/ground_night_tiles", 

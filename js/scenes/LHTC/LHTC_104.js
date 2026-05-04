@@ -1,5 +1,6 @@
 export const LHTC104Scenes = {
     "LHTC_104_day" : {
+        "title" : "L - 104",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/L104_tiles", 
@@ -23,6 +24,7 @@ export const LHTC104Scenes = {
         ]
     },
     "LHTC_104_night" : {
+        "title" : "L - 104",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/L104_tiles", 

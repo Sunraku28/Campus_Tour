@@ -1,5 +1,6 @@
 export const afcScenes = {
     "afc_day" : {
+        "title": "AFC Workshop",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/afc_tiles", 
@@ -23,6 +24,7 @@ export const afcScenes = {
         ]
     },
     "afc_night" : {
+        "title": "AFC Workshop",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H1/afc_tiles", 

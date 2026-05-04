@@ -1,5 +1,6 @@
 export const gymScenes = {
     "gym_day" : {
+        "title" : "Gym",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H4_gate_H4_gate_day_tiles", 
@@ -24,7 +25,7 @@ export const gymScenes = {
         ]
     },
     "gym_night" : {
-        // "title" : "cafeteria_day",
+        "title" : "Gym",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/H4_gate_H4_gate_day_tiles", 

@@ -1,5 +1,6 @@
 export const physicslabScenes = {
     "physics_lab_day" : {
+        "title" : "Physics Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/physics_lab_tiles", 
@@ -23,6 +24,7 @@ export const physicslabScenes = {
         ]
     },
     "physics_lab_night" : {
+        "title" : "Physics Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/physics_lab_tiles", 

@@ -1,5 +1,6 @@
 export const conferenceScenes = {
     "conference_room_day" : {
+        "title": "Conference Room",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/DSA/DSA_CF_tiles", 
@@ -24,6 +25,7 @@ export const conferenceScenes = {
         ]
     },
     "conference_room_night" : {
+        "title": "Conference Room",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/DSA/DSA_CF_tiles", 

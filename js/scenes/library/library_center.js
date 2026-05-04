@@ -1,5 +1,6 @@
 export const librarycenterScenes = {
     "library_center_day" : {
+        "title" : "Central Library",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/library_center_tiles", 
@@ -69,6 +70,7 @@ export const librarycenterScenes = {
         ]
     },
     "library_center_night" : {
+        "title" : "Central Library",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/library_center_tiles", 
@@ -91,8 +93,8 @@ export const librarycenterScenes = {
             
             },
             {
-                "pitch": 2.2983009993886263,
-                "yaw": 16.83904673818371,
+                "pitch": 2.8983009993886263,
+                "yaw": 10.03904673818371,
                 "type": "scene",
                 "sceneId": "library_night",
                 "createTooltipFunc": permanentText,

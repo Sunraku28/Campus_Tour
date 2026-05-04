@@ -1,5 +1,6 @@
 export const LHTCBACKGATEScenes = {
     "LHTC_back_day" : {
+        "title" : "LHTC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/lhtc_back_day_tiles", 
@@ -17,7 +18,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_102_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "L-102",
+                "createTooltipArgs": "L102",
                 
             },
             {
@@ -35,7 +36,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_103_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " L-103",
+                "createTooltipArgs": "Auditorium",
                 
             },
             {
@@ -44,7 +45,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_104_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "L-104",
+                "createTooltipArgs": "L104",
             
             },
             {
@@ -53,7 +54,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_cr_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " CR",
+                "createTooltipArgs": "Class Room",
                
             },
             {
@@ -62,7 +63,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_design1_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "DESIGN LAB",
+                "createTooltipArgs": "Design Studio",
                
             },
             {
@@ -80,7 +81,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "lab_complex_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Core Lab",
+                "createTooltipArgs": "Lab Complex",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -95,6 +96,7 @@ export const LHTCBACKGATEScenes = {
         ]
     },
     "LHTC_back_night" : {
+        "title" : "LHTC",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/LHTC/LHTC_back_night_tiles", 
@@ -112,7 +114,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_102_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "L-102",
+                "createTooltipArgs": "L102",
                 
             },
             {
@@ -121,7 +123,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "racing_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " Racing Workshop",
+                "createTooltipArgs": "Racing Workshop",
                 
             },
             {
@@ -130,7 +132,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_103_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " L-103",
+                "createTooltipArgs": "Auditorium",
                 
             },
             {
@@ -139,7 +141,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_104_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " L-104",
+                "createTooltipArgs": " L104",
                 
             },
             {
@@ -148,7 +150,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_design1_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "DESIGN Studio",
+                "createTooltipArgs": "Design Studio",
                 
             },
             {
@@ -157,7 +159,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_cr_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "CR",
+                "createTooltipArgs": "Class Room",
                
             },
             {
@@ -166,7 +168,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "LHTC_frontgate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " Front Gate",
+                "createTooltipArgs": "Front Gate",
                 
             },
              {
@@ -175,7 +177,7 @@ export const LHTCBACKGATEScenes = {
                 "type": "scene",
                 "sceneId": "lab_complex_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": " Core Lab",
+                "createTooltipArgs": "Lab Complex",
                 "cssClass": "custom-nav-arrow point-up-left"
             },  
             {

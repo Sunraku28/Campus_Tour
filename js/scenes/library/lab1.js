@@ -1,6 +1,7 @@
 // this is Seminar Hall
 export const lab1Scenes = {
     "seminarhall_day" : {
+        "title" : "Seminar Hall",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/seminar_hall_tiles", 
@@ -24,6 +25,7 @@ export const lab1Scenes = {
         ]
     },
     "seminarhall_night" : {
+        "title" : "Seminar Hall",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/seminar_hall_tiles", 
@@ -42,7 +44,7 @@ export const lab1Scenes = {
                 "sceneId": "library_center_night",
                 "createTooltipFunc": permanentText,
                 "createTooltipArgs": "Exit",
-                "cssClass": "custom-nav-arrow point-left"
+                "cssClass": "custom-nav-door"
             }
           
         ]

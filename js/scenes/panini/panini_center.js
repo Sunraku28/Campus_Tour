@@ -1,5 +1,6 @@
 export const paninicenterScenes = {
     "panini_center_day" :{
+        "title" : "Panini Hostel",
         "type": 'multires',
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/panini/panini_center_day_tiles", 
@@ -32,6 +33,7 @@ export const paninicenterScenes = {
         ]
     },
     "panini_center_night" :{ 
+        "title" : "Panini Hostel",
         "type": 'multires',
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/panini/panini_center_night_tiles", 

@@ -1,6 +1,7 @@
 
 export const HexagonScenes = {
     "hexagon_day" : {
+        "title" : "Hexagon Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/hexagon/hexagon_tiles", 
@@ -25,6 +26,7 @@ export const HexagonScenes = {
         ]
     },
     "hexagon_night" : {
+        "title" : "Hexagon Canteen",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/hexagon/hexagon_tiles", 

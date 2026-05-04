@@ -1,5 +1,6 @@
 export const librarygateScenes = {
     "library_gate_day" : {
+        "title" : "Central Library",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/library_gate_day_tiles", 
@@ -41,6 +42,7 @@ export const librarygateScenes = {
         ]
     },
     "library_gate_night" : {
+        "title" : "Central Library",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/library_gate_night_tiles", 

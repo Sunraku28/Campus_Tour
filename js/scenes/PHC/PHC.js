@@ -1,5 +1,6 @@
 export const PHCScenes = {
     "PHC_day" : {
+        "title" : "PHC-Amul",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/amul_day_tiles", 
@@ -50,6 +51,7 @@ export const PHCScenes = {
         ]
     },
     "PHC_night" : {
+        "title" : "PHC-Amul",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/amul_night_tiles", 

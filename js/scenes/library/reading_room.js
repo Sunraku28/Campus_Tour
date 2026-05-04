@@ -1,5 +1,6 @@
 export const readingroomScenes = {
     "reading_room_day" : {
+        "title" : "Reading Room",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/reading_room_tiles", 
@@ -23,6 +24,7 @@ export const readingroomScenes = {
         ]
     },
     "reading_room_night" : {
+        "title" : "Reading Room",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/reading_room_tiles",  

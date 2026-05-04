@@ -1,5 +1,6 @@
 export const manufacturinglabScenes = {
     "manufacturing_lab_day" : {
+        "title" : "Manufacturing Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/Manufacturing_lab_tiles", 
@@ -23,6 +24,7 @@ export const manufacturinglabScenes = {
         ]
     },
     "manufacturing_lab_night" : {
+        "title" : "Manufacturing Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/Manufacturing_lab_tiles", 

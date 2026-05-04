@@ -1,6 +1,7 @@
 // This is computer lab
 export const lab3Scenes = {
     "computer_lab_day" : {
+        "title" : "Computer Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/cse_lab_tiles", 
@@ -24,6 +25,7 @@ export const lab3Scenes = {
         ]
     },
     "computer_lab_night" : {
+        "title" : "Computer Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/library/cse_lab_tiles", 
