@@ -937,7 +937,7 @@ div.custom-logo-pin:hover {
         right: 20px !important;       /* Anchors buttons to the left */
         left: auto !important;    
         top: auto !important;
-        bottom: 180px;  
+        bottom: 80px;  
 
         opacity: 1 !important;
         visibility: visible !important;
@@ -1093,11 +1093,12 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     #info-btn, 
     #toggle-time {
         position: fixed !important;
-        left: 20px !important;       /* Anchors buttons to the left */
-        right: auto !important;      /* Removes any right alignment */
-        transform: none !important;  /* Stops them from centering */
-        width: 45px !important;      /* Uniform width */
-        height: 45px !important;     /* Uniform height */
+        /* Matches the bottom height of the .pnlm-panorama-info title */
+        bottom: 80px !important;     
+        right: auto !important;      
+        transform: none !important;  
+        width: 45px !important;      
+        height: 45px !important;     
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -1106,24 +1107,13 @@ body:has(.contributors-modal-overlay.show) .info-btn {
         z-index: 10001;
     }
 
-    /* Set exact heights so they stack perfectly */
-    #mobile-map-btn { bottom: 80px !important; }
-    #info-btn       { bottom: 135px !important; }
-    #toggle-time    { bottom: 190px !important; }
+    /* Space them out side-by-side (Width is 45px + 10px gap) */
+    #mobile-map-btn { left: 20px !important; }
+    #info-btn       { left: 75px !important; }  /* 20px + 45px + 10px */
+    #toggle-time    { left: 130px !important; } /* 75px + 45px + 10px */
 
     /* 2. Bottom-Right Title Badge (Aligned with Map Button) */
-    .pnlm-panorama-info {
-        top: auto !important;        /* Clears any top positioning */
-        bottom: 80px !important;     /* Exactly matches the map button's height */
-        right: 20px !important;      /* Pins it neatly to the right edge */
-        left: auto !important; 
-    }
 
-    .pnlm-title-box {
-        font-size: 13px !important;   /* Slightly smaller text for mobile */
-        padding: 6px 12px !important; /* Tighter padding to save space */
-        margin-bottom: 0 !important;
-    }
 
     
 }
