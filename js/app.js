@@ -232,10 +232,11 @@ window.startTour = async function() {
     document.querySelector('.college-name').classList.add('tour-started');
     document.getElementById('info-btn').classList.add('tour-started');
 
+    const panoramaInfo = document.querySelector('.pnlm-panorama-info');
+    if (panoramaInfo) panoramaInfo.classList.add('tour-started');
+
+
     overlay.classList.add('hidden');
-    
-    // THIS is the only time the title should become visible
-    if (mobileTitle) mobileTitle.classList.add('tour-started');
 
     // ... the rest of your UI code ...
 
