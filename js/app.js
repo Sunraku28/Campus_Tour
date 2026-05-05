@@ -209,6 +209,13 @@ window.startTour = function() {
         let currentScene = window.tourViewer.getScene() || 'DSA_gate_day';
         window.syncMapWithScene(currentScene);
     }
+    const { error } = await supabase.rpc('increment_click', { target_id: 1 });
+    
+    if (error) {
+        console.error("Could not record click:", error);
+    } else {
+        console.log("Click recorded successfully!");
+    }
 };
 
 window.isNight = false;
@@ -577,6 +584,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// 1. Store your specific database address
+// (I grabbed your specific project ID from your screenshot!)
+const supabaseUrl = 'https://tmmxidpxlirrapongppd.supabase.co'; 
+
+// 2. Store your ID badge 
+// (Copy the long string of letters/numbers from your dashboard and paste it between the quotes)
+const supabaseKey = 'sb_publishable_vxQCH7prc-OuVk7nx0hdSw_qBUQMZj_'; 
+
+// 3. Create the connection! 
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+
 
 
 
