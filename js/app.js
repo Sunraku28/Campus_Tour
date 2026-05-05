@@ -585,15 +585,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// 1. Store your specific database address
-// (I grabbed your specific project ID from your screenshot!)
-const supabaseUrl = 'https://tmmxidpxlirrapongppd.supabase.co'; 
+const supabaseUrl = 'https://urdwkxlrnpximmcbzmcc.supabase.co'; 
 
-// 2. Store your ID badge 
-// (Copy the long string of letters/numbers from your dashboard and paste it between the quotes)
 const supabaseKey = 'sb_publishable_vxQCH7prc-OuVk7nx0hdSw_qBUQMZj_'; 
 
-// 3. Create the connection! 
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 
