@@ -209,7 +209,7 @@ window.startTour = async function() {
         let currentScene = window.tourViewer.getScene() || 'DSA_gate_day';
         window.syncMapWithScene(currentScene);
     }
-    const { error } = await supabase.rpc('increment_click', { target_id: 1 });
+    const { error } = await supabase.rpc('increment_click', { target_id: '1' });
     
     if (error) {
         console.error("Could not record click:", error);
