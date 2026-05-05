@@ -1093,8 +1093,7 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     #info-btn, 
     #toggle-time {
         position: fixed !important;
-        /* Matches the bottom height of the .pnlm-panorama-info title */
-        bottom: 80px !important;     
+        bottom: 40px !important;     /* Lowered to stop them from levitating */
         right: auto !important;      
         transform: none !important;  
         width: 45px !important;      
@@ -1109,11 +1108,19 @@ body:has(.contributors-modal-overlay.show) .info-btn {
 
     /* Space them out side-by-side (Width is 45px + 10px gap) */
     #mobile-map-btn { left: 20px !important; }
-    #info-btn       { left: 75px !important; }  /* 20px + 45px + 10px */
-    #toggle-time    { left: 130px !important; } /* 75px + 45px + 10px */
+    #info-btn       { left: 75px !important; }  
+    #toggle-time    { left: 130px !important; } 
 
-    /* 2. Bottom-Right Title Badge (Aligned with Map Button) */
-
-
+    /* 2. Bottom-Right Title Badge (Perfectly Aligned) */
+    .pnlm-panorama-info.tour-started {
+        position: fixed !important;
+        right: 20px !important;       
+        left: auto !important;    
+        top: auto !important;
+        bottom: 40px !important;      /* EXACTLY matches the buttons, with !important added */
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 10001 !important;    /* Brings it above the map layer */
+    }
     
 }
