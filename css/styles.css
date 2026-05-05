@@ -1069,18 +1069,13 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     margin-bottom: 0 !important;
     
     /* Match your Glassmorphism UI Theme */
-    background: rgba(20, 20, 20, 0.7) !important;
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: #e6f05a !important; 
-    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0) !important;
+    color: #ffffff !important; 
     padding: 8px 16px !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-    font-size: 15px !important;
+    font-size: 20px !important;
     font-weight: bold !important;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* 3. Hide the author box (if you aren't using it) so it doesn't leave an empty gap */
@@ -1094,7 +1089,7 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     #toggle-time {
         position: fixed !important;
         bottom: 40px !important;     /* Lowered to stop them from levitating */
-        right: auto !important;      
+        left: auto !important;      
         transform: none !important;  
         width: 45px !important;      
         height: 45px !important;     
@@ -1107,16 +1102,18 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     }
 
     /* Space them out side-by-side (Width is 45px + 10px gap) */
-    #mobile-map-btn { left: 20px !important; }
-    #info-btn       { left: 75px !important; }  
-    #toggle-time    { left: 130px !important; } 
+    #mobile-map-btn { right: 20px !important; }
+    #info-btn       { right: 75px !important; }  
+    #toggle-time    { right: 130px !important; } 
 
     /* 2. Bottom-Right Title Badge (Perfectly Aligned) */
     .pnlm-panorama-info.tour-started {
         position: fixed !important;
-        right: 20px !important;       
-        left: auto !important;    
+        left: 20px !important;       
+        right: auto !important;    
         top: auto !important;
+        font-size: 15px !important;
+
         
         /* INCREASE THIS NUMBER to lift the title up! 
            48px should perfectly center it with your 45px tall buttons */
