@@ -932,6 +932,13 @@ div.custom-logo-pin:hover {
 
     /* This class gets added by JS when the Start button is pressed */
     .pnlm-panorama-info.tour-started {
+
+        position: fixed !important;
+        right: 20px !important;       /* Anchors buttons to the left */
+        left: auto !important;    
+        top: auto !important;
+        bottom: 180px;  
+
         opacity: 1 !important;
         visibility: visible !important;
     }
@@ -1105,7 +1112,18 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     #toggle-time    { bottom: 190px !important; }
 
     /* 2. Bottom-Right Title Badge (Aligned with Map Button) */
+    .pnlm-panorama-info {
+        top: auto !important;        /* Clears any top positioning */
+        bottom: 80px !important;     /* Exactly matches the map button's height */
+        right: 20px !important;      /* Pins it neatly to the right edge */
+        left: auto !important; 
+    }
 
+    .pnlm-title-box {
+        font-size: 13px !important;   /* Slightly smaller text for mobile */
+        padding: 6px 12px !important; /* Tighter padding to save space */
+        margin-bottom: 0 !important;
+    }
 
     
 }
