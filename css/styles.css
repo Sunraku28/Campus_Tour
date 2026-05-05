@@ -1071,4 +1071,54 @@ body:has(.contributors-modal-overlay.show) .info-btn {
 /* 3. Hide the author box (if you aren't using it) so it doesn't leave an empty gap */
 .pnlm-author-box {
     display: none !important; 
+}/* --- MOBILE LAYOUT: Left Buttons & Bottom-Right Title --- */
+@media (max-width: 768px) {
+    /* 1. Left Vertical Button Stack */
+    #mobile-map-btn, 
+    #info-btn, 
+    #toggle-time {
+        position: fixed !important;
+        left: 20px !important;       /* Anchors buttons to the left */
+        right: auto !important;      /* Removes any right alignment */
+        transform: none !important;  /* Stops them from centering */
+        width: 45px !important;      /* Uniform width */
+        height: 45px !important;     /* Uniform height */
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin: 0 !important;
+        padding: 0 !important;
+        z-index: 10001;
+    }
+
+    /* Set exact heights so they stack perfectly */
+    #mobile-map-btn { bottom: 80px !important; }
+    #info-btn       { bottom: 135px !important; }
+    #toggle-time    { bottom: 190px !important; }
+
+    /* 2. Bottom-Right Title Badge (Aligned with Map Button) */
+    .scene-title-badge {
+        display: none; /* Hidden until tour starts */
+        position: fixed !important;
+        bottom: 80px !important;     /* Exactly the same height as mobile-map-btn */
+        right: 20px !important;      /* Anchors to the right edge */
+        left: auto !important;       /* Removes centering */
+        transform: none !important;  /* Removes centering */
+        background: rgba(0, 0, 0, 0.7) !important;
+        color: white !important;
+        padding: 8px 16px !important;
+        border: 2px solid rgba(255, 255, 255, 0.8) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+        font-size: 13px !important;
+        font-family: 'Stack Sans Headline', sans-serif;
+        z-index: 20000 !important;
+        white-space: nowrap;
+        pointer-events: none;
+    }
+
+    /* Shows the badge when JS adds this class */
+    .scene-title-badge.tour-started {
+        display: block !important;
+    }
 }

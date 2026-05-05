@@ -175,6 +175,33 @@ const allCampusScenes = {
     ...kabaddiScenes
     
 };
+// Function to update the title text based on the scene
+
+    window.updateMobileTitle = function(sceneId) {
+    const titleBadge = document.getElementById('mobile-scene-title');
+    
+    // Safety check: Is the HTML missing?
+    if (!titleBadge) {
+        console.error("The title box is missing from the HTML!");
+        return; 
+    }
+
+    if (sceneId) {
+        let config = window.tourViewer.getConfig();
+        let sceneConfig = config.scenes[sceneId];
+        
+        let displayName = (sceneConfig && sceneConfig.title) 
+            ? sceneConfig.title 
+            : sceneId.replace(/_(day|night)$/i, '').replace(/_/g, ' ').toUpperCase();
+            
+        titleBadge.innerText = displayName;
+        
+        // FORCE THE BOX TO SHOW (Overrides CSS display: none)
+        titleBadge.style.display = "block";
+        titleBadge.classList.add('tour-started');
+    }
+};
+
 
 window.tourViewer = pannellum.viewer('campus-map', {
     "default": {
@@ -205,17 +232,18 @@ window.startTour = async function() {
     document.querySelector('.college-name').classList.add('tour-started');
     document.getElementById('info-btn').classList.add('tour-started');
 
-    if (window.syncMapWithScene) {
-        let currentScene = window.tourViewer.getScene() || 'DSA_gate_day';
-        window.syncMapWithScene(currentScene);
-    }
-    const { error } = await supabase.rpc('increment_click', { target_id: '1' });
+    overlay.classList.add('hidden');
     
-    if (error) {
-        console.error("Could not record click:", error);
-    } else {
-        console.log("Click recorded successfully!");
-    }
+    // THIS is the only time the title should become visible
+    if (mobileTitle) mobileTitle.classList.add('tour-started');
+
+    // ... the rest of your UI code ...
+
+    let currentScene = window.tourViewer.getScene() || 'DSA_gate_day';
+    
+    setTimeout(() => {
+        window.updateMobileTitle(currentScene);
+    }, 100);
 };
 
 window.isNight = false;
@@ -259,6 +287,7 @@ window.tourViewer.on('scenechange', function(newSceneId) {
     if (window.syncMapWithScene) {
         window.syncMapWithScene(newSceneId);
     }
+    window.updateMobileTitle(newSceneId);
 }); 
 
 window.onload = function() {
