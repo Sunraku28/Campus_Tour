@@ -192,7 +192,7 @@ window.tourViewer = pannellum.viewer('campus-map', {
     "scenes": allCampusScenes 
 });
 
-window.startTour = function() {
+window.startTour = async function() {
     const overlay = document.getElementById('hero-layer');
     const nightBtn = document.getElementById('toggle-time');
     
