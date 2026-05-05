@@ -1098,7 +1098,7 @@ body:has(.contributors-modal-overlay.show) .info-btn {
 
     /* 2. Bottom-Right Title Badge (Aligned with Map Button) */
     .scene-title-badge {
-        display: none; /* Hidden until tour starts */
+        display: none !important; /* Hidden until tour starts */
         position: fixed !important;
         bottom: 80px !important;     /* Exactly the same height as mobile-map-btn */
         right: 20px !important;      /* Anchors to the right edge */
