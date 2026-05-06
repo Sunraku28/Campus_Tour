@@ -180,7 +180,6 @@ const allCampusScenes = {
     window.updateMobileTitle = function(sceneId) {
     const titleBadge = document.getElementById('mobile-scene-title');
     
-    // Safety check: Is the HTML missing?
     if (!titleBadge) {
         console.error("The title box is missing from the HTML!");
         return; 
@@ -195,8 +194,6 @@ const allCampusScenes = {
             : sceneId.replace(/_(day|night)$/i, '').replace(/_/g, ' ').toUpperCase();
             
         titleBadge.innerText = displayName;
-        
-        // FORCE THE BOX TO SHOW (Overrides CSS display: none)
         titleBadge.style.display = "block";
         titleBadge.classList.add('tour-started');
     }
@@ -238,13 +235,16 @@ window.startTour = async function() {
 
     overlay.classList.add('hidden');
 
-    // ... the rest of your UI code ...
-
     let currentScene = window.tourViewer.getScene() || 'DSA_gate_day';
     
     setTimeout(() => {
         window.updateMobileTitle(currentScene);
-    }, 100);
+
+        if (window.syncMapWithScene) {
+            window.syncMapWithScene(currentScene);
+        }
+
+    }, 100); 
 };
 
 window.isNight = false;
@@ -321,10 +321,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // teleport button 
    const teleportBtn = document.getElementById("btn-teleport");
     if (teleportBtn) {
-        // 1. Grab all scenes
+        // Grab all scenes
         const allScenes = Object.keys(allCampusScenes); 
         
-        // 2. Add scenes you want to completely exclude (always hidden)
+        // Add scenes you want to completely exclude (always hidden)
         const excludedScenes = [
             "gym_day",
             "gym_night"     
@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const safeScenes = allScenes.filter(scene => {
                 if (excludedScenes.includes(scene)) return false;
 
-                // Next, check the current time mode
+                // Next check the current time mode
                 if (window.isNight) {
                     return !scene.endsWith('_day');
                 } else {
@@ -342,11 +342,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
 
-            // 4. Pick a random scene from the newly filtered list
+            // Pick a random scene from the newly filtered list
             const randomIndex = Math.floor(Math.random() * safeScenes.length);
             const nextScene = safeScenes[randomIndex];
 
-            // 5. Load it!
+            // Load it
             window.tourViewer.loadScene(nextScene);
 
             // Hide the right-click menu if it's open
@@ -497,12 +497,12 @@ document.addEventListener("DOMContentLoaded", function() {
     joystickOverlay.style.left = '0';
     joystickOverlay.style.width = '100%';
     joystickOverlay.style.height = '100%';
-    joystickOverlay.style.zIndex = '99999'; // Sits above Pannellum, below UI
-    joystickOverlay.style.display = 'none'; // Hidden by default
+    joystickOverlay.style.zIndex = '99999'; 
+    joystickOverlay.style.display = 'none';
     joystickOverlay.style.cursor = 'all-scroll';
     viewerContainer.appendChild(joystickOverlay);
 
-    // 2. Toggle Mode On/Off from the Right-Click Menu
+    // Toggle Mode On/Off from the Right-Click Menu
     if (joystickBtn) {
         joystickBtn.addEventListener('click', function() {
             isJoystickMode = !isJoystickMode;
@@ -530,22 +530,21 @@ document.addEventListener("DOMContentLoaded", function() {
         let deltaX = currentX - startX;
         let deltaY = currentY - startY;
 
-        // SPEED MULTIPLIER: Lower = smoother/slower. 
+        // SPEED MULTIPLIER: Lower = smoother/slower
         let sensitivity = 0.005;
 
         let currentYaw = window.tourViewer.getYaw();
         let currentPitch = window.tourViewer.getPitch();
 
-        // Apply continuous rotation. 
+        // Apply continuous rotation
         window.tourViewer.setYaw(currentYaw + (deltaX * sensitivity), false);
         window.tourViewer.setPitch(currentPitch - (deltaY * sensitivity), false);
 
         animationFrameId = requestAnimationFrame(joystickLoop);
     }
 
-    // 4. Mouse Controls
+    // Mouse Controls
     joystickOverlay.addEventListener('mousedown', function(e) {
-        // Only trigger joystick on Left Click (button 0)
         if (e.button !== 0) return; 
         
         isDragging = true;
@@ -553,7 +552,7 @@ document.addEventListener("DOMContentLoaded", function() {
         startY = e.clientY;
         currentX = e.clientX;
         currentY = e.clientY;
-        joystickLoop(); // Start the engine
+        joystickLoop();
     });
 
     joystickOverlay.addEventListener('mousemove', function(e) {
@@ -566,11 +565,10 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('mouseup', function(e) {
         if (!isDragging) return;
         isDragging = false;
-        cancelAnimationFrame(animationFrameId); // Stop the engine
+        cancelAnimationFrame(animationFrameId);
 
-        // SMART CLICK: Let users click hotspots even if Joystick mode is ON
         let dist = Math.hypot(currentX - startX, currentY - startY);
-        if (dist < 5) { // If they just clicked without dragging
+        if (dist < 5) {
             joystickOverlay.style.display = 'none'; 
             let elementBelow = document.elementFromPoint(e.clientX, e.clientY);
             if (elementBelow) elementBelow.click(); // Pass the click through
@@ -578,7 +576,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // 5. Touch Controls (for mobile)
+    // Touch Controls (for mobile)
     joystickOverlay.addEventListener('touchstart', function(e) {
         isDragging = true;
         startX = e.touches[0].clientX;
