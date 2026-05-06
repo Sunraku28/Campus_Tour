@@ -1,6 +1,6 @@
 export const powerandcontrollabScenes = {
     "pandc_lab_day" : {
-        "title" : "Power and Control Lab",
+        "title" : "Power-Control Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/power_control_lab_tiles", 
@@ -24,7 +24,7 @@ export const powerandcontrollabScenes = {
         ]
     },
     "pandc_lab_night" : {
-        "title" : "Power and Control Lab",
+        "title" : "Power-Control Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/power_control_lab_tiles", 

@@ -1,6 +1,6 @@
 export const mechatronicslabScenes = {
     "mechatronics_lab_day" : {
-        "title" : "Microwave and Fabrication Lab",
+        "title" : "Microwave-Fabrication Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/corelab1_tiles", // <- needs to be changed 
@@ -24,7 +24,7 @@ export const mechatronicslabScenes = {
         ]
     },
     "mechatronics_lab_night" : {
-        "title" : "Microwave and Fabrication Lab",
+        "title" : "Microwave-Fabrication Lab",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/corelab/corelab1_tiles", // <- needs to be changed 

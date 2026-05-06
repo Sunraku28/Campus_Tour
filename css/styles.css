@@ -1114,7 +1114,7 @@ body:has(.contributors-modal-overlay.show) .info-btn {
         left: 10px !important;       
         right: auto !important;      /* Changed to auto so the box doesn't get squished */
         top: auto !important;
-        bottom: 95px !important;      
+        bottom: 100px !important;      
         opacity: 1 !important;
         visibility: visible !important;
         z-index: 10001 !important;
