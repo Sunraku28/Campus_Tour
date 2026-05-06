@@ -29,7 +29,7 @@ This project allows users to seamlessly navigate the campus environment through 
 
 **Backend (Serverless Edge Architecture)**
 * **Hosting & Delivery:** Cloudflare Pages
-* **Asset Storage:** Cloudflare R2 Object Storage (Master Bucket)
+* **Asset Storage:** Cloudflare R2 Object Storage
 * **DNS & Routing:** Cloudflare for SaaS & Edge Caching
 
 ---
@@ -39,7 +39,7 @@ This project allows users to seamlessly navigate the campus environment through 
 This project bypasses traditional server hosting (like AWS EC2 or Heroku) in favor of a Serverless Edge Computing Architecture, ensuring zero maintenance, infinite scalability, and virtually no hosting costs.
 
 1. **Frontend Delivery (Cloudflare Pages):** The HTML, CSS, and JS files are deployed on Cloudflare Pages, ensuring the initial UI loads instantly via global edge nodes.
-2. **Heavy Asset Storage (Cloudflare R2):** To prevent bandwidth throttling, all 360° high-res images are hosted in a centralized Cloudflare R2 Object Storage bucket. These are cached and delivered via a dedicated asset subdomain (`360-assets.iiitdmj.ac.in`).
+2. **Heavy Asset Storage (Cloudflare R2):** To prevent bandwidth throttling, all 360° high-res images are hosted in a centralized Cloudflare R2 Object Storage bucket. These are cached and delivered via a dedicated asset domain.
 3. **DNS & Routing:** Managed via GoDaddy and Cloudflare, routing the official `360-tour.iiitdmj.ac.in` domain directly to the Edge network.
 
 ---
