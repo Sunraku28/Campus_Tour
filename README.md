@@ -8,7 +8,7 @@ This project allows users to seamlessly navigate the campus environment through 
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * **Immersive 360° Navigation:** High-fidelity panoramic scenes linked via custom interactive hotspots, powered by Pannellum.
 * 🌙 **Real-Time Day/Night Mode:** The environment dynamically syncs with the user's local clock. If the tour is accessed between 7:00 PM and 5:00 AM, the interface and environments automatically transition into a custom-designed Night Mode.
@@ -19,7 +19,7 @@ This project allows users to seamlessly navigate the campus environment through 
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 **Frontend (Interface & Engine)**
 * **Core:** HTML5, Vanilla JavaScript, CSS3 (Custom Glassmorphism UI)
