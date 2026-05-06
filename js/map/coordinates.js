@@ -47,6 +47,8 @@ const campusCoordinates = {
     "H1_canteen_night": [23.17383, 79.01875],
     "DSA_gate_day": [23.18291, 79.02316],
     "DSA_gate_night": [23.18291, 79.02316],
+    "DSA_center_day": [23.18360, 79.02327],
+    "DSA_center_night": [23.18360, 79.02327],
     "APS_room_day": [23.18315, 79.02309],
     "APS_room_night": [23.18315, 79.02309],
     "conference_room_day": [23.18365, 79.02288], 

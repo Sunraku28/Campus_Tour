@@ -131,12 +131,12 @@ if (window.innerWidth > 768) {
         }
     });
 
-    // map.on('click', function(e) {
-    //     const lat = e.latlng.lat.toFixed(5);
-    //     const lng = e.latlng.lng.toFixed(5);
-    //     console.log(`📍 New Pin Coordinates: [${lat}, ${lng}]`);
+    map.on('click', function(e) {
+        const lat = e.latlng.lat.toFixed(5);
+        const lng = e.latlng.lng.toFixed(5);
+        console.log(`📍 New Pin Coordinates: [${lat}, ${lng}]`);
         
-    //     alert(`[${lat}, ${lng}]`);
-    // });
+        alert(`[${lat}, ${lng}]`);
+    });
 
 }
