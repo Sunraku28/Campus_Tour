@@ -1083,12 +1083,12 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     display: none !important; 
 }/* --- MOBILE LAYOUT: Left Buttons & Bottom-Right Title --- */
 @media (max-width: 768px) {
-    /* 1. Left Vertical Button Stack */
+    /* 1. Shared Button Styles */
     #mobile-map-btn, 
     #info-btn, 
     #toggle-time {
         position: fixed !important;
-        bottom: 40px !important;     /* Lowered to stop them from levitating */
+        right: 20px !important;      /* Anchors all buttons to the rightmost edge */
         left: auto !important;      
         transform: none !important;  
         width: 45px !important;      
@@ -1101,27 +1101,30 @@ body:has(.contributors-modal-overlay.show) .info-btn {
         z-index: 10001;
     }
 
-    /* Space them out side-by-side (Width is 45px + 10px gap) */
-    #mobile-map-btn { right: 20px !important; }
-    #info-btn       { right: 75px !important; }  
-    #toggle-time    { right: 130px !important; } 
+    /* 2. Vertical Stacking (45px height + 10px gap) */
+    #mobile-map-btn { bottom: 40px !important; }  /* Bottom button */
+    #info-btn       { bottom: 95px !important; }  /* Middle button */
+    #toggle-time    { bottom: 150px !important; } /* Top button */
 
-    /* 2. Bottom-Right Title Badge (Perfectly Aligned) */
+    /* 3. Title Badge (Aligned with the middle button) */
+    /* 3. Title Badge (Aligned with the bottom button and pushed further left) */
+    /* 3. Title Badge (Forced to a SINGLE line, bold, and aligned left) */
     .pnlm-panorama-info.tour-started {
         position: fixed !important;
-        left: 20px !important;       
-        right: auto !important;    
+        left: 10px !important;       
+        right: auto !important;      /* Changed to auto so the box doesn't get squished */
         top: auto !important;
-        font-size: 15px !important;
-
-        
-        /* INCREASE THIS NUMBER to lift the title up! 
-           48px should perfectly center it with your 45px tall buttons */
-        bottom: 100px !important;      
-        
+        bottom: 45px !important;      
         opacity: 1 !important;
         visibility: visible !important;
         z-index: 10001 !important;
+        white-space: nowrap !important; /* Prevents wrapping on the container */
     }
-    
+
+    /* Target the actual text element inside Pannellum to stop it from wrapping */
+    .pnlm-panorama-info.tour-started .pnlm-title-box {
+        white-space: nowrap !important; 
+        font-weight: bold !important; 
+        font-size: 16px !important; /* Slightly smaller to ensure long names fit on one line without overlapping buttons */
+    }
 }
