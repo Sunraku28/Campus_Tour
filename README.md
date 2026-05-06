@@ -12,7 +12,7 @@ This project allows users to seamlessly navigate the campus environment through 
 
 * **Immersive 360° Navigation:** High-fidelity panoramic scenes linked via custom interactive hotspots, powered by Pannellum.
 * 🌙 **Real-Time Day/Night Mode:** The environment dynamically syncs with the user's local clock. If the tour is accessed between 7:00 PM and 5:00 AM, the interface and environments automatically transition into a custom-designed Night Mode.
-* 🚌 **Smart Transit Widgets:** Interactive UI modules located at virtual campus bus stops fetch the current real-world time and dynamically display the schedule for the next arriving bus (e.g., if checking at 11:00 AM, the module automatically updates to show "Next Bus: 3:30 PM").
+* **Smart Transit Widgets:** Interactive UI modules located at virtual campus bus stops fetch the current real-world time and dynamically display the schedule for the next arriving bus (e.g., if checking at 11:00 AM, the module automatically updates to show "Next Bus: 3:30 PM").
 * **Interactive GIS Mapping:** Integrated 2D campus maps (via Leaflet.js) to provide spatial context and instant teleportation across different zones of the institute.
 * **Dynamic UI & Glassmorphism Design:** A sleek, modern user interface featuring custom CSS styling that overlays directly inside the 360 viewer.
 * **Ultra-Fast Global Delivery:** Heavy visual assets are served through a custom CDN architecture, ensuring sub-second load times globally without traditional server bottlenecks.
@@ -34,7 +34,7 @@ This project allows users to seamlessly navigate the campus environment through 
 
 ---
 
-## 🏗️ Deployment Architecture
+## Deployment Architecture
 
 This project bypasses traditional server hosting (like AWS EC2 or Heroku) in favor of a Serverless Edge Computing Architecture, ensuring zero maintenance, infinite scalability, and virtually no hosting costs.
 
@@ -44,7 +44,7 @@ This project bypasses traditional server hosting (like AWS EC2 or Heroku) in fav
 
 ---
 
-## 🎮 Controls & Keyboard Usage
+## Controls & Keyboard Usage
 
 The tour is fully optimized for both desktop and mobile web browsers.
 
