@@ -670,9 +670,6 @@ div.custom-logo-pin:hover {
 
 /* Mobile: info button*/
 @media (max-width: 1020px) {
-    /* Mobile night toggle is repositioned in existing CSS:
-       bottom: 90px, left: 50%, transform: translateX(-50%)
-       We place info-btn to its right */
     .info-btn {
         justify-content: center;
         align-items: center;
@@ -844,9 +841,6 @@ div.custom-logo-pin:hover {
 }
 
 
-
-
-
 /* changing icon size for mobile */
 @media (max-width: 768px) {
     
@@ -923,18 +917,17 @@ div.custom-logo-pin:hover {
         display: none !important; 
     } */
 
-    /* 2. Hide the main Scene Title box (that was overlapping your buttons) */
     .pnlm-panorama-info {
         opacity: 0 !important;
         visibility: hidden !important;
         transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out !important;
     }
 
-    /* This class gets added by JS when the Start button is pressed */
+
     .pnlm-panorama-info.tour-started {
 
         position: fixed !important;
-        right: 20px !important;       /* Anchors buttons to the left */
+        right: 20px !important;
         left: auto !important;    
         top: auto !important;
         bottom: 80px;  
@@ -943,7 +936,7 @@ div.custom-logo-pin:hover {
         visibility: visible !important;
     }
 
-    /* 3. Hide any lingering default Pannellum tooltips just to be safe */
+
     .pnlm-tooltip {
         display: none !important;
     } 
@@ -1063,12 +1056,9 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     background-color: rgba(0, 0, 0, 0);
 }
 
-/* 2. Apply the Glassmorphism styling to the actual title box */
 .pnlm-title-box {
     display: inline-block !important;
     margin-bottom: 0 !important;
-    
-    /* Match your Glassmorphism UI Theme */
     background: rgba(255, 255, 255, 0) !important;
     color: #ffffff !important; 
     padding: 8px 16px !important;
@@ -1078,22 +1068,22 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
 }
 
-/* 3. Hide the author box (if you aren't using it) so it doesn't leave an empty gap */
+
 .pnlm-author-box {
     display: none !important; 
 }/* --- MOBILE LAYOUT: Left Buttons & Bottom-Right Title --- */
+
+
 @media (max-width: 768px) {
-    /* 1. Shared Button Styles */
     #mobile-map-btn, 
     #info-btn, 
     #toggle-time {
         position: fixed !important;
-        right: 20px !important;      /* Anchors all buttons to the rightmost edge */
+        right: 20px !important;
         left: auto !important;      
         transform: none !important;  
         width: 45px !important;      
         height: 45px !important;     
-        display: flex !important;
         align-items: center;
         justify-content: center;
         margin: 0 !important;
@@ -1101,30 +1091,25 @@ body:has(.contributors-modal-overlay.show) .info-btn {
         z-index: 10001;
     }
 
-    /* 2. Vertical Stacking (45px height + 10px gap) */
-    #mobile-map-btn { bottom: 40px !important; }  /* Bottom button */
-    #info-btn       { bottom: 95px !important; }  /* Middle button */
-    #toggle-time    { bottom: 150px !important; } /* Top button */
+    #mobile-map-btn { bottom: 40px !important; }  
+    #info-btn       { bottom: 95px !important; }  
+    #toggle-time    { bottom: 150px !important; } 
 
-    /* 3. Title Badge (Aligned with the middle button) */
-    /* 3. Title Badge (Aligned with the bottom button and pushed further left) */
-    /* 3. Title Badge (Forced to a SINGLE line, bold, and aligned left) */
     .pnlm-panorama-info.tour-started {
         position: fixed !important;
         left: 10px !important;       
-        right: auto !important;      /* Changed to auto so the box doesn't get squished */
+        right: auto !important; 
         top: auto !important;
         bottom: 100px !important;      
         opacity: 1 !important;
         visibility: visible !important;
         z-index: 10001 !important;
-        white-space: nowrap !important; /* Prevents wrapping on the container */
+        white-space: nowrap !important; 
     }
 
-    /* Target the actual text element inside Pannellum to stop it from wrapping */
     .pnlm-panorama-info.tour-started .pnlm-title-box {
         white-space: nowrap !important; 
         font-weight: bold !important; 
-        font-size: 19px !important; /* Slightly smaller to ensure long names fit on one line without overlapping buttons */
+        font-size: 19px !important;
     }
 }
