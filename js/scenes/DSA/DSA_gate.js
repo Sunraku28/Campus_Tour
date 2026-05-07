@@ -1,6 +1,6 @@
 export const DSAgateScenes = {
     "DSA_gate_day" : {
-        "title": "DSA Office",
+        "title": "Academic Block",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/DSA/DSA_gate_day_tiles", 
@@ -45,7 +45,7 @@ export const DSAgateScenes = {
         
     },
     "DSA_gate_night" : {
-        "title": "DSA Office",
+        "title": "Academic Block",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/DSA/DSA_gate_night_tiles", 

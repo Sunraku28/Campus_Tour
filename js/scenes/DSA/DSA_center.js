@@ -1,6 +1,6 @@
 export const DSAcenterScenes = {
     "DSA_center_day" : {
-        "title" : "DSA Office",
+        "title" : "Academic Block",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/DSA/DSA_center_tiles", // <- needs to be changed 
@@ -51,7 +51,7 @@ export const DSAcenterScenes = {
         ]
     },
     "DSA_center_night" : {
-        "title" : "DSA Office",
+        "title" : "Academic Block",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/DSA/DSA_center_tiles", // <- needs to be changed 
