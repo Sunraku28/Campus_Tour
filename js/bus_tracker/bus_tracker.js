@@ -1,10 +1,9 @@
-// 1. Define Schedules
+//  Define Schedules
 const busSchedules = {
     weekday: ["15:00" , "15:40" , "17:15" ,"18:00" , "19:00" , "20:20" , "20:50"], 
     weekend: ["15:00" , "15:30", "17:30", "18:00" , "19:00" , "20:50"]                    
 };
 
-// 2. The Math Function (Calculates the next bus)
 export function getNextBusInfo() {
     const now = new Date();
     const currentMins = (now.getHours() * 60) + now.getMinutes();
@@ -38,12 +37,8 @@ export function getNextBusInfo() {
     }
 }
 
-// 3. The Hotspot Creator (Injects the exact time instantly)
 function busHotspotCreator(hotSpotDiv, args) {
-    // RUN THE MATH FIRST!
     let busData = getNextBusInfo();
-    
-    // Inject the HTML with the calculated text already inside it
     hotSpotDiv.innerHTML = `
         <div style="font-size: 24px;">🚌</div>
         <div>
@@ -54,8 +49,6 @@ function busHotspotCreator(hotSpotDiv, args) {
         </div>
     `;
 }
-
-// 4. Update the tracker every 60 seconds 
 setInterval(function() {
     let busData = getNextBusInfo();
     document.querySelectorAll('.bus-countdown-display').forEach(display => {
