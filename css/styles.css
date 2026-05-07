@@ -1125,4 +1125,69 @@ body:has(.contributors-modal-overlay.show) .info-btn {
         font-weight: bold !important; 
         font-size: 19px !important;
     }
+
+    /* to remove buttons when nav dropdown is toggled */
+    body:has(#nav-toggle:checked) #mobile-map-btn,
+    body:has(#nav-toggle:checked) #info-btn,
+    body:has(#nav-toggle:checked) #toggle-time {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    }
+}
+
+.contributors-modal-panel {
+    padding: 40px 36px 58px; /* increase bottom padding from 36px to 52px */
+}
+
+.tours-counter {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(235, 207, 147, 0.6);
+}
+
+.tours-counter-dot {
+    color: #ebcf93;
+    font-size: 0.5rem;
+    animation: pulse-dot 2s infinite;
+}
+
+.tours-counter-label {
+    color: rgba(235, 207, 147, 0.6);
+}
+
+#live-tour-count {
+    color: #ebcf93;
+    font-weight: 700;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+.suggestion-btn {
+    position: absolute;
+    bottom: 16px;
+    left: 24px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(235, 207, 147, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.suggestion-btn:hover {
+    color: #ebcf93;
 }

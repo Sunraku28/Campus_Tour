@@ -228,6 +228,7 @@ window.startTour = async function() {
     document.querySelector('.map-icon-btn').classList.add('tour-started');
     document.querySelector('.college-name').classList.add('tour-started');
     document.getElementById('info-btn').classList.add('tour-started');
+    const { error } = await window.supabaseClient.rpc('increment_click', { target_id: '1' });
 
     const panoramaInfo = document.querySelector('.pnlm-panorama-info');
     if (panoramaInfo) panoramaInfo.classList.add('tour-started');
@@ -420,10 +421,7 @@ window.showToast = function(message) {
     }, 2500);
 };  
 
-window.openTeamModal = function() {
-    const modal = document.getElementById("contributors-modal");
-    if (modal) modal.classList.add("show");
-};
+
 
 window.closeTeamModal = function() {
     const modal = document.getElementById("contributors-modal");
@@ -617,8 +615,25 @@ const supabaseUrl = 'https://urdwkxlrnpximmcbzmcc.supabase.co';
 
 const supabaseKey = 'sb_publishable_vxQCH7prc-OuVk7nx0hdSw_qBUQMZj_'; 
 
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+window.supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
+async function fetchTourCount() {
+    const { data, error } = await window.supabaseClient
+        .rpc('get_click_count', { target_id: '1' });
+
+    const el = document.getElementById('live-tour-count');
+    if (!error && el) {
+        el.textContent = data ?? '—';
+    }
+}
+
+window.openTeamModal = function() {
+    const modal = document.getElementById("contributors-modal");
+    if (modal) {
+        modal.classList.add("show");
+        fetchTourCount(); // refresh count every time modal opens
+    }
+};
 
 
 
