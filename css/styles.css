@@ -1125,6 +1125,16 @@ body:has(.contributors-modal-overlay.show) .info-btn {
         font-weight: bold !important; 
         font-size: 19px !important;
     }
+
+    /* to remove buttons when nav dropdown is toggled */
+    body:has(#nav-toggle:checked) #mobile-map-btn,
+    body:has(#nav-toggle:checked) #info-btn,
+    body:has(#nav-toggle:checked) #toggle-time {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    }
 }
 
 .contributors-modal-panel {
