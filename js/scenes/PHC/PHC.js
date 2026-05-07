@@ -36,7 +36,7 @@ export const PHCScenes = {
                 "type": "scene",
                 "sceneId": "DSA_gate_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "DSA Office",
+                "createTooltipArgs": "Admin Block",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {
@@ -87,7 +87,7 @@ export const PHCScenes = {
                 "type": "scene",
                 "sceneId": "DSA_gate_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "DSA Office",
+                "createTooltipArgs": "Admin Block",
                 "cssClass": "custom-nav-arrow point-up-left"
             },
             {

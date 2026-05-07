@@ -12,7 +12,7 @@ const fastTravelLocations = [
     { baseId: "ground", name: "Ground", coords: [23.16972, 79.02095] },
     { baseId: "LHTC_frontgate", name: "LHTC", coords: [23.17437, 79.02333] },
     { baseId: "lab_complex_gate", name: "Lab Complex", coords: [23.17771, 79.02266] },
-    { baseId: "DSA_gate", name: "DSA", coords: [23.18291, 79.02316] },
+    { baseId: "DSA_gate", name: "Admin Block", coords: [23.18291, 79.02316] },
     { baseId: "library_gate", name: "Library", coords: [23.17695, 79.02732] },
     { baseId: "PHC", name: "PHC", coords: [23.17836, 79.02904] },
     { baseId: "visitor_hostel", name: "Visitor Hostel", coords: [23.17649, 79.03269] },
