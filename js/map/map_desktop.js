@@ -12,6 +12,8 @@ if (window.innerWidth > 768) {
         dragging: false,
         scrollWheelZoom: false,
         doubleClickZoom: false
+
+        
     });
 
     const imageUrl = './photos/minimap.png'; 
@@ -57,6 +59,17 @@ if (window.innerWidth > 768) {
                 if (currentPin) {
                     map.setView(currentPin.getLatLng(), 18, { animate: false });
                 }
+
+                // Leaflet updating its size calculation
+                map.invalidateSize({ pan: false, animate: false });
+                
+                // Added a tiny 50ms delay here so Leaflet can find the new size for the map acc to the new view 
+                setTimeout(() => {
+                    if (currentPin) {
+                        map.setView(currentPin.getLatLng(), 18, { animate: false });
+                    }
+                }, 50);
+
                 minimapWrapper.style.opacity = '1';
             }, 500);
         }
@@ -127,6 +140,17 @@ if (window.innerWidth > 768) {
         if (minimapWrapper && minimapWrapper.classList.contains('map-expanded')) {
             if (!innerMap.contains(event.target) && !toggleBtn.contains(event.target)) {
                 transitionMapState(false);
+            }
+        }
+    });
+
+
+    // Fix for Leaflet off-center bug on window resize 
+    window.addEventListener('resize', function() {
+        if (map) {
+            map.invalidateSize();
+            if (currentPin && minimapWrapper && !minimapWrapper.classList.contains('map-expanded')) {
+                map.setView(currentPin.getLatLng(), 18, { animate: false });
             }
         }
     });
