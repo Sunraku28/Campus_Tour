@@ -1128,7 +1128,7 @@ body:has(.contributors-modal-overlay.show) .info-btn {
 }
 
 .contributors-modal-panel {
-    padding: 40px 36px 68px; /* increase bottom padding from 36px to 52px */
+    padding: 40px 36px 58px; /* increase bottom padding from 36px to 52px */
 }
 
 .tours-counter {
