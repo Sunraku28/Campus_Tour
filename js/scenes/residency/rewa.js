@@ -1,7 +1,7 @@
 import { getNextBusInfo } from '../../bus_tracker/bus_tracker.js';
 export const rewaScenes = {
     "rewa_day" : {
-        "title" : "Rewa Residency",
+        "title" : "Narmada-2 Residency",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/rewa_tiles", 
@@ -50,7 +50,7 @@ export const rewaScenes = {
         ]
     },
     "rewa_night" : {
-        "title" : "Rewa Residency",
+        "title" : "Narmada-2 Residency",
         "type": "multires",
         "multiRes" :{
             "basePath": "https://iiitdmj-assets.xyz/photos/residencies/rewa_tiles", 

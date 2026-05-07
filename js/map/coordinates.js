@@ -17,7 +17,7 @@ const fastTravelLocations = [
     { baseId: "PHC", name: "PHC", coords: [23.17836, 79.02904] },
     { baseId: "visitor_hostel", name: "Visitor Hostel", coords: [23.17649, 79.03269] },
     { baseId: "court", name: "Courts", coords: [23.16769, 79.01979] }, 
-    { baseId: "rewa", name: "Rewa", coords: [23.18171, 79.04277] },
+    { baseId: "rewa", name: "Narmada-2", coords: [23.18171, 79.04277] }, // it was rewa earlier
     { baseId: "narmada", name: "Narmada", coords: [23.18084, 79.04526] },
     { baseId: "Oat", name: "OAT", coords: [23.17313, 79.02252]}
 

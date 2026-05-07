@@ -27,7 +27,7 @@ export const visitorhostelScenes = {
                 "type": "scene",
                 "sceneId": "rewa_day",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Rewa Residency",
+                "createTooltipArgs": "Narmada-2 Residency",
                 "cssClass": "custom-nav-arrow point-up"
             }
         ]
@@ -60,7 +60,7 @@ export const visitorhostelScenes = {
                 "type": "scene",
                 "sceneId": "rewa_night",
                 "createTooltipFunc": permanentText,
-                "createTooltipArgs": "Rewa Residency",
+                "createTooltipArgs": "Narmada-2 Residency",
                 "cssClass": "custom-nav-arrow point-up"
             }
           
