@@ -1060,8 +1060,8 @@ body:has(.contributors-modal-overlay.show) .info-btn {
 .pnlm-title-box {
     display: inline-block !important;
     margin-bottom: 0 !important;
-    background: rgba(255, 255, 255, 0) !important; /* Transparent by default */
-    color: #ffffff !important; 
+    background: rgba(14, 13, 13, 0) !important; /* Transparent by default */
+    color: #eee8e8 !important; 
     padding: 8px 16px !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     font-size: 20px !important;
@@ -1072,7 +1072,7 @@ body:has(.contributors-modal-overlay.show) .info-btn {
 /* --- Glass Box Effect (ONLY for PC/Desktop) --- */
 @media (min-width: 769px) {
     .pnlm-title-box {
-        background: rgba(20, 20, 20, 0.6) !important;
+        background: rgba(199, 196, 196, 0.6) !important;
         backdrop-filter: blur(12px) !important;
         -webkit-backdrop-filter: blur(12px) !important;
         border: 1px solid rgba(255, 255, 255, 0.2) !important;
