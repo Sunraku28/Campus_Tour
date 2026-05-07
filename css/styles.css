@@ -1113,3 +1113,58 @@ body:has(.contributors-modal-overlay.show) .info-btn {
         font-size: 19px !important;
     }
 }
+
+.contributors-modal-panel {
+    padding: 40px 36px 68px; /* increase bottom padding from 36px to 52px */
+}
+
+.tours-counter {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(235, 207, 147, 0.6);
+}
+
+.tours-counter-dot {
+    color: #ebcf93;
+    font-size: 0.5rem;
+    animation: pulse-dot 2s infinite;
+}
+
+.tours-counter-label {
+    color: rgba(235, 207, 147, 0.6);
+}
+
+#live-tour-count {
+    color: #ebcf93;
+    font-weight: 700;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+.suggestion-btn {
+    position: absolute;
+    bottom: 16px;
+    left: 24px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(235, 207, 147, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.suggestion-btn:hover {
+    color: #ebcf93;
+}
