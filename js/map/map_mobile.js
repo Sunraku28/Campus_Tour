@@ -29,6 +29,7 @@ if (window.innerWidth <= 768) {
     const minimapWrapper = document.getElementById('minimap-wrapper');
     const mobileMapBtn = document.getElementById('mobile-map-btn');
     const innerCloseBtn = document.getElementById('toggle-map-btn');
+    const aiMapTransitionBlur = document.getElementById('ai-map-transition-blur');
 
     function transitionMobileMap(isExpanding) {
         if (isExpanding) {
@@ -63,6 +64,10 @@ if (window.innerWidth <= 768) {
                 minimapWrapper.style.opacity = '1';
             }, 500);
         }
+    }
+
+    function setAiMapTransitionBlur(isActive) {
+        if (aiMapTransitionBlur) aiMapTransitionBlur.classList.toggle('is-active', isActive);
     }
 
     function toggleMobileMap() {
@@ -113,5 +118,67 @@ if (window.innerWidth <= 768) {
 
     window.syncMapWithScene = function(sceneId) {
         console.log("Mobile scene synced", sceneId);
+    };
+
+    // ---- AI-triggered animated navigation (mobile) ----
+    window.aiNavigateToScene = function(sceneId) {
+        return new Promise((resolve) => {
+            const coords = campusCoordinates[sceneId];
+            if (!coords) {
+                if (window.tourViewer) {
+                    window.tourViewer.loadScene(sceneId);
+                    window.tourViewer.setPitch(0);
+                    window.tourViewer.setYaw(0, false);
+                }
+                resolve();
+                return;
+            }
+
+            const targetLatLng = [coords[0], coords[1]];
+
+            // Step 1: Expand the mobile map
+            setAiMapTransitionBlur(true);
+            minimapWrapper.style.opacity = '0';
+            minimapWrapper.classList.add('map-expanded');
+            if (innerCloseBtn) innerCloseBtn.innerHTML = '❌';
+            map.dragging.enable();
+            map.touchZoom.enable();
+            map.scrollWheelZoom.enable();
+            map.doubleClickZoom.enable();
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    map.invalidateSize({ animate: false });
+                    map.fitBounds(imageBounds, { padding: [20, 20], animate: false });
+                    minimapWrapper.style.opacity = '1';
+
+                    // Step 2: Fly to target
+                    setTimeout(() => {
+                        // Render the target panorama while the full-screen map animation hides it.
+                        if (window.tourViewer) {
+                            window.tourViewer.loadScene(sceneId);
+                            window.tourViewer.setPitch(0);
+                            window.tourViewer.setYaw(0, false);
+                        }
+
+                        // Collapse as soon as the flight ends; there is no added destination hold.
+                        map.once('moveend', () => {
+                            transitionMobileMap(false);
+
+                            // Keep the panorama blurred until the map has fully collapsed.
+                            setTimeout(() => {
+                                setAiMapTransitionBlur(false);
+                                resolve();
+                            }, 600);
+                        });
+
+                        map.flyTo(targetLatLng, 15, {
+                            duration: 2,
+                            easeLinearity: 0.25
+                        });
+                    }, 500);
+                });
+            });
+        });
     };
 }

@@ -215,18 +215,7 @@ body {
     border-color: #d4ac0d;
 }
 
-@media (max-width: 1020px) {
-    .time-btn {
-        bottom: 90px;
-        top: auto; 
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 8px 8px;
-        font-size: 20px;
-    }
-    
-}
+
 
 
 @media (min-width: 1024px) {
@@ -668,23 +657,85 @@ div.custom-logo-pin:hover {
     }
 }
 
-/* Mobile: info button*/
-@media (max-width: 1020px) {
-    .info-btn {
-        justify-content: center;
-        align-items: center;
-        z-index: 9999999 !important;
-        position: absolute;
-        pointer-events: auto !important; 
-        bottom: 90px;
-        top: auto;
-        right: auto;
-        left: calc(50% + 40px);
-        transform: none;
-        width: 47px;
-        height: 47px;
+
+
+/* AI button (mirrors info-btn design) */
+
+.ai-btn {
+    position: fixed;
+    right: 20px;
+    z-index: 999999;
+    width: 46px;
+    height: 46px;
+    background-color: #1a1a1a7c;
+    color: #ffffff;
+    border: 2px solid #555;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+
+    /* Hidden until tour starts */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ai-btn.tour-started {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.ai-btn svg {
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+}
+
+.ai-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ebcf93;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(235, 207, 147, 0.4);
+}
+
+.ai-btn.listening {
+    background-color: rgba(220, 38, 38, 0.8);
+    border-color: #ef4444;
+    animation: ai-pulse 1.2s ease-in-out infinite;
+}
+
+.ai-btn.thinking {
+    background-color: rgba(59, 130, 246, 0.6);
+    border-color: #60a5fa;
+}
+
+.ai-btn.error {
+    background-color: rgba(245, 158, 11, 0.6);
+    border-color: #f59e0b;
+}
+
+@keyframes ai-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+    50%      { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+}
+
+/* Desktop: AI button sits above time toggle */
+@media (min-width: 1021px) {
+    .ai-btn {
+        top: calc(50% - 90px);
     }
 }
+
+
 
 .contributors-modal-overlay {
     position: fixed;
@@ -1087,11 +1138,13 @@ body:has(.contributors-modal-overlay.show) .info-btn {
 }/* --- MOBILE LAYOUT: Left Buttons & Bottom-Right Title --- */
 
 
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
     #mobile-map-btn, 
     #info-btn, 
-    #toggle-time {
+    #toggle-time,
+    #ai-assist-btn {
         position: fixed !important;
+        top: auto !important;
         right: 20px !important;
         left: auto !important;      
         transform: none !important;  
@@ -1102,11 +1155,14 @@ body:has(.contributors-modal-overlay.show) .info-btn {
         margin: 0 !important;
         padding: 0 !important;
         z-index: 10001;
+        display: flex !important;
+        border-radius: 50% !important;
     }
 
     #mobile-map-btn { bottom: 40px !important; }  
     #info-btn       { bottom: 95px !important; }  
     #toggle-time    { bottom: 150px !important; } 
+    #ai-assist-btn  { bottom: 205px !important; }
 
     .pnlm-panorama-info.tour-started {
         position: fixed !important;
@@ -1129,7 +1185,8 @@ body:has(.contributors-modal-overlay.show) .info-btn {
     /* to remove buttons when nav dropdown is toggled */
     body:has(#nav-toggle:checked) #mobile-map-btn,
     body:has(#nav-toggle:checked) #info-btn,
-    body:has(#nav-toggle:checked) #toggle-time {
+    body:has(#nav-toggle:checked) #toggle-time,
+    body:has(#nav-toggle:checked) #ai-assist-btn {
         opacity: 0 !important;
         visibility: hidden !important;
         pointer-events: none !important;

@@ -25,7 +25,9 @@ if (window.innerWidth > 768) {
 
     const minimapWrapper = document.getElementById('minimap-wrapper');
     const innerMap = document.getElementById('minimap'); 
+    const aiMapTransitionBlur = document.getElementById('ai-map-transition-blur');
     let currentPin = null;
+    let isAiMapNavigating = false;
 
     function transitionMapState(isExpanding) {
         const toggleBtn = document.getElementById('toggle-map-btn');
@@ -73,6 +75,10 @@ if (window.innerWidth > 768) {
                 minimapWrapper.style.opacity = '1';
             }, 500);
         }
+    }
+
+    function setAiMapTransitionBlur(isActive) {
+        if (aiMapTransitionBlur) aiMapTransitionBlur.classList.toggle('is-active', isActive);
     }
 
 
@@ -126,6 +132,10 @@ if (window.innerWidth > 768) {
 
         currentPin = L.marker([lat, lng], {icon: userIcon}).addTo(map);
 
+        // Loading the panorama during an AI flight emits scenechange. Keep its
+        // marker update, but do not cancel the in-progress fly-to animation.
+        if (isAiMapNavigating) return;
+
         const isExpanded = minimapWrapper.classList.contains('map-expanded');
         if (isExpanded) {
             map.panTo([lat, lng], { animate: false }); 
@@ -155,12 +165,71 @@ if (window.innerWidth > 768) {
         }
     });
 
-    // map.on('click', function(e) {
-    //     const lat = e.latlng.lat.toFixed(5);
-    //     const lng = e.latlng.lng.toFixed(5);
-    //     console.log(`📍 New Pin Coordinates: [${lat}, ${lng}]`);
-        
-    //     alert(`[${lat}, ${lng}]`);
-    // });
+    // ---- AI-triggered animated navigation ----
+    // Called by the AI assistant to show a fly-to animation before teleporting
+    window.aiNavigateToScene = function(sceneId) {
+        return new Promise((resolve) => {
+            const coords = campusCoordinates[sceneId];
+            if (!coords) {
+                // No coordinates for this scene, just load directly
+                if (window.tourViewer) {
+                    window.tourViewer.loadScene(sceneId);
+                    window.tourViewer.setPitch(0);
+                    window.tourViewer.setYaw(0, false);
+                }
+                resolve();
+                return;
+            }
+
+            const targetLatLng = [coords[0], coords[1]];
+
+            // Step 1: Expand the map
+            setAiMapTransitionBlur(true);
+            minimapWrapper.style.opacity = '0';
+            minimapWrapper.classList.add('map-expanded');
+            const toggleBtn = document.getElementById('toggle-map-btn');
+            if (toggleBtn) toggleBtn.innerHTML = '❌';
+            map.dragging.enable();
+            map.scrollWheelZoom.enable();
+            map.doubleClickZoom.enable();
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    map.invalidateSize({ pan: false, animate: false });
+                    map.fitBounds(imageBounds, { animate: false });
+                    minimapWrapper.style.opacity = '1';
+
+                    // Step 2: After map is visible, fly to target (with a small delay for visual effect)
+                    setTimeout(() => {
+                        // Start rendering the target scene behind the full-screen map while
+                        // Leaflet performs its flight. Suppress scene sync from cancelling it.
+                        isAiMapNavigating = true;
+                        if (window.tourViewer) {
+                            window.tourViewer.loadScene(sceneId);
+                            window.tourViewer.setPitch(0);
+                            window.tourViewer.setYaw(0, false);
+                        }
+
+                        // Collapse as soon as the map animation reaches its destination.
+                        map.once('moveend', () => {
+                            isAiMapNavigating = false;
+                            transitionMapState(false);
+
+                            // Keep the panorama blurred until the map has fully collapsed.
+                            setTimeout(() => {
+                                setAiMapTransitionBlur(false);
+                                resolve();
+                            }, 600);
+                        });
+
+                        map.flyTo(targetLatLng, 18, {
+                            duration: 2,    // 2 second fly animation
+                            easeLinearity: 0.25
+                        });
+                    }, 500); // 0.5s delay before starting fly animation
+                });
+            });
+        });
+    };
 
 }

@@ -1,5 +1,24 @@
 /* MAP UI  */
 
+#ai-map-transition-blur {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: opacity 180ms ease, visibility 0s linear 180ms;
+}
+
+#ai-map-transition-blur.is-active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 180ms ease;
+}
+
 #minimap-wrapper {
     position: absolute;
     bottom: 20px;
@@ -133,7 +152,7 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
     .map-icon-btn {
         display: flex !important; 
         justify-content: center;
@@ -172,7 +191,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
     
     #minimap-wrapper:not(.map-expanded) {
         display: none !important; 

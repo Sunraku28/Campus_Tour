@@ -228,6 +228,7 @@ window.startTour = async function() {
     document.querySelector('.map-icon-btn').classList.add('tour-started');
     document.querySelector('.college-name').classList.add('tour-started');
     document.getElementById('info-btn').classList.add('tour-started');
+    document.getElementById('ai-assist-btn').classList.add('tour-started');
     const { error } = await window.supabaseClient.rpc('increment_click', { target_id: '1' });
 
     const panoramaInfo = document.querySelector('.pnlm-panorama-info');
@@ -635,6 +636,184 @@ window.openTeamModal = function() {
     }
 };
 
+
+// ==========================================
+// AI ASSISTANT LOGIC
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const aiBtn = document.getElementById('ai-assist-btn');
+    if (!aiBtn) return;
+
+    const WORKER_URL = 'https://ai-tour-assistant.sharmaanubhav398.workers.dev/query'; 
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        console.warn("Speech Recognition API is not supported in this browser.");
+        aiBtn.style.display = 'none';
+        return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-IN'; 
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    // State: 'idle' | 'listening' | 'processing'
+    let aiState = 'idle';
+    let abortController = null;
+
+    // Universal stop — kills everything and resets to idle
+    function stopAI() {
+        // Stop listening
+        try { recognition.abort(); } catch (_) {}
+
+        // Abort any in-flight fetch
+        if (abortController) {
+            abortController.abort();
+            abortController = null;
+        }
+
+        // Stop speaking
+        window.speechSynthesis.cancel();
+
+        // Reset UI
+        aiState = 'idle';
+        aiBtn.classList.remove('listening', 'thinking', 'error');
+    }
+
+    // Click handler: toggle between idle ↔ active
+    aiBtn.addEventListener('click', () => {
+        if (aiState !== 'idle') {
+            // Currently active (listening, thinking, or speaking) — stop everything
+            stopAI();
+            return;
+        }
+
+        // Idle → start listening
+        try {
+            recognition.start();
+        } catch (err) {
+            console.error("Recognition already started");
+        }
+    });
+
+    recognition.onstart = () => {
+        aiState = 'listening';
+        aiBtn.classList.add('listening');
+        aiBtn.classList.remove('thinking', 'error');
+    };
+
+    recognition.onspeechend = () => {
+        recognition.stop();
+    };
+
+    recognition.onresult = async (event) => {
+        // If user already hit stop, bail out
+        if (aiState === 'idle') return;
+
+        aiState = 'processing';
+        aiBtn.classList.remove('listening');
+        aiBtn.classList.add('thinking');
+
+        const lastResultIndex = event.results.length - 1;
+        const userQuery = event.results[lastResultIndex][0].transcript;
+
+        // Create an AbortController so the fetch can be cancelled
+        abortController = new AbortController();
+
+        try {
+            const response = await fetch(WORKER_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query: userQuery }),
+                signal: abortController.signal
+            });
+
+            // Check if user stopped while we were awaiting
+            if (aiState === 'idle') return;
+
+            const data = await response.json();
+
+            if (aiState === 'idle') return;
+
+            if (data.target_scene_id && window.tourViewer) {
+                // Use animated map navigation if available, else direct teleport
+                if (window.aiNavigateToScene) {
+                    await window.aiNavigateToScene(data.target_scene_id);
+                } else {
+                    window.tourViewer.loadScene(data.target_scene_id);
+                    window.tourViewer.setPitch(0);
+                    window.tourViewer.setYaw(0, false);
+                }
+            }
+
+            window.speechSynthesis.cancel(); 
+            const utterance = new SpeechSynthesisUtterance(data.answer);
+            utterance.rate = 1.0;
+
+            // --- VOICE SELECTION LOGIC ---
+            const availableVoices = window.speechSynthesis.getVoices();
+            
+            const preferredVoice = availableVoices.find(voice => 
+                voice.name.includes('Google UK English Female') || // Google Chrome specific
+                voice.name.includes('Microsoft Neerja') ||         // Windows Indian Female
+                voice.name.includes('Samantha') ||                 // macOS standard female
+                voice.lang === 'en-IN'                             // Fallback to any Indian English voice
+            );
+
+            if (preferredVoice) {
+                utterance.voice = preferredVoice;
+            }
+            // -----------------------------
+
+            utterance.onend = () => {
+                // Only reset if we're still in processing (user didn't stop manually)
+                if (aiState === 'processing') {
+                    aiState = 'idle';
+                    aiBtn.classList.remove('thinking');
+                }
+            };
+
+            // Final check before speaking
+            if (aiState === 'idle') return;
+            window.speechSynthesis.speak(utterance);
+
+        } catch (error) {
+            // If aborted by user, just stay silent
+            if (error.name === 'AbortError') return;
+
+            console.error("AI Assist failed:", error);
+            if (window.showToast) window.showToast("AI is unreachable right now.");
+            aiBtn.classList.remove('thinking');
+            aiBtn.classList.add('error');
+            aiState = 'idle';
+            setTimeout(() => { aiBtn.classList.remove('error'); }, 2500);
+        } finally {
+            abortController = null;
+        }
+    };
+
+    recognition.onerror = (event) => {
+        // If user already stopped, don't show errors
+        if (aiState === 'idle') return;
+
+        console.error("Speech recognition error:", event.error);
+        aiState = 'idle';
+        aiBtn.classList.remove('listening', 'thinking', 'error');
+
+        if (event.error !== 'no-speech' && window.showToast) {
+            window.showToast("Could not hear you properly.");
+        }
+    };
+
+    recognition.onend = () => {
+        // If still in 'listening' state when recognition ends (no result), reset
+        if (aiState === 'listening') {
+            aiState = 'idle';
+            aiBtn.classList.remove('listening', 'thinking', 'error');
+        }
+    };
+});
 
 
 
