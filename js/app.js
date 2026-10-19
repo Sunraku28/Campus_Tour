@@ -275,11 +275,26 @@ toggleBtn.addEventListener('click', () => {
 });
 
 window.tourViewer.on('scenechange', function(newSceneId) {
-    
     var timeButton = document.querySelector('.time-btn');
     
+    // --- SYNC DAY/NIGHT TOGGLE UI ---
+    if (newSceneId.endsWith('_night')) {
+        window.isNight = true;
+        if (timeButton) {
+            timeButton.innerHTML = "☀️";
+            timeButton.classList.add("day-mode");
+        }
+    } else if (newSceneId.endsWith('_day')) {
+        window.isNight = false;
+        if (timeButton) {
+            timeButton.innerHTML = "🌙";
+            timeButton.classList.remove("day-mode");
+        }
+    }
+
     if (timeButton) {
-        if (indoorScenes.includes(newSceneId)) {
+        // Hide button if inside an indoor scene
+        if (typeof indoorScenes !== 'undefined' && indoorScenes.includes(newSceneId)) {
             timeButton.style.display = 'none'; 
         } 
         else {
@@ -645,6 +660,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!aiBtn) return;
 
     const WORKER_URL = 'https://ai-tour-assistant.sharmaanubhav398.workers.dev/query'; 
+    // const WORKER_URL = 'http://localhost:8787/query';
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
@@ -721,11 +737,16 @@ document.addEventListener("DOMContentLoaded", () => {
         // Create an AbortController so the fetch can be cancelled
         abortController = new AbortController();
 
+        const currentSceneId = window.tourViewer ? window.tourViewer.getScene() : null;
+
         try {
             const response = await fetch(WORKER_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query: userQuery }),
+                body: JSON.stringify({ 
+                    query: userQuery,
+                    current_scene_id: currentSceneId 
+                }),
                 signal: abortController.signal
             });
 
