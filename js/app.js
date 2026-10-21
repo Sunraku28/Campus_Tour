@@ -12,7 +12,7 @@
 // import { H4entryScenes } from './scenes/junctions/H3H4junc.js';
 // import { saazScenes } from './scenes/junctions/H3H4junc.js';
 // import { ttScenes } from './scenes/junctions/H3H4junc.js';
-     
+
 import { DSAcenterScenes } from './scenes/DSA/DSA_center.js';
 import { conferenceScenes } from './scenes/DSA/conference_room.js';
 import { DSAgateScenes } from './scenes/DSA/DSA_gate.js';
@@ -173,26 +173,26 @@ const allCampusScenes = {
     ...vlsilabScenes,
     ...powerandcontrollabScenes,
     ...kabaddiScenes
-    
+
 };
 // Function to update the title text based on the scene
 
-    window.updateMobileTitle = function(sceneId) {
+window.updateMobileTitle = function (sceneId) {
     const titleBadge = document.getElementById('mobile-scene-title');
-    
+
     if (!titleBadge) {
         console.error("The title box is missing from the HTML!");
-        return; 
+        return;
     }
 
     if (sceneId) {
         let config = window.tourViewer.getConfig();
         let sceneConfig = config.scenes[sceneId];
-        
-        let displayName = (sceneConfig && sceneConfig.title) 
-            ? sceneConfig.title 
+
+        let displayName = (sceneConfig && sceneConfig.title)
+            ? sceneConfig.title
             : sceneId.replace(/_(day|night)$/i, '').replace(/_/g, ' ').toUpperCase();
-            
+
         titleBadge.innerText = displayName;
         titleBadge.style.display = "block";
         titleBadge.classList.add('tour-started');
@@ -202,24 +202,24 @@ const allCampusScenes = {
 
 window.tourViewer = pannellum.viewer('campus-map', {
     "default": {
-        "firstScene": "DSA_gate_day", 
-        "sceneFadeDuration": 1500, 
+        "firstScene": "DSA_gate_day",
+        "sceneFadeDuration": 1500,
         "showZoomCtrl": false,
         "showFullscreenCtrl": false,
-        "autoLoad": true , 
-        "autoRotate" : -2,
+        "autoLoad": true,
+        "autoRotate": -2,
         "autoRotateInactivityDelay": 7000,
-        "touchPanSpeedCoeffFactor": 1.1, 
+        "touchPanSpeedCoeffFactor": 1.1,
         "friction": 0.10,
-         "hotSpotDebug": false
+        "hotSpotDebug": false
     },
-    "scenes": allCampusScenes 
+    "scenes": allCampusScenes
 });
 
-window.startTour = async function() {
+window.startTour = async function () {
     const overlay = document.getElementById('hero-layer');
     const nightBtn = document.getElementById('toggle-time');
-    
+
     overlay.classList.add('hidden');
     nightBtn.style.display = 'block';
     document.querySelector('.floating-nav').classList.add('tour-started');
@@ -238,7 +238,7 @@ window.startTour = async function() {
     overlay.classList.add('hidden');
 
     let currentScene = window.tourViewer.getScene() || 'DSA_gate_day';
-    
+
     setTimeout(() => {
         window.updateMobileTitle(currentScene);
 
@@ -246,7 +246,7 @@ window.startTour = async function() {
             window.syncMapWithScene(currentScene);
         }
 
-    }, 100); 
+    }, 100);
 };
 
 window.isNight = false;
@@ -255,11 +255,11 @@ const toggleBtn = document.getElementById('toggle-time');
 toggleBtn.addEventListener('click', () => {
     const currentScene = window.tourViewer.getScene();
     const currentPitch = window.tourViewer.getPitch();
-    const currentYaw   = window.tourViewer.getYaw();
+    const currentYaw = window.tourViewer.getYaw();
 
     let nextScene;
 
-    if(window.isNight) {
+    if (window.isNight) {
         nextScene = currentScene.replace("_night", "_day");
         toggleBtn.innerHTML = "🌙";
         toggleBtn.classList.remove("day-mode");
@@ -274,9 +274,9 @@ toggleBtn.addEventListener('click', () => {
     window.tourViewer.loadScene(nextScene, currentPitch, currentYaw);
 });
 
-window.tourViewer.on('scenechange', function(newSceneId) {
+window.tourViewer.on('scenechange', function (newSceneId) {
     var timeButton = document.querySelector('.time-btn');
-    
+
     // --- SYNC DAY/NIGHT TOGGLE UI ---
     if (newSceneId.endsWith('_night')) {
         window.isNight = true;
@@ -295,10 +295,10 @@ window.tourViewer.on('scenechange', function(newSceneId) {
     if (timeButton) {
         // Hide button if inside an indoor scene
         if (typeof indoorScenes !== 'undefined' && indoorScenes.includes(newSceneId)) {
-            timeButton.style.display = 'none'; 
-        } 
+            timeButton.classList.add('hidden-indoor');
+        }
         else {
-            timeButton.style.display = 'block';  
+            timeButton.classList.remove('hidden-indoor');
         }
     }
 
@@ -306,48 +306,48 @@ window.tourViewer.on('scenechange', function(newSceneId) {
         window.syncMapWithScene(newSceneId);
     }
     window.updateMobileTitle(newSceneId);
-}); 
+});
 
-window.onload = function() {
+window.onload = function () {
     var initialScene = window.tourViewer.getScene();
     var timeButton = document.querySelector('.time-btn');
-    
+
     if (timeButton) {
         if (indoorScenes.includes(initialScene)) {
-            timeButton.style.display = 'none';
+            timeButton.classList.add('hidden-indoor');
         } else {
-            timeButton.style.display = 'block';
+            timeButton.classList.remove('hidden-indoor');
         }
     }
 
     // if (window.syncMapWithScene && initialScene) {
     //     window.syncMapWithScene(initialScene);
     // }
-}; 
+};
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const contextMenu = document.getElementById("custom-right-click-menu");
 
     // Info button - open contributors modal 
     const infoBtn = document.getElementById("info-btn");
     if (infoBtn) {
-        infoBtn.addEventListener("click", function() {
+        infoBtn.addEventListener("click", function () {
             window.openTeamModal();
         });
     }
     // teleport button 
-   const teleportBtn = document.getElementById("btn-teleport");
+    const teleportBtn = document.getElementById("btn-teleport");
     if (teleportBtn) {
         // Grab all scenes
-        const allScenes = Object.keys(allCampusScenes); 
-        
+        const allScenes = Object.keys(allCampusScenes);
+
         // Add scenes you want to completely exclude (always hidden)
         const excludedScenes = [
             "gym_day",
-            "gym_night"     
+            "gym_night"
         ];
 
-        teleportBtn.addEventListener("click", function() {
+        teleportBtn.addEventListener("click", function () {
             const safeScenes = allScenes.filter(scene => {
                 if (excludedScenes.includes(scene)) return false;
 
@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function() {
             window.tourViewer.loadScene(nextScene);
 
             // Hide the right-click menu if it's open
-            if (contextMenu){
+            if (contextMenu) {
                 contextMenu.classList.remove("show");
             }
         });
@@ -375,18 +375,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const restartBtn = document.getElementById("btn-restart-tour");
     if (restartBtn) {
-        restartBtn.addEventListener("click", function() {
+        restartBtn.addEventListener("click", function () {
             window.tourViewer.loadScene('DSA_gate_day', 0, 0, 100);
-            
+
             const contextMenu = document.getElementById("custom-right-click-menu");
             if (contextMenu) contextMenu.classList.remove("show");
         });
     }
 
-    window.addEventListener("contextmenu", function(event) {
+    window.addEventListener("contextmenu", function (event) {
         if (!contextMenu) return;
-        event.preventDefault(); 
-        
+        event.preventDefault();
+
         let mouseX = event.clientX;
         let mouseY = event.clientY;
 
@@ -403,48 +403,48 @@ document.addEventListener("DOMContentLoaded", function() {
         contextMenu.style.left = mouseX + "px";
         contextMenu.style.top = mouseY + "px";
         contextMenu.classList.add("show");
-        
+
     }, { capture: true });
 
-    window.addEventListener("click", function(event) {
+    window.addEventListener("click", function (event) {
         if (contextMenu && contextMenu.classList.contains("show")) {
             contextMenu.classList.remove("show");
         }
     }, { capture: true });
 });
 
-window.addEventListener("mousedown", function(event) {
-    if (event.button === 2) {
-        event.stopPropagation(); 
-    }
-}, { capture: true });
-
-window.addEventListener("mouseup", function(event) {
+window.addEventListener("mousedown", function (event) {
     if (event.button === 2) {
         event.stopPropagation();
     }
 }, { capture: true });
 
-window.showToast = function(message) {
+window.addEventListener("mouseup", function (event) {
+    if (event.button === 2) {
+        event.stopPropagation();
+    }
+}, { capture: true });
+
+window.showToast = function (message) {
     const toast = document.getElementById("toast-notification");
     if (!toast) return;
-    
+
     toast.innerText = message;
     toast.classList.add("show");
-    
+
     setTimeout(() => {
         toast.classList.remove("show");
     }, 2500);
-};  
+};
 
 
 
-window.closeTeamModal = function() {
+window.closeTeamModal = function () {
     const modal = document.getElementById("contributors-modal");
     if (modal) modal.classList.remove("show");
 };
 
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
     const modal = document.getElementById("contributors-modal");
     if (event.target === modal) {
         modal.classList.remove("show");
@@ -454,26 +454,26 @@ window.addEventListener("click", function(event) {
 
 // for dynamically scaling hotspot icons
 
-window.updateHotspotScale = function(currentFov) {
-    const baseFov = 100; 
-    
+window.updateHotspotScale = function (currentFov) {
+    const baseFov = 100;
+
     let scale = baseFov / currentFov;
-    
+
     scale = Math.max(0.3, Math.min(scale, 2.5));
-    
+
     document.documentElement.style.setProperty('--zoom-scale', scale);
 };
 
 
-window.onload = function() {
+window.onload = function () {
     var initialScene = window.tourViewer.getScene();
     var timeButton = document.querySelector('.time-btn');
-    
+
     if (timeButton) {
         if (typeof indoorScenes !== 'undefined' && indoorScenes.includes(initialScene)) {
-            timeButton.style.display = 'none';
+            timeButton.classList.add('hidden-indoor');
         } else {
-            timeButton.style.display = 'block';
+            timeButton.classList.remove('hidden-indoor');
         }
     }
 
@@ -481,20 +481,20 @@ window.onload = function() {
     window.updateHotspotScale(initialFov);
 };
 
-window.tourViewer.on('zoomchange', function(newFov) {
+window.tourViewer.on('zoomchange', function (newFov) {
     window.updateHotspotScale(newFov);
 });
 
-window.tourViewer.on('scenechange', function() {
+window.tourViewer.on('scenechange', function () {
     setTimeout(() => {
         let currentFov = window.tourViewer.getHfov();
         window.updateHotspotScale(currentFov);
-    }, 100); 
+    }, 100);
 });
 
 // Joystick Control
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const joystickBtn = document.getElementById('btn-joystick-mode');
     const viewerContainer = document.getElementById('campus-map');
     const contextMenu = document.getElementById("custom-right-click-menu");
@@ -511,23 +511,23 @@ document.addEventListener("DOMContentLoaded", function() {
     joystickOverlay.style.left = '0';
     joystickOverlay.style.width = '100%';
     joystickOverlay.style.height = '100%';
-    joystickOverlay.style.zIndex = '99999'; 
+    joystickOverlay.style.zIndex = '99999';
     joystickOverlay.style.display = 'none';
     joystickOverlay.style.cursor = 'all-scroll';
     viewerContainer.appendChild(joystickOverlay);
 
     // Toggle Mode On/Off from the Right-Click Menu
     if (joystickBtn) {
-        joystickBtn.addEventListener('click', function() {
+        joystickBtn.addEventListener('click', function () {
             isJoystickMode = !isJoystickMode;
-            
+
             if (isJoystickMode) {
                 joystickBtn.innerHTML = 'Disable Joystick Pan'; // Update menu text
-                joystickOverlay.style.display = 'block'; 
-                window.tourViewer.stopAutoRotate(); 
+                joystickOverlay.style.display = 'block';
+                window.tourViewer.stopAutoRotate();
             } else {
                 joystickBtn.innerHTML = 'Enable Joystick Pan'; // Revert menu text
-                joystickOverlay.style.display = 'none'; 
+                joystickOverlay.style.display = 'none';
                 isDragging = false;
                 cancelAnimationFrame(animationFrameId);
             }
@@ -558,9 +558,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Mouse Controls
-    joystickOverlay.addEventListener('mousedown', function(e) {
-        if (e.button !== 0) return; 
-        
+    joystickOverlay.addEventListener('mousedown', function (e) {
+        if (e.button !== 0) return;
+
         isDragging = true;
         startX = e.clientX;
         startY = e.clientY;
@@ -569,29 +569,29 @@ document.addEventListener("DOMContentLoaded", function() {
         joystickLoop();
     });
 
-    joystickOverlay.addEventListener('mousemove', function(e) {
+    joystickOverlay.addEventListener('mousemove', function (e) {
         if (isDragging) {
             currentX = e.clientX;
             currentY = e.clientY;
         }
     });
 
-    window.addEventListener('mouseup', function(e) {
+    window.addEventListener('mouseup', function (e) {
         if (!isDragging) return;
         isDragging = false;
         cancelAnimationFrame(animationFrameId);
 
         let dist = Math.hypot(currentX - startX, currentY - startY);
         if (dist < 5) {
-            joystickOverlay.style.display = 'none'; 
+            joystickOverlay.style.display = 'none';
             let elementBelow = document.elementFromPoint(e.clientX, e.clientY);
             if (elementBelow) elementBelow.click(); // Pass the click through
-            joystickOverlay.style.display = 'block'; 
+            joystickOverlay.style.display = 'block';
         }
     });
 
     // Touch Controls (for mobile)
-    joystickOverlay.addEventListener('touchstart', function(e) {
+    joystickOverlay.addEventListener('touchstart', function (e) {
         isDragging = true;
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
@@ -600,14 +600,14 @@ document.addEventListener("DOMContentLoaded", function() {
         joystickLoop();
     });
 
-    joystickOverlay.addEventListener('touchmove', function(e) {
+    joystickOverlay.addEventListener('touchmove', function (e) {
         if (isDragging) {
             currentX = e.touches[0].clientX;
             currentY = e.touches[0].clientY;
         }
     });
 
-    window.addEventListener('touchend', function() {
+    window.addEventListener('touchend', function () {
         isDragging = false;
         cancelAnimationFrame(animationFrameId);
     });
@@ -622,14 +622,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentHour >= 19 || currentHour <= 5) {
         const timeToggleBtn = document.getElementById('toggle-time');
         if (timeToggleBtn) {
-            timeToggleBtn.click(); 
+            timeToggleBtn.click();
         }
     }
 });
 
-const supabaseUrl = 'https://urdwkxlrnpximmcbzmcc.supabase.co'; 
+const supabaseUrl = 'https://urdwkxlrnpximmcbzmcc.supabase.co';
 
-const supabaseKey = 'sb_publishable_vxQCH7prc-OuVk7nx0hdSw_qBUQMZj_'; 
+const supabaseKey = 'sb_publishable_vxQCH7prc-OuVk7nx0hdSw_qBUQMZj_';
 
 window.supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
@@ -643,7 +643,7 @@ async function fetchTourCount() {
     }
 }
 
-window.openTeamModal = function() {
+window.openTeamModal = function () {
     const modal = document.getElementById("contributors-modal");
     if (modal) {
         modal.classList.add("show");
@@ -659,7 +659,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const aiBtn = document.getElementById('ai-assist-btn');
     if (!aiBtn) return;
 
-    const WORKER_URL = 'https://ai-tour-assistant.sharmaanubhav398.workers.dev/query'; 
+    const WORKER_URL = 'https://ai-tour-assistant.sharmaanubhav398.workers.dev/query';
     // const WORKER_URL = 'http://localhost:8787/query';
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -670,7 +670,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const recognition = new SpeechRecognition();
-    recognition.lang = 'en-IN'; 
+    recognition.lang = 'en-IN';
     recognition.continuous = false;
     recognition.interimResults = false;
 
@@ -681,7 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Universal stop — kills everything and resets to idle
     function stopAI() {
         // Stop listening
-        try { recognition.abort(); } catch (_) {}
+        try { recognition.abort(); } catch (_) { }
 
         // Abort any in-flight fetch
         if (abortController) {
@@ -743,9 +743,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const response = await fetch(WORKER_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ 
+                body: JSON.stringify({
                     query: userQuery,
-                    current_scene_id: currentSceneId 
+                    current_scene_id: currentSceneId
                 }),
                 signal: abortController.signal
             });
@@ -768,14 +768,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            window.speechSynthesis.cancel(); 
+            window.speechSynthesis.cancel();
             const utterance = new SpeechSynthesisUtterance(data.answer);
             utterance.rate = 1.0;
 
             // --- VOICE SELECTION LOGIC ---
             const availableVoices = window.speechSynthesis.getVoices();
-            
-            const preferredVoice = availableVoices.find(voice => 
+
+            const preferredVoice = availableVoices.find(voice =>
                 voice.name.includes('Google UK English Female') || // Google Chrome specific
                 voice.name.includes('Microsoft Neerja') ||         // Windows Indian Female
                 voice.name.includes('Samantha') ||                 // macOS standard female

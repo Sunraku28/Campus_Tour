@@ -203,6 +203,13 @@ body {
     transition: opacity 0.5s ease-in-out; 
 }
 
+/* Hide time button on indoor scenes */
+.time-btn.hidden-indoor {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
 .time-btn.tour-started{
     opacity: 1;
     visibility: visible;
@@ -650,7 +657,7 @@ div.custom-logo-pin:hover {
 /* Desktop: info button below the night toggle */
 @media (min-width: 1021px) {
     .time-btn {
-        top: calc(50% - 30px);
+        top: calc(50% - 90px);
     }
     .info-btn {
         top: calc(50% + 30px);
@@ -728,10 +735,10 @@ div.custom-logo-pin:hover {
     50%      { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
 }
 
-/* Desktop: AI button sits above time toggle */
+/* Desktop: AI button sits below info button, at old time-btn position */
 @media (min-width: 1021px) {
     .ai-btn {
-        top: calc(50% - 90px);
+        top: calc(50% - 30px);
     }
 }
 
@@ -1161,8 +1168,8 @@ body:has(.contributors-modal-overlay.show) .info-btn {
 
     #mobile-map-btn { bottom: 40px !important; }  
     #info-btn       { bottom: 95px !important; }  
-    #toggle-time    { bottom: 150px !important; } 
-    #ai-assist-btn  { bottom: 205px !important; }
+    #toggle-time    { bottom: 205px !important; } 
+    #ai-assist-btn  { bottom: 150px !important; }
 
     .pnlm-panorama-info.tour-started {
         position: fixed !important;
